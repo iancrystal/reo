@@ -1,0 +1,33 @@
+require 'rubygems'
+require 'geokit'
+
+#count=1
+#count=29636
+#count=35439
+count=41672
+  
+File.open('create-zipcodes-yml.log', 'w') do |log|  
+File.open('zipcodes.yml2', 'w') do |f2|  
+  #File.open('zipcodes.txt', 'r') do |f1|  
+  File.open('zip-nodata.txt', 'r') do |f1|  
+    while zipc = f1.gets  
+      zipc.chomp!
+      a=Geokit::Geocoders::YahooGeocoder.geocode zipc
+      if a.lat
+        f2.puts "#{zipc}:"
+        f2.puts "  id: #{count}"
+        f2.puts "  zipcode: #{zipc}"
+        f2.puts "  lat: #{a.lat}"
+        f2.puts "  lng: #{a.lng}"
+        f2.puts "  state: #{a.state}"
+        f2.puts "  city: #{a.city}"
+        puts count
+        count += 1
+      else
+        log.puts "cannot get info for #{zipc}" 
+        puts "cannot get info for #{zipc}" 
+      end
+    end  
+  end  
+end
+end

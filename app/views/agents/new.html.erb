@@ -1,0 +1,91 @@
+<div class="reo-form">
+
+<% form_for(@agent, :html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+<fieldset>
+  <legend>Enter User Details</legend>
+  <div>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, :size => 15 %>
+    <%= f.label :middle_name %>
+    <%= f.text_field :middle_name, :size => 15 %>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, :size => 15 %>
+    <%= f.label :suffix %>
+    <%= f.text_field :suffix, :size => 3 %>
+  </div>
+  <div>
+    <%= f.label :user_password, 'Password' %> 
+    <%= f.password_field :password, :size => 15 %>
+    <%= f.label :user_password_confirmation, 'Confirm password' %>
+    <%= f.password_field :password_confirmation, :size => 15 %>
+  </div>
+  <div>
+    <%= f.label :company %>
+    <%= f.text_field :company %>
+  </div>
+  <div>
+    Physical address:
+    <%= f.label :physical_address1, 'Street 1' %>
+    <%= f.text_field :physical_address1 %>
+    <%= f.label :physical_address2, 'Street 2' %>
+    <%= f.text_field :physical_address2 %>
+  </div>
+  <div>
+    <%= f.label :physical_address_city, 'City' %>
+    <%= f.text_field :physical_address_city, :size => 15 %>
+    <%= f.label :physical_address_state, 'State' %>
+    <%= f.text_field :physical_address_state, :size => 2 %>
+    <%= f.label :physical_address_zip, 'Zip code'%>
+    <%= f.text_field :physical_address_zip, :size => 9  %>
+  </div>
+  <div>
+    Mailing address:
+    <%= f.label :mailing_address1, 'Street 1' %>
+    <%= f.text_field :mailing_address1 %>
+    <%= f.label :mailing_address2, 'Street 2' %>
+    <%= f.text_field :mailing_address2 %>
+  </div>
+  <div>
+    <%= f.label :mailing_address_city, 'City' %>
+    <%= f.text_field :mailing_address_city, :size => 15 %>
+    <%= f.label :mailing_address_state, 'State' %>
+    <%= f.text_field :mailing_address_state, :size => 2 %>
+    <%= f.label :mailing_address_zip, 'Zip code'%>
+    <%= f.text_field :mailing_address_zip, :size => 9  %>
+  </div>
+  <div>
+    <%= f.label :email1, 'Email 1' %>
+    <%= f.text_field :email1 %>
+    <%= f.label :email2, 'Email 2' %>
+    <%= f.text_field :email2 %>
+  </div>
+  <div>
+    <%= f.label :phone1, 'Phone 1'%>
+    <%= f.text_field :phone1, :size => 15  %>
+    <%= f.label :phone2, 'Phone 2'%>
+    <%= f.text_field :phone2, :size => 15  %>
+    <%= f.label :fax, 'Fax'%>
+    <%= f.text_field :fax, :size => 15  %>
+  </div>
+  <div>
+    <%= f.label :bio_cred, 'Credentials' %>
+  </div>
+  <div>
+    <%= f.text_area :bio_cred, :rows => 5, :cols => 80 %>
+  </div>
+  <div>
+    <%= f.label :zip_codes, 'Service areas(enter the zipcodes separated by spaces):' %>
+    <%= f.text_field :zip_codes, :size => 50 %>
+  </div>
+  <div>
+    Upload your picture: <%= f.file_field("uploaded_picture" ) %>
+  </div>
+  <br />
+  <div>
+    <%= f.submit 'Create' %>
+  </div>
+</fieldset>
+<% end %>
+
+</div>

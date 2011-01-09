@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  zipcode: 1
+  lat: 9.99
+  lng: 9.99
+  state: MyString
+  city: MyString
+
+two:
+  zipcode: 1
+  lat: 9.99
+  lng: 9.99
+  state: MyString
+  city: MyString

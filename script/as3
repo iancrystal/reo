@@ -1,0 +1,18 @@
+require 'rubygems'
+
+version = ">= 0"
+
+if ARGV.first =~ /^_(.*)_$/ and Gem::Version.correct? $1 then
+  version = $1
+  ARGV.shift
+end
+
+gem 'aws-s3', version
+#load Gem.bin_path('aws-s3', 's3sh', version)
+
+AWS::S3::Base.establish_connection!(
+    :access_key_id     => 'AKIAIOLMS62WKQM2NQ2A',
+    :secret_access_key => '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'
+)
+
+policy = S3Object.acl('eDMxNzE4x.jpg', 'reoagentphoto')

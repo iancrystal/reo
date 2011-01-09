@@ -1,0 +1,10 @@
+<div style="float:left">
+<% form_tag(:action => :index) do %>
+  <%= text_field_tag(:address, @address, :size => 80) %>
+  <%= submit_tag("Search") %>
+<% end %>
+<br />
+<%= GMap.header %>
+<%= @map.to_html %>
+<%= @map.div(:width => 600, :height => 400) %>
+</div>

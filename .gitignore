@@ -1,0 +1,4 @@
+tmp/*
+log/development.log
+public/images/*.jpg
+db/*

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>REO Agents Connect: <%= controller.action_name %></title>
+    <%= stylesheet_link_tag 'scaffold', 'reo' %>
+    <%= javascript_include_tag :defaults %>
+</head>
+<body id="reo">
+    <div id="banner">
+        <%= @page_title || "Reo Agents Connect" %>
+    </div>
+    <div id="columns">
+        <div id="side">
+            <br />
+            <%= link_to "Home", :controller => "home", :action => "index"%><br />
+            <%= link_to "Advanced search", :controller => "home", :action => "advanced_search", :id => 0%><br />
+            <%= link_to "Support/Contact", :controller => "home", :action => "support_contact"%><br />
+            <br />
+            <% if session[:agent_id] %>
+                <%= link_to 'Update Profile', edit_agent_url(:id => session[:agent_id]) %><br />
+                <%= link_to 'Show Profile', agent_url (:id => session[:agent_id])%><br />
+                <%= link_to 'Delete Profile', {:controller => 'agents', :action => 'destroy', :id => session[:agent_id]}, {:confirm => "Are you sure?", :method => :delete} %><br />
+                <%= link_to 'Logout', :controller => 'admin', :action => 'logout' %>
+            <% else %>
+                <%= link_to "Login", :controller => "admin", :action => "login"%><br />
+                <%= link_to "Sign-up", :controller => "home", :action => "sign_up" %><br />
+            <% end %>
+            <br /><br />
+            <% if @area_agents -%>
+                <div id="area_agents">
+                <h3>REO Agents</h3>
+                    <% for agent in @area_agents %>
+                         <%= link_to agent.first_name + " " + agent.last_name, agent_url(:id => agent.id) %><br />
+                    <% end %>
+                </div>
+            <% end -%>
+        </div>
+        <div id="main">
+            <% if flash[:notice] -%>
+                <div id="notice"><%= flash[:notice] %></div>
+            <% end -%>
+            <%= yield %>
+        </div>
+    </div>
+</body>
+</html>
+

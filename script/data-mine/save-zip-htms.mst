@@ -1,0 +1,100 @@
+' this is a comment line
+
+' run this script with the following command:
+' l:\installd\vtest\bin\mt r:\regtest\template.mst /T "Hep hep, "  /C Hurray!
+
+sub sleep_then_focus(t as integer)
+  sleep t$
+  'wFlags = FW_ALL or FW_PART or FW_HIDDENOK or FW_FOCUS
+  'WHILE NOT (WFndWnd("REO Network : Broker & Vendor Search",wFlags) > 0)
+    'sleep 1
+  'WEND
+end sub 
+
+sleep 2
+wFlags = FW_ALL or FW_PART or FW_HIDDENOK or FW_FOCUS
+WFndWnd("REO Network : Broker & Vendor Search",wFlags)
+WHILE NOT (WFndWnd("REO Network : Broker & Vendor Search",wFlags) > 0)
+  sleep 1
+WEND
+
+'-------------------------------------------
+' run birch.exe
+'x% = RUN("c:\program files\google\chrome\application\chrome.exe www.reonetwork.com")
+'-------------------------------------------
+
+filenum& = FREEFILE
+OPEN "c:\my\projects\reoagentsconnect\data-mine\mst.log" FOR APPEND AS # filenum
+PRINT # filenum, "begin " + testmode$
+
+sleep_then_focus 2
+for i = 1 to 9
+  'sleep_then_focus 1
+  PLAY "{tab}"
+next i
+PRINT # filenum, "enter zip " + testmode$
+sleep_then_focus 1
+play TESTMODE$
+sleep_then_focus 1
+play "{enter}"
+PRINT # filenum, "save " + testmode$
+sleep_then_focus 7
+play "%f"
+sleep 1
+play "a"
+sleep_then_focus 1
+'play "%t"
+'sleep 1
+'play "{down}"
+'sleep 1
+'play "{up}"
+'sleep 1
+'play "{enter}"
+'sleep 1
+play "%n"
+sleep 1
+play "c:\my\projects\reoagentsconnect\data-mine\out\zip-htm\" + testmode$ + ".htm"
+sleep 1
+play "%s"
+sleep_then_focus 7
+play "%{f4}"
+PRINT # filenum, "close chrome " + testmode$
+
+CLOSE filenum
+
+filenum& = FREEFILE
+OPEN "c:\my\projects\reoagentsconnect\data-mine\mst.done" FOR APPEND AS # filenum
+PRINT # filenum, "this is just a test"
+CLOSE filenum
+
+
+''-------------------------------------------
+'' open chiptrip project
+'WMenuSelect("&File\Open Project...")
+'WHILE NOT (WFndWnd("Open Project",wFlags) > 0)
+'  sleep 1
+'WEND
+'PLAY "d:\birch\bin\chiptrip\chiptrip.birchdb"
+'' for information on non character keys, search for "Keyboard Simulation
+''      Using Play" in Visual Test help.  Example Alt -> "%"
+'WButtonClick("&Open")
+'' WButtonClick is a Button "Control Procedure". For more information on other
+''      controls and their procedures, search for "Control Procedures" in
+''      Visual Test help.
+''-------------------------------------------
+'
+'
+''-------------------------------------------
+'' create and write to a file named test.tmp 
+'filenum& = FREEFILE
+'OPEN "d:\birch\bin\chiptrip\test.tmp" FOR APPEND AS # filenum
+'PRINT # filenum, "this is just a test"
+'CLOSE filenum
+''-------------------------------------------
+'
+'
+''-------------------------------------------
+''Displays a message box. TESTMODE$ and COMMAND$ are strings supplied in the
+''     command line with argument flags /T and /C respectively
+'MsgBox "Chiptrip has just been opened.  " + TESTMODE$ + COMMAND$
+''-------------------------------------------

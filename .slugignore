@@ -1,0 +1,4 @@
+public/images/*.jpg
+db/migrate/dev_data/*
+script/data-mine/*
+script/create-ymls/*
