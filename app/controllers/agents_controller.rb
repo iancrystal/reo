@@ -7,16 +7,31 @@ class AgentsController < ApplicationController
   def show
 =begin
     aws_s3_connect
-    if AWS::S3::S3Object.exists? "photo15564", 'reoagentphoto'
-      puts "photo15564 exists"
+    if AWS::S3::S3Object.exists? "photo15580", 'reoagentphoto'
+      puts "photo15580 exists"
     else
-      puts "photo15564 does not exist"
+      puts "photo15580 does not exist"
     end
 =end
     
     @agent = Agent.find(params[:id])
     @service_areas = @agent.service_areas
-	@photo_url = @agent.photo_url
+    
+    aws_s3_connect
+    
+    @resume_url = @agent.resume_url
+    if ! @resume_url.blank?
+        if ! AWS::S3::S3Object.exists? @agent.resume_filename, 'reoagentresume'
+          @resume_url = ""
+        end
+    end
+    
+    @photo_url = @agent.photo_url
+    if ! @photo_url.blank?
+        if ! AWS::S3::S3Object.exists? "photo" + @agent.id.to_s, 'reoagentphoto'
+          @photo_url = ""
+        end
+    end
 
     respond_to do |format|
       format.html # show.html.erb
@@ -53,10 +68,18 @@ class AgentsController < ApplicationController
         if ! @agent.photo_data.blank?
           # now that we have the id, save the photo_url
           @agent.photo_url = "/images/photo" + @agent.id.to_s
-          @agent.save
           # save the photo to amazon s3 reoagentphoto bucket
           aws_s3_connect
           save_photo_to_aws_s3
+        end
+        if ! @agent.resume_data.blank?
+          @agent.resume_filename = "resume" + @agent.id.to_s + "." + @agent.resume_ext
+          # save the photo to amazon s3 reoagentphoto bucket
+          aws_s3_connect
+          save_resume_to_aws_s3
+        end
+        if ! @agent.photo_data.blank? || ! @agent.resume_data.blank?
+          @agent.save
         end
         session[:agent_id] = @agent.id
         flash[:notice] = "User #{@agent.first_name} #{@agent.last_name} was successfully created."
@@ -76,19 +99,28 @@ class AgentsController < ApplicationController
         
     if authorize(@agent.id, "/agents/edit/" + @agent.id.to_s)
         respond_to do |format|
-          if ! @agent.photo_data.blank?
-            params[:agent][:photo_url] = "/images/photo" + @agent.id.to_s
-          end
+
           if @agent.update_attributes(params[:agent])
           
             # this magically updates the zipcodes and habtm agents_zipcodes tables
             @agent.service_areas = params[:agent][:zip_codes]
             
-            if ! @agent.photo_data.blank?
-              # save the photo to amazon s3 reoagentphoto bucket
+            if ! @agent.photo_data.blank? || ! @agent.resume_data.blank?
               aws_s3_connect
+            end
+            if ! @agent.photo_data.blank?
+              @agent.photo_url = "/images/photo" + @agent.id.to_s              
               save_photo_to_aws_s3
             end
+
+            if ! @agent.resume_data.blank?
+              @agent.resume_filename = "resume" + @agent.id.to_s + "." + @agent.resume_ext
+              save_resume_to_aws_s3
+            end
+            if ! @agent.photo_data.blank? || ! @agent.resume_data.blank?
+              @agent.save
+            end
+
             flash[:notice] = "User #{@agent.first_name} #{@agent.last_name} was successfully updated"
             format.html { redirect_to(:action=>'show', :id => @agent.id ) }
             format.xml  { head :ok }
@@ -111,6 +143,10 @@ class AgentsController < ApplicationController
         if ! @agent.photo_url.blank?
           aws_s3_connect
           delete_aws_s3_photo
+        end
+        if ! @agent.resume_filename.blank?
+          aws_s3_connect
+          delete_aws_s3_resume
         end
         
         @agent.destroy
@@ -146,8 +182,14 @@ class AgentsController < ApplicationController
     ) 
   end
   
+  # these should be refactored as more file types are added
+  
   def save_photo_to_aws_s3
     AWS::S3::S3Object.store("photo" + @agent.id.to_s, @agent.photo_data, 'reoagentphoto', :access => :public_read)
+  end
+  
+  def save_resume_to_aws_s3
+    AWS::S3::S3Object.store(@agent.resume_filename, @agent.resume_data, 'reoagentresume', :access => :public_read)
   end
   
   def delete_aws_s3_photo
@@ -156,6 +198,14 @@ class AgentsController < ApplicationController
       logger.info "deleting photo" + @agent.id.to_s
     else
       logger.info "photo" + @agent.id.to_s + " does not exist"
+    end
+  end
+  def delete_aws_s3_resume
+    if AWS::S3::S3Object.exists? @agent.resume_filename, 'reoagentresume'
+      AWS::S3::S3Object.delete @agent.resume_filename, 'reoagentresume'
+      logger.info "deleting #{@agent.resume_filename}"
+    else
+      logger.info "#{@agent.resume_filename} does not exist"
     end
   end
   

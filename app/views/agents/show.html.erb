@@ -1,5 +1,12 @@
 <h2><%=h@agent.first_name%> <%=h@agent.middle_name%> <%=h@agent.last_name%> <%=h@agent.suffix%></h2>
-<%= image_tag @photo_url %>
+<% if ! @photo_url.blank? %>
+  <%= image_tag @photo_url %>
+  <br /><br />
+<% end %>
+<% if ! @resume_url.blank? %>
+  <%= link_to "Resume", @resume_url %>
+  <br />
+<% end %>
 <ul>
 <li>Company: <%=h@agent.company%></li>
 <li>Phone 1: <%=h@agent.phone1%></li>

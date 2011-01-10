@@ -20,6 +20,9 @@ class Agent < ActiveRecord::Base
   attr_accessor :password_confirmation
   attr_accessor :photo_type
   attr_accessor :photo_data
+  attr_accessor :resume_type
+  attr_accessor :resume_data
+  attr_accessor :resume_ext
   attr_accessor :zip_codes
 
   def service_areas
@@ -90,6 +93,15 @@ class Agent < ActiveRecord::Base
     end
   end
   
+  def resume_url
+    name = read_attribute("resume_filename")
+    if ! name.blank?
+      "http://s3.amazonaws.com/reoagentresume/#{name}"
+    else
+      ""
+    end
+  end
+
   def self.authenticate(email1, password)
     agent = self.find_by_email1(email1)
     if agent
@@ -121,6 +133,12 @@ class Agent < ActiveRecord::Base
     self.photo_type = picture_field.content_type.chomp
     self.photo_data = picture_field.read
   end
+  
+  def uploaded_resume=(resume_field)
+    self.resume_ext = ext_part_of(resume_field.original_filename)
+    self.resume_type = resume_field.content_type.chomp
+    self.resume_data = resume_field.read
+  end
       
   private
   
@@ -137,8 +155,8 @@ class Agent < ActiveRecord::Base
     self.salt = self.object_id.to_s + rand.to_s
   end
   
-  def base_part_of(file_name)
-    File.basename(file_name).gsub(/[^\w._-]/, '' )
+  def ext_part_of(file_name)
+    File.basename(file_name).gsub(/.*\./, '' )
   end
 
 end
