@@ -28,7 +28,7 @@ class AgentsController < ApplicationController
     
     @photo_url = @agent.photo_url
     if ! @photo_url.blank?
-        if ! AWS::S3::S3Object.exists? "photo" + @agent.id.to_s, 'reoagentphoto'
+        if ! AWS::S3::S3Object.exists? @agent.photo_filename, 'reoagentphoto'
           @photo_url = ""
         end
     end

@@ -93,6 +93,16 @@ class Agent < ActiveRecord::Base
     end
   end
   
+  def photo_filename
+    # facade to access filename of photo
+    url = read_attribute("photo_url")
+	if ! url.blank?
+      url.gsub(/\/images\//,"")
+    else
+      ""
+    end
+  end
+  
   def resume_url
     name = read_attribute("resume_filename")
     if ! name.blank?
