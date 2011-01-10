@@ -93,9 +93,14 @@ class Agent < ActiveRecord::Base
   def self.authenticate(email1, password)
     agent = self.find_by_email1(email1)
     if agent
-      expected_password = encrypted_password(password, agent.salt)
-      if agent.hashed_password != expected_password
+      # the salt and hashed_password is blank if the account exist but not yet verified
+      if agent.salt.blank? || agent.hashed_password.blank?
         agent = nil
+      else
+        expected_password = encrypted_password(password, agent.salt)
+        if agent.hashed_password != expected_password
+          agent = nil
+        end
       end
     end
     agent
