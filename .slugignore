@@ -1,4 +1,3 @@
 public/images/*.jpg
-db/*
 script/data-mine/*
 script/create-ymls/*
