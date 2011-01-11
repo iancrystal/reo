@@ -38,6 +38,7 @@ class AssetCompaniesController < ApplicationController
     @asset_company = AssetCompany.new(params[:asset_company])
     respond_to do |format|
       if @asset_company.save
+        session[:asset_company_id] = @asset_company.id
         flash[:notice] = "Account for #{@asset_company.company_name} was successfully created."
         format.html { redirect_to(:action=>'show', :id => @asset_company.id) }
         format.xml  { render :xml => @asset_company, :status => :created, :location => @asset_company }

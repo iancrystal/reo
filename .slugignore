@@ -3,4 +3,4 @@ script/data-mine/*
 script/create-ymls/*
 db/development.sqlite3
 db/schema.rb
-db/mirate/dev_data/*
+db/migrate/dev_data/*
