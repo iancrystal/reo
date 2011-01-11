@@ -121,12 +121,12 @@ font-size: 12px;
 list-style: square;
 }
 
-#area_agents {
+#found_agents {
 overflow:auto;width:145px;height:350px;border:2px solid black;padding-left:5px
 }
-#area_agents h3 {
+#found_agents h3 {
 text-decoration:underline;background:#bfb;width:7em
 }
-#area_agents a:visited 
+#found_agents a:visited 
 { color: #666; 
 }

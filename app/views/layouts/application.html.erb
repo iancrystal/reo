@@ -38,10 +38,10 @@
                 <%= link_to "Asset Co. Sign-up", new_asset_company_url %><br />
             <% end %>
             <br /><br />
-            <% if @area_agents -%>
-                <div id="area_agents">
+            <% if @found_agents -%>
+                <div id="found_agents">
                 <h3>REO Agents</h3>
-                    <% for agent in @area_agents %>
+                    <% @found_agents.each do |agent| %>
                          <%= link_to agent.first_name + " " + agent.last_name, agent_url(:id => agent.id) %><br />
                     <% end %>
                 </div>

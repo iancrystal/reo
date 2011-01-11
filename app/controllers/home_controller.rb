@@ -30,16 +30,16 @@ class HomeController < ApplicationController
       coord = [a.lat, a.lng]
       @map.center_zoom_init(coord,9)
 
-      @area_agents = [];
+      @found_agents = [];
       # get the zipcodes within the 50 mile radius
       zips = Zipcode.find(:all, :origin => coord, :within=>50)
       zips.each do |zip|
         agents = zip.agents
         # get the agents of each zipcode
         agents.each do |agent|
-          found = @area_agents.detect {|a| a.id == agent.id}
+          found = @found_agents.detect {|a| a.id == agent.id}
           if found.blank?
-            @area_agents << agent;
+            @found_agents << agent
             # create the marker for each agent
             coord = [zip.lat, zip.lng]
             @map.overlay_init(GMarker.new(coord, :title => "#{agent.first_name} #{agent.last_name}", :info_window => "<b>#{agent.first_name} #{agent.last_name}</b><br> #{agent.phone1}<br>#{agent.email1}<br><a href=\"/agents/show/#{agent.id}\">profile</a>"))
@@ -74,6 +74,60 @@ class HomeController < ApplicationController
   end
   
   def advanced_search
+    if request.post?
+      sql = ""
+      sql_params = []
+      if ! params[:name].blank?
+        sql += "(first_name like ? or middle_name like ? or last_name like ?) and "
+        sql_params << "%"+params[:name]+"%" << "%"+params[:name]+"%" << "%"+params[:name]+"%"
+      end
+      if ! params[:company].blank?
+        sql += "(company like ?) and "
+        sql_params << "%"+params[:company]+"%"
+      end
+      if ! params[:street].blank?
+        sql += "(physical_address1 like ? or physical_address2 like ? or mailing_address1 like ? or mailing_address2 like ?) and "
+        sql_params << "%"+params[:street]+"%" << "%"+params[:street]+"%" << "%"+params[:street]+"%" << "%"+params[:street]+"%"
+      end
+      if ! params[:city].blank?
+        sql += "(physical_address_city like ? or mailing_address_city like ?) and "
+        sql_params << "%"+params[:city]+"%" << "%"+params[:city]+"%"
+      end
+      if ! params[:state].blank?
+        sql += "(physical_address_state like ? or mailing_address_state like ?) and "
+        sql_params << "%"+params[:state]+"%" << "%"+params[:state]+"%"
+      end
+      if ! params[:zip].blank?
+        sql += "(physical_address_zip like ? or mailing_address_zip like ?) and "
+        sql_params << "%"+params[:zip]+"%" << "%"+params[:zip]+"%"
+      end
+      if ! params[:email].blank?
+        sql += "(email1 like ? or email2 like ?) and "
+        sql_params << "%"+params[:email]+"%" << "%"+params[:email]+"%"
+      end
+      if ! params[:phone].blank?
+        sql += "(phone1 like ? or phone2 like ?) and "
+        sql_params << "%"+params[:email]+"%" << "%"+params[:email]+"%"
+      end
+      if ! params[:fax].blank?
+        sql += "(fax like ?) and "
+        sql_params << "%"+params[:fax]+"%"
+      end
+      if ! params[:bio_cred].blank?
+        sql += "(bio_cred like ?)"
+        sql_params << "%"+params[:bio_cred]+"%"
+      end
+
+      agents = Agent.find(:all, :conditions => [sql.gsub!(/ and $/, '')] + sql_params) # prepend sql command
+      
+      @found_agents = []
+      agents.each do |agent|
+        found = @found_agents.detect {|a| a.id == agent.id}
+        if found.blank?
+          @found_agents << agent        
+        end
+      end
+    end
   end
   
   def support_contact
