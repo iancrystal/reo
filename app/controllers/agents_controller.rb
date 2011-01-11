@@ -5,15 +5,6 @@ class AgentsController < ApplicationController
   # GET /agents/1
   # GET /agents/1.xml
   def show
-=begin
-    aws_s3_connect
-    if AWS::S3::S3Object.exists? "photo15580", 'reoagentphoto'
-      puts "photo15580 exists"
-    else
-      puts "photo15580 does not exist"
-    end
-=end
-    
     @agent = Agent.find(params[:id])
     @service_areas = @agent.service_areas
     

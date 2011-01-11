@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110110031025) do
+ActiveRecord::Schema.define(:version => 20110111031648) do
 
   create_table "agents", :force => true do |t|
     t.string   "company"
@@ -51,6 +51,31 @@ ActiveRecord::Schema.define(:version => 20110110031025) do
 
   add_index "agents_zipcodes", ["agent_id", "zipcode_id"], :name => "index_agents_zipcodes_on_agent_id_and_zipcode_id", :unique => true
   add_index "agents_zipcodes", ["zipcode_id"], :name => "index_agents_zipcodes_on_zipcode_id"
+
+  create_table "asset_companies", :force => true do |t|
+    t.string   "company_name"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "contact_name"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "address_city"
+    t.string   "address_state"
+    t.string   "address_zip"
+    t.string   "hash_password"
+    t.string   "salt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "asset_company_notes", :force => true do |t|
+    t.integer  "agent_id"
+    t.integer  "asset_company_id"
+    t.text     "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "zipcodes", :force => true do |t|
     t.integer  "zipcode"

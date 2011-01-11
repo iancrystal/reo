@@ -3,6 +3,7 @@ require 'geokit'
 
 class Agent < ActiveRecord::Base
   has_and_belongs_to_many :zipcodes
+  has_many :asset_company_notes
   
   validates_presence_of :email1
   validates_uniqueness_of :email1

@@ -20,13 +20,22 @@
             <%= link_to "Support/Contact", :controller => "home", :action => "support_contact"%><br />
             <br />
             <% if session[:agent_id] %>
+                <h3 style="color: #bfb ;">REO Agent:</h3>
                 <%= link_to 'Update Profile', edit_agent_url(:id => session[:agent_id]) %><br />
                 <%= link_to 'Show Profile', agent_url (:id => session[:agent_id])%><br />
                 <%= link_to 'Delete Profile', {:controller => 'agents', :action => 'destroy', :id => session[:agent_id]}, {:confirm => "Are you sure?", :method => :delete} %><br />
                 <%= link_to 'Logout', :controller => 'admin', :action => 'logout' %>
+            <% elsif session[:asset_company_id] %>
+                <h3 style="color: #bfb ;">Asset Company:</h3>
+                <%= link_to 'Agent notes', :controller => "home", :action => "advanced_search", :id => 0%><br />
+                <%= link_to 'Update Account', edit_asset_company_url(:id => session[:asset_company_id]) %><br />
+                <%= link_to 'Show Account', asset_company_url (:id => session[:asset_company_id])%><br />
+                <%= link_to 'Delete Account', {:controller => 'asset_companies', :action => 'destroy', :id => session[:asset_company_id]}, {:confirm => "Are you sure?", :method => :delete} %><br />
+                <%= link_to 'Logout', :controller => 'admin', :action => 'logout' %>
             <% else %>
                 <%= link_to "Login", :controller => "admin", :action => "login"%><br />
-                <%= link_to "Sign-up", :controller => "home", :action => "sign_up" %><br />
+                <%= link_to "REO Agent Sign-up", :controller => "home", :action => "sign_up" %><br />
+                <%= link_to "Asset Co. Sign-up", new_asset_company_url %><br />
             <% end %>
             <br /><br />
             <% if @area_agents -%>

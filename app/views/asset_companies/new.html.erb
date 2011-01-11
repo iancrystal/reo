@@ -1,0 +1,50 @@
+<div class="reo-form">
+
+<% form_for(@asset_company) do |f| %>
+  <%= f.error_messages %>
+<fieldset>
+  <legend>Enter Company Details</legend>
+  <div>
+    <%= f.label :company_name %>
+    <%= f.text_field :company_name, :size => 15 %>
+    <%= f.label :contact_name %>
+    <%= f.text_field :contact_name, :size => 15 %>
+  </div>
+  <div>
+    <%= f.label :user_password, 'Password' %> 
+    <%= f.password_field :password, :size => 15 %>
+    <%= f.label :user_password_confirmation, 'Confirm password' %>
+    <%= f.password_field :password_confirmation, :size => 15 %>
+  </div>
+  <div>
+    <%= f.label :address1, 'Street 1' %>
+    <%= f.text_field :address1 %>
+    <%= f.label :address2, 'Street 2' %>
+    <%= f.text_field :address2 %>
+  </div>
+  <div>
+    <%= f.label :address_city, 'City' %>
+    <%= f.text_field :address_city, :size => 15 %>
+    <%= f.label :address_state, 'State' %>
+    <%= f.text_field :address_state, :size => 2 %>
+    <%= f.label :address_zip, 'Zip code'%>
+    <%= f.text_field :address_zip, :size => 9  %>
+  </div>
+  <div>
+    <%= f.label :email, 'Email' %>
+    <%= f.text_field :email %>
+  </div>
+  <div>
+    <%= f.label :phone, 'Phone'%>
+    <%= f.text_field :phone, :size => 15  %>
+    <%= f.label :fax, 'Fax'%>
+    <%= f.text_field :fax, :size => 15  %>
+  </div>
+  <br />
+  <div>
+    <%= f.submit 'Create' %>
+  </div>
+</fieldset>
+<% end %>
+
+</div>
