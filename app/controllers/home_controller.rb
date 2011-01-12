@@ -77,44 +77,49 @@ class HomeController < ApplicationController
     if request.post?
       sql = ""
       sql_params = []
+      
+      # mysql (development) like is case insensitive, postgresql (production/heroku) uses ilike which is not supported 
+      # in mysql. this ENV['LIKE'] is set in config/environments/development.rb and production.rb
+      like = ENV['LIKE']
+      
       if ! params[:name].blank?
-        sql += "(first_name like ? or middle_name like ? or last_name like ?) and "
+        sql += "(first_name #{like} ? or middle_name #{like} ? or last_name #{like} ?) and "
         sql_params << "%"+params[:name]+"%" << "%"+params[:name]+"%" << "%"+params[:name]+"%"
       end
       if ! params[:company].blank?
-        sql += "(company like ?) and "
+        sql += "(company #{like} ?) and "
         sql_params << "%"+params[:company]+"%"
       end
       if ! params[:street].blank?
-        sql += "(physical_address1 like ? or physical_address2 like ? or mailing_address1 like ? or mailing_address2 like ?) and "
+        sql += "(physical_address1 #{like} ? or physical_address2 #{like} ? or mailing_address1 #{like} ? or mailing_address2 #{like} ?) and "
         sql_params << "%"+params[:street]+"%" << "%"+params[:street]+"%" << "%"+params[:street]+"%" << "%"+params[:street]+"%"
       end
       if ! params[:city].blank?
-        sql += "(physical_address_city like ? or mailing_address_city like ?) and "
+        sql += "(physical_address_city #{like} ? or mailing_address_city #{like} ?) and "
         sql_params << "%"+params[:city]+"%" << "%"+params[:city]+"%"
       end
       if ! params[:state].blank?
-        sql += "(physical_address_state like ? or mailing_address_state like ?) and "
+        sql += "(physical_address_state #{like} ? or mailing_address_state #{like} ?) and "
         sql_params << "%"+params[:state]+"%" << "%"+params[:state]+"%"
       end
       if ! params[:zip].blank?
-        sql += "(physical_address_zip like ? or mailing_address_zip like ?) and "
+        sql += "(physical_address_zip #{like} ? or mailing_address_zip #{like} ?) and "
         sql_params << "%"+params[:zip]+"%" << "%"+params[:zip]+"%"
       end
       if ! params[:email].blank?
-        sql += "(email1 like ? or email2 like ?) and "
+        sql += "(email1 #{like} ? or email2 #{like} ?) and "
         sql_params << "%"+params[:email]+"%" << "%"+params[:email]+"%"
       end
       if ! params[:phone].blank?
-        sql += "(phone1 like ? or phone2 like ?) and "
+        sql += "(phone1 #{like} ? or phone2 #{like} ?) and "
         sql_params << "%"+params[:email]+"%" << "%"+params[:email]+"%"
       end
       if ! params[:fax].blank?
-        sql += "(fax like ?) and "
+        sql += "(fax #{like} ?) and "
         sql_params << "%"+params[:fax]+"%"
       end
       if ! params[:bio_cred].blank?
-        sql += "(bio_cred like ?)"
+        sql += "(bio_cred #{like} ?)"
         sql_params << "%"+params[:bio_cred]+"%"
       end
 
