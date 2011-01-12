@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :agents
   map.resources :asset_companies
+  map.resources :asset_company_notes
 
   # The priority is based upon order of creation: first created -> highest priority.
 

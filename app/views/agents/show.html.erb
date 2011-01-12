@@ -25,3 +25,33 @@
 <li>Service areas:</li>
 <%=h@service_areas%>
 </ul>
+<% if session[:asset_company_id] %>
+    <br />
+<div class="reo-form">
+
+<% form_for(@asset_company_note) do |f| %>
+  <%= f.error_messages %>
+<fieldset>
+  <legend>Note from <%= @asset_company_note.asset_company.company_name %> asset company</legend>
+  <div>
+    <%= f.text_area :note, :rows => 5, :cols => 80 %>
+  </div>
+  <br />
+  <div>
+    <%= f.submit 'Update' %>
+  </div>
+</fieldset>
+<% end %>
+
+</div>
+<% end %>
+
+<% if @all_notes %>
+<% @all_notes.each do |n| %>
+<% if (! session[:asset_company_id] ) || (session[:asset_company_id] != n.asset_company_id) %>
+<br />
+<h3>Note from <%=n.asset_company.company_name%> asset company</h3>
+<%=h n.note %>
+<% end %>
+<% end %>
+<% end %>

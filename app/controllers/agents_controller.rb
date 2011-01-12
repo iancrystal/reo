@@ -23,6 +23,13 @@ class AgentsController < ApplicationController
           @photo_url = ""
         end
     end
+    
+    if session[:asset_company_id]
+      @asset_company_note = AssetCompanyNote.find_or_initialize_by_agent_id_and_asset_company_id(@agent.id, session[:asset_company_id])
+      flash[:agent_id] = @agent.id
+    end
+    
+    @all_notes = AssetCompanyNote.find_all_by_agent_id(@agent.id)
 
     respond_to do |format|
       format.html # show.html.erb
