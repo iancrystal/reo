@@ -9,7 +9,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110111031648) do
+ActiveRecord::Schema.define(:version => 20110113095057) do
+
+  create_table "addr_latlng", :force => true do |t|
+    t.integer "agent_id"
+    t.decimal "lat",      :precision => 7, :scale => 5
+    t.decimal "lng",      :precision => 8, :scale => 5
+  end
+
+  create_table "addr_latlngs", :force => true do |t|
+    t.integer "agent_id"
+    t.decimal "lat",      :precision => 7, :scale => 5
+    t.decimal "lng",      :precision => 8, :scale => 5
+  end
 
   create_table "agents", :force => true do |t|
     t.string   "company"
@@ -63,7 +75,7 @@ ActiveRecord::Schema.define(:version => 20110111031648) do
     t.string   "address_city"
     t.string   "address_state"
     t.string   "address_zip"
-    t.string   "hash_password"
+    t.string   "hashed_password"
     t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
