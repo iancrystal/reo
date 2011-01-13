@@ -1,4 +1,14 @@
 class AssetCompaniesController < ApplicationController
+  
+  # GET /asset_companies
+  # GET /asset_companies.xml
+  def index
+    @asset_companies = AssetCompany.find(:all)
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml { render :xml => @asset_companies }
+    end
+  end
 
   # GET /asset_companies/1
   # GET /asset_companies/1.xml
@@ -26,9 +36,6 @@ class AssetCompaniesController < ApplicationController
   # GET /asset_companies/1/edit
   def edit
     @asset_company = AssetCompany.find(params[:id])
-    if ! authorize(@asset_company.id, "/asset_companies/edit/" + @asset_company.id.to_s)
-      redirect_to :controller => 'admin' , :action => 'login'
-    end
   end
 
   # POST /asset_companies
@@ -38,7 +45,7 @@ class AssetCompaniesController < ApplicationController
     @asset_company = AssetCompany.new(params[:asset_company])
     respond_to do |format|
       if @asset_company.save
-        session[:asset_company_id] = @asset_company.id
+        #session[:asset_company_id] = @asset_company.id
         flash[:notice] = "Account for #{@asset_company.company_name} was successfully created."
         format.html { redirect_to(:action=>'show', :id => @asset_company.id) }
         format.xml  { render :xml => @asset_company, :status => :created, :location => @asset_company }
@@ -52,22 +59,16 @@ class AssetCompaniesController < ApplicationController
   # PUT /asset_companies/1
   # PUT /asset_companies/1.xml
   def update
-    @asset_company = AssetCompany.find(params[:id])
-        
-    if authorize(@asset_company.id, "/asset_companies/edit/" + @asset_company.id.to_s)
-        respond_to do |format|
-
-          if @asset_company.update_attributes(params[:asset_company])
-            flash[:notice] = "#{@asset_company.company_name} was successfully updated"
-            format.html { redirect_to(:action=>'show', :id => @asset_company.id ) }
-            format.xml  { head :ok }
-          else
-            format.html { render :action => "edit" }
-            format.xml  { render :xml => @asset_company.errors, :status => :unprocessable_entity }
-          end
-        end
-    else
-        redirect_to :controller => 'admin' , :action => 'login'
+    @asset_company = AssetCompany.find(params[:id])        
+    respond_to do |format|
+      if @asset_company.update_attributes(params[:asset_company])
+        flash[:notice] = "#{@asset_company.company_name} was successfully updated"
+        format.html { redirect_to(:action=>'show', :id => @asset_company.id ) }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @asset_company.errors, :status => :unprocessable_entity }
+      end
     end
   end
 
@@ -76,30 +77,14 @@ class AssetCompaniesController < ApplicationController
   def destroy
     # this automatically removes the entries in the asset_company_notes table of the asset_company being destroyed
     @asset_company = AssetCompany.find(params[:id])
-    if authorize(@asset_company.id, "/asset_companies/destroy/" + @asset_company.id.to_s)
-        @asset_company.destroy
-        
-        flash[:notice] = "#{@asset_company.company_name} was successfully deleted"
-        respond_to do |format|
-          session[:after_destroy_asset_company] = "yes"
-          format.html { redirect_to(:controller => 'admin', :action => 'logout') }
-          format.xml  { head :ok }
-        end
-    else
-        redirect_to :controller => 'admin' , :action => 'login'
+    @asset_company.destroy
+    
+    flash[:notice] = "#{@asset_company.company_name} was successfully deleted"
+    respond_to do |format|
+      session[:after_destroy_asset_company] = "yes"
+      format.html { redirect_to(:controller => 'admin', :action => 'logout') }
+      format.xml  { head :ok }
     end
   end
-
-  protected
-  
-  def authorize(id,original_uri)
-    if (session[:asset_company_id] != id)
-        session[:original_uri] = original_uri
-        flash[:notice] = "Please log in"
-        false
-    else
-        true
-    end
-  end
-  
+ 
 end

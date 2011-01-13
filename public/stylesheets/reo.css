@@ -130,3 +130,23 @@ text-decoration:underline;background:#bfb;width:7em
 #found_agents a:visited 
 { color: #666; 
 }
+
+/* Styles for products/index */
+#asset-company-list table {
+border-collapse: collapse;
+}
+#asset-company-list table tr td {
+padding: 5px;
+vertical-align: top;
+}
+#asset-company-list .list-actions {
+font-size: x-small;
+text-align: right;
+padding-left: 1em;
+}
+#asset-company-list .list-line-even {
+background: #e0f8f8 ;
+}
+#asset-company-list .list-line-odd {
+background: #f8b0f8 ;
+}

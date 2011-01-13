@@ -26,7 +26,9 @@ class AgentsController < ApplicationController
     
     if session[:asset_company_id]
       @asset_company_note = AssetCompanyNote.find_or_initialize_by_agent_id_and_asset_company_id(@agent.id, session[:asset_company_id])
-      flash[:agent_id] = @agent.id
+      session[:last_agent_shown] = @agent.id
+      # so that authorize_filter can make sure updating can only come from this action
+      session[:asset_company_id_of_note] = session[:asset_company_id]
     end
     
     @all_notes = AssetCompanyNote.find_all_by_agent_id(@agent.id)
@@ -94,41 +96,37 @@ class AgentsController < ApplicationController
   # PUT /agents/1.xml
   def update
     @agent = Agent.find(params[:id])
+    
+    respond_to do |format|
+
+      if @agent.update_attributes(params[:agent])
+      
+        # this magically updates the zipcodes and habtm agents_zipcodes tables
+        @agent.service_areas = params[:agent][:zip_codes]
         
-    if authorize(@agent.id, "/agents/edit/" + @agent.id.to_s)
-        respond_to do |format|
-
-          if @agent.update_attributes(params[:agent])
-          
-            # this magically updates the zipcodes and habtm agents_zipcodes tables
-            @agent.service_areas = params[:agent][:zip_codes]
-            
-            if ! @agent.photo_data.blank? || ! @agent.resume_data.blank?
-              aws_s3_connect
-            end
-            if ! @agent.photo_data.blank?
-              @agent.photo_url = "/images/photo" + @agent.id.to_s              
-              save_photo_to_aws_s3
-            end
-
-            if ! @agent.resume_data.blank?
-              @agent.resume_filename = "resume" + @agent.id.to_s + "." + @agent.resume_ext
-              save_resume_to_aws_s3
-            end
-            if ! @agent.photo_data.blank? || ! @agent.resume_data.blank?
-              @agent.save
-            end
-
-            flash[:notice] = "User #{@agent.first_name} #{@agent.last_name} was successfully updated"
-            format.html { redirect_to(:action=>'show', :id => @agent.id ) }
-            format.xml  { head :ok }
-          else
-            format.html { render :action => "edit" }
-            format.xml  { render :xml => @agent.errors, :status => :unprocessable_entity }
-          end
+        if ! @agent.photo_data.blank? || ! @agent.resume_data.blank?
+          aws_s3_connect
         end
-    else
-        redirect_to :controller => 'admin' , :action => 'login'
+        if ! @agent.photo_data.blank?
+          @agent.photo_url = "/images/photo" + @agent.id.to_s              
+          save_photo_to_aws_s3
+        end
+
+        if ! @agent.resume_data.blank?
+          @agent.resume_filename = "resume" + @agent.id.to_s + "." + @agent.resume_ext
+          save_resume_to_aws_s3
+        end
+        if ! @agent.photo_data.blank? || ! @agent.resume_data.blank?
+          @agent.save
+        end
+
+        flash[:notice] = "User #{@agent.first_name} #{@agent.last_name} was successfully updated"
+        format.html { redirect_to(:action=>'show', :id => @agent.id ) }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @agent.errors, :status => :unprocessable_entity }
+      end
     end
   end
 
@@ -137,41 +135,27 @@ class AgentsController < ApplicationController
   def destroy
     # this automatically removes the entries in the agents_zipcodes table of the agent being destroyed
     @agent = Agent.find(params[:id])
-    if authorize(@agent.id, "/agents/destroy/" + @agent.id.to_s)
-        if ! @agent.photo_url.blank?
-          aws_s3_connect
-          delete_aws_s3_photo
-        end
-        if ! @agent.resume_filename.blank?
-          aws_s3_connect
-          delete_aws_s3_resume
-        end
-        
-        @agent.destroy
-        
-        flash[:notice] = "User #{@agent.first_name} #{@agent.last_name} was successfully deleted"
+    if ! @agent.photo_url.blank?
+      aws_s3_connect
+      delete_aws_s3_photo
+    end
+    if ! @agent.resume_filename.blank?
+      aws_s3_connect
+      delete_aws_s3_resume
+    end
+    
+    @agent.destroy
+    
+    flash[:notice] = "User #{@agent.first_name} #{@agent.last_name} was successfully deleted"
 
-        respond_to do |format|
-          session[:after_destroy_agent] = "yes"
-          format.html { redirect_to(:controller => 'admin', :action => 'logout') }
-          format.xml  { head :ok }
-        end
-    else
-        redirect_to :controller => 'admin' , :action => 'login'
+    respond_to do |format|
+      session[:after_destroy_agent] = "yes"
+      format.html { redirect_to(:controller => 'admin', :action => 'logout') }
+      format.xml  { head :ok }
     end
   end
 
   protected
-  
-  def authorize(id,original_uri)
-    if (session[:agent_id] != id)
-        session[:original_uri] = original_uri
-        flash[:notice] = "Please log in"
-        false
-    else
-        true
-    end
-  end
   
   def aws_s3_connect
     AWS::S3::Base.establish_connection!(

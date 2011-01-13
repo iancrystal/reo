@@ -62,6 +62,7 @@ class HomeController < ApplicationController
         else
           # account exists but no password yet
           flash[:notice] = "Account exists but no password has been set. You may edit the existing information"
+          session[:editing_nopassword_agent] = true
           redirect_to(edit_agent_url(:id => agent.id))
         end
       else
@@ -79,8 +80,8 @@ class HomeController < ApplicationController
       sql_params = []
       
       # mysql (development) like is case insensitive, postgresql (production/heroku) uses ilike which is not supported 
-      # in mysql. this ENV['LIKE'] is set in config/environments/development.rb and production.rb
-      like = ENV['LIKE']
+      # in mysql. this is set in config/environments/development.rb, production.rb and test.rb
+      like = LIKE
       
       if ! params[:name].blank?
         sql += "(first_name #{like} ? or middle_name #{like} ? or last_name #{like} ?) and "
@@ -136,12 +137,6 @@ class HomeController < ApplicationController
   end
   
   def support_contact
-  end
-
-  protected
-  
-  # overrides the authorize of admin class to do nothing since the operations here do not need authentication. (we are using the whitelist technique)
-  def authorize
   end
 
 end

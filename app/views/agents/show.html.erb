@@ -48,7 +48,7 @@
 
 <% if @all_notes %>
 <% @all_notes.each do |n| %>
-<% if (! session[:asset_company_id] ) || (session[:asset_company_id] != n.asset_company_id) %>
+<% if session[:asset_company_id] != n.asset_company_id %>
 <br />
 <h3>Note from <%=n.asset_company.company_name%> asset company</h3>
 <%=h n.note %>

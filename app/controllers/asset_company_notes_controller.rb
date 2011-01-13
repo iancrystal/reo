@@ -1,39 +1,11 @@
 class AssetCompanyNotesController < ApplicationController
 
-  # GET /asset_company_notes/1
-  # GET /asset_company_notes/1.xml
-  def show
-    @asset_company_note = AssetCompanyNote.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @asset_company_note }
-    end
-  end
-
-  # GET /asset_company_notes/new
-  # GET /asset_company_notes/new.xml
-  def new
-    @asset_company_note = AssetCompanyNote.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @asset_company_note }
-    end
-  end
-
-  # GET /asset_company_notes/1/edit
-  def edit
-    @asset_company_note = AssetCompanyNote.find(params[:id])
-
-  end
-
   # POST /asset_company_notes
   # POST /asset_company_notes.xml
   def create
     
     @asset_company_note = AssetCompanyNote.new(params[:asset_company_note])
-    @asset_company_note.agent_id = flash[:agent_id]
+    @asset_company_note.agent_id = session[:last_agent_shown]
     @asset_company_note.asset_company_id = session[:asset_company_id]
     respond_to do |format|
       if @asset_company_note.save
@@ -46,7 +18,7 @@ class AssetCompanyNotesController < ApplicationController
       end
     end
   end
-
+  
   # PUT /asset_company_notes/1
   # PUT /asset_company_notes/1.xml
   def update
@@ -63,20 +35,7 @@ class AssetCompanyNotesController < ApplicationController
     end
   end
 
-  # DELETE /asset_company_notes/1
-  # DELETE /asset_company_notes/1.xml
-  def destroy
-    # this automatically removes the entries in the asset_company_notes_zipcodes table of the asset_company_note being destroyed
-    @asset_company_note = AssetCompanyNote.find(params[:id])
-    
-    @asset_company_note.destroy
-    
-    flash[:notice] = "note was successfully deleted"
-
-    respond_to do |format|
-      format.html { redirect_to(:controller => 'agents', :action => 'show', :id => @asset_company_note.agent.id ) }
-      format.xml  { head :ok }
-    end
-  end
+  # for now just empty the notes instead of delete so no destroy action yet
   
 end
+
