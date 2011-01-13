@@ -4,6 +4,7 @@ require 'geokit'
 class Agent < ActiveRecord::Base
   has_and_belongs_to_many :zipcodes
   has_many :asset_company_notes
+  has_one :addr_latlng
   
   validates_presence_of :email1
   validates_uniqueness_of :email1
@@ -149,6 +150,22 @@ class Agent < ActiveRecord::Base
     self.resume_ext = ext_part_of(resume_field.original_filename)
     self.resume_type = resume_field.content_type.chomp
     self.resume_data = resume_field.read
+  end
+  
+  def set_latlng!
+    if ! self.physical_address1.blank? && ! self.physical_address_city.blank? && ! self.physical_address_state.blank? && ! self.physical_address_zip.blank? 
+      phys_addr = Geokit::Geocoders::YahooGeocoder.geocode self.physical_address1 + "," + 
+        self.physical_address_city + "," + self.physical_address_state + " " + self.physical_address_zip
+      if phys_addr && ! phys_addr.lat.blank? && ! phys_addr.lng.blank? 
+        latlng = AddrLatlng.new(:agent_id => self.id, :lat => phys_addr.lat, :lng => phys_addr.lng)
+        self.addr_latlng = latlng
+        self.save
+      end
+    end
+  end
+  
+  def latlng_good?
+    self.addr_latlng && self.addr_latlng.lat && self.addr_latlng.lng
   end
       
   private

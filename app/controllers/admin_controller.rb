@@ -55,4 +55,5 @@ class AdminController < ApplicationController
     flash[:notice] = "Unauthorized access. Please log in"
     redirect_to(:action => "login")
   end
+  
 end

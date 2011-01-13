@@ -81,6 +81,9 @@ class AgentsController < ApplicationController
         if ! @agent.photo_data.blank? || ! @agent.resume_data.blank?
           @agent.save
         end
+        #ok if this fails, it is retried the next time lat lng is needed for this agent location
+        @agent.set_latlng!
+        
         session[:agent_id] = @agent.id
         flash[:notice] = "User #{@agent.first_name} #{@agent.last_name} was successfully created."
         format.html { redirect_to(:action=>'show', :id => @agent.id) }

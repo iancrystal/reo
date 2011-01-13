@@ -21,18 +21,13 @@ class HomeController < ApplicationController
       end
       @address = session[:address]
 
-      #Geocoding api is flaky so use Geokit api
-      #results = Geocoding::get(@address)
-      #if results.status == Geocoding::GEO_SUCCESS
-      #coord = results[0].latlon
-
-      a=Geokit::Geocoders::GoogleGeocoder.geocode @address
+      a=Geokit::Geocoders::YahooGeocoder.geocode @address
       coord = [a.lat, a.lng]
-      @map.center_zoom_init(coord,9)
+      @map.center_zoom_init(coord,11)
 
       @found_agents = [];
       # get the zipcodes within the 50 mile radius
-      zips = Zipcode.find(:all, :origin => coord, :within=>50)
+      zips = Zipcode.find(:all, :origin => coord, :within=>5)
       zips.each do |zip|
         agents = zip.agents
         # get the agents of each zipcode
@@ -40,9 +35,21 @@ class HomeController < ApplicationController
           found = @found_agents.detect {|a| a.id == agent.id}
           if found.blank?
             @found_agents << agent
-            # create the marker for each agent
-            coord = [zip.lat, zip.lng]
-            @map.overlay_init(GMarker.new(coord, :title => "#{agent.first_name} #{agent.last_name}", :info_window => "<b>#{agent.first_name} #{agent.last_name}</b><br> #{agent.phone1}<br>#{agent.email1}<br><a href=\"/agents/show/#{agent.id}\">profile</a>"))
+            # get the geo lat lng to create the marker for each agent.  check addr_latlng first then the geo web 
+            # service then as last resort just use the geo of the zipcode table
+            if agent.latlng_good? 
+              coord = [agent.addr_latlng.lat, agent.addr_latlng.lng]
+            else
+              agent.set_latlng!
+              if agent.latlng_good? 
+                coord = [agent.addr_latlng.lat, agent.addr_latlng.lng]  
+              else
+                # last resort. this will cause the overlays to overlap but that's ok
+                coord = [zip.lat, zip.lng]
+              end
+            end
+            @map.overlay_init(GMarker.new(coord, :title => "#{agent.first_name} #{agent.last_name}",
+              :info_window => "<b>#{agent.first_name} #{agent.last_name}</b><br> #{agent.phone1}<br>#{agent.email1}<br><a href=\"/agents/show/#{agent.id}\">profile</a>"))
           end
         end
       end
@@ -137,6 +144,27 @@ class HomeController < ApplicationController
   end
   
   def support_contact
+  end
+  
+  # utility to fill in the addr_latlng table
+  def fill_in_addr_latlng
+    agents = Agent.find(:all, :conditions => "id > 14528")
+    #agents = Agent.find(15,17,18)
+    agents.each do |agent|
+        if ! agent.latlng_good?
+            agent.set_latlng!
+            if agent.latlng_good?
+                puts "#{agent.id} geocode succeeded"
+                logger.info("#{agent.id} geocode succeeded")
+            else
+              puts "#{agent.id} geocode failed"
+              logger.info("#{agent.id} geocode failed")
+            end
+        else
+            puts "#{agent.id} geocode already done"
+            logger.info("#{agent.id} geocode already done")
+        end
+    end
   end
 
 end
