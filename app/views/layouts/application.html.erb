@@ -35,7 +35,7 @@
             <% elsif session[:admin_id] %>
                 <h3 style="color: #bfb ;">Admin:</h3>
                 <%= link_to "Manage asset co's", asset_companies_url %><br />
-                <%= link_to "Change member status", new_asset_company_url %><br />
+                <%= link_to "Manage agent accts", :controller => "home", :action => "advanced_search", :id => 0%><br />
                 <%= link_to 'Logout', :controller => 'admin', :action => 'logout' %>
             <% else %>
                 <%= link_to "Login", :controller => "admin", :action => "login"%><br />
@@ -46,7 +46,9 @@
                 <div id="found_agents">
                 <h3>REO Agents</h3>
                     <% @found_agents.each do |agent| %>
-                         <%= link_to agent.first_name + " " + agent.last_name, agent_url(:id => agent.id) %><br />
+                        <% if ! agent.first_name.blank? %>
+                           <%= link_to agent.first_name + " " + agent.last_name, agent_url(:id => agent.id) %><br />
+                        <% end %>
                     <% end %>
                 </div>
             <% end -%>

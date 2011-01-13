@@ -131,7 +131,8 @@ class HomeController < ApplicationController
         sql_params << "%"+params[:bio_cred]+"%"
       end
 
-      agents = Agent.find(:all, :conditions => [sql.gsub!(/ and $/, '')] + sql_params) # prepend sql command
+      agents = Agent.find(:all, :conditions => [sql.gsub!(/ and $/, '')] + sql_params,
+        :order => "first_name, last_name", :limit => 30)
       
       @found_agents = []
       agents.each do |agent|
@@ -167,6 +168,7 @@ class HomeController < ApplicationController
     end
   end
   
+  # creates a yaml file for migration to production (e.g. heroku)
   def dump_addr_latlng
     File.open("addr_latlng.yml", 'w') do |f|
       geo = AddrLatlng.find(:all)

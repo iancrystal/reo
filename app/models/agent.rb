@@ -167,6 +167,16 @@ class Agent < ActiveRecord::Base
   def latlng_good?
     self.addr_latlng && self.addr_latlng.lat && self.addr_latlng.lng
   end
+  
+  def member_status_text
+    if self.member_status == 0
+      "free"
+    elsif self.member_status == 1
+      "basic"
+    elsif self.member_status == 2
+      "premium"
+    end
+  end
       
   private
   

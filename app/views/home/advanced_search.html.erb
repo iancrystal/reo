@@ -3,6 +3,8 @@
 <% form_tag(:controller => "home", :action => "advanced_search", :method => "get") do %>
 <fieldset>
   <legend>Search REO Agent</legend>
+  Note: Search results are limited to 30 to guard against searches that are too broad.<br />
+  Try to narrow down your search.<br />
   <div>
     <%= label_tag(:q, "Name") %>
     <%= text_field_tag(:name, "", :size => 15) %>

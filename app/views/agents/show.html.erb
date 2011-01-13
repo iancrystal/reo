@@ -3,12 +3,17 @@
   <%= image_tag @photo_url %>
   <br /><br />
 <% end %>
-
+<% if session[:admin_id] %>
+<%= link_to "Update/Change Membership Status", edit_agent_url(:id => @agent.id) %> |
+<%= link_to 'Delete Account', {:action => 'destroy', :id => @agent.id}, {:confirm => "Are you sure?", :method => :delete} %> 
+<br /><br />
+<% end %>
 <% if ! @resume_url.blank? %>
   <%= link_to "Resume", @resume_url %>
   <br />
 <% end %>
 <ul>
+<li>REO Agents Connect membership level: <%=h@agent.member_status_text%></li>
 <li>Company: <%=h@agent.company%></li>
 <li>Phone 1: <%=h@agent.phone1%></li>
 <li>Phone 2: <%=h@agent.phone2%></li>
