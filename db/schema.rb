@@ -9,13 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110113095057) do
-
-  create_table "addr_latlng", :force => true do |t|
-    t.integer "agent_id"
-    t.decimal "lat",      :precision => 7, :scale => 5
-    t.decimal "lng",      :precision => 8, :scale => 5
-  end
+ActiveRecord::Schema.define(:version => 20110113150020) do
 
   create_table "addr_latlngs", :force => true do |t|
     t.integer "agent_id"
