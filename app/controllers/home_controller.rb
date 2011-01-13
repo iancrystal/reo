@@ -166,5 +166,18 @@ class HomeController < ApplicationController
         end
     end
   end
+  
+  def dump_addr_latlng
+    File.open("addr_latlng.yml", 'w') do |f|
+      geo = AddrLatlng.find(:all)
+      geo.each do |g|
+        f.puts "#{g.id}:"
+        f.puts "  id: #{g.id}"
+        f.puts "  agent_id: #{g.agent_id}"
+        f.puts "  lat: #{g.lat}"
+        f.puts "  lng: #{g.lng}"
+      end
+    end
+  end
 
 end
