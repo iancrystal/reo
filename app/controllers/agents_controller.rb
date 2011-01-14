@@ -5,6 +5,7 @@ class AgentsController < ApplicationController
   # GET /agents/1
   # GET /agents/1.xml
   def show
+
     @agent = Agent.find(params[:id])
     @service_areas = @agent.service_areas
     
@@ -33,9 +34,14 @@ class AgentsController < ApplicationController
     
     @all_notes = AssetCompanyNote.find_all_by_agent_id(@agent.id)
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @agent }
+    if request.xhr?
+        render :layout=>false
+    else
+        #render :template => 'list_emails'
+        respond_to do |format|
+          format.html # show.html.erb
+          format.xml  { render :xml => @agent }
+        end
     end
   end
 

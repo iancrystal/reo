@@ -47,7 +47,13 @@
                 <h3>REO Agents</h3>
                     <% @found_agents.each do |agent| %>
                         <% if ! agent.first_name.blank? %>
-                           <%= link_to agent.first_name + " " + agent.last_name, agent_url(:id => agent.id) %><br />
+                           <%= link_to_remote agent.first_name + " " + agent.last_name, 
+                              :url => {:controller => 'agents', :action => 'show', :id => agent.id},
+                              :method => 'get',
+                              :html => { :href => "/agents/#{agent.id}" },
+                              :update => 'agent_profile', 
+                              :before => "Element.show('spinner')", 
+                              :complete => "Element.hide('spinner')" %><br />
                         <% end %>
                     <% end %>
                 </div>
@@ -57,7 +63,10 @@
             <% if flash[:notice] -%>
                 <div id="notice"><%= flash[:notice] %></div>
             <% end -%>
-            <%= yield %>
+            <%= image_tag 'loading.gif', :id=>'spinner', :width => "50" , :height => "50", :style=>"display:none; float:center;" %>
+            <div id='agent_profile'>
+              <%= yield %>
+            </div>
         </div>
     </div>
 </body>

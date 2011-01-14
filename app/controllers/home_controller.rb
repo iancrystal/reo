@@ -49,7 +49,8 @@ class HomeController < ApplicationController
               end
             end
             @map.overlay_init(GMarker.new(coord, :title => "#{agent.first_name} #{agent.last_name}",
-              :info_window => "<b>#{agent.first_name} #{agent.last_name}</b><br> #{agent.phone1}<br>#{agent.email1}<br><a href=\"/agents/show/#{agent.id}\">profile</a>"))
+              :info_window => "<b>#{agent.first_name} #{agent.last_name}</b><br> #{agent.phone1}<br>#{agent.email1}<br>
+                <a href=\"/agents/#{agent.id}\" onclick=\"Element.show('spinner'); new Ajax.Updater('agent_profile', '/agents/#{agent.id}', {asynchronous:true, evalScripts:true, method:'get', onComplete:function(request){Element.hide('spinner')}, parameters:'authenticity_token=' + encodeURIComponent('nNJoKK3O6kpWMtOXgC+nnxsg23wruU80fTJ6I2HpmCI=')}); return false;\">Link to Profile</a>"))
           end
         end
       end
