@@ -9,7 +9,9 @@ development:
 
 test:
 
+# and i guess the 2-key has does not work so each host needs a different gmap_api_key.yml version
+
 production:
  #electric-moon-446.heroku.com: ABQIAAAAPSFqsne5NVF4NpGES-FR_xQBQyL-4xj1MUoigeTRjWCjx1i_lxR1DTOSRl6hMPapK5xT_BtJcLhN4Q
  #ian-crystal-reo.heroku.com: ABQIAAAAPSFqsne5NVF4NpGES-FR_xSBCsuJMJ6_7ExO_G-UELHCVth_ehTduacOUdDTsQKOLB_VstHuSvt47g
- ABQIAAAAPSFqsne5NVF4NpGES-FR_xSBCsuJMJ6_7ExO_G-UELHCVth_ehTduacOUdDTsQKOLB_VstHuSvt47g
+ ABQIAAAAPSFqsne5NVF4NpGES-FR_xQBQyL-4xj1MUoigeTRjWCjx1i_lxR1DTOSRl6hMPapK5xT_BtJcLhN4Q
