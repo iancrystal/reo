@@ -9,12 +9,14 @@
     <%= javascript_include_tag :defaults %>
 </head>
 <body id="reo">
+    site under construction - by Ian Crystal
     <div id="banner">
         <%= @page_title || "Reo Agents Connect" %>
     </div>
     <div id="columns">
         <div id="side">
             <br />
+            <a href="http://www.wiki-site.com/index.php/ReoAgentsConnect">Project Wiki</a><br />
             <%= link_to "Home", :controller => "home", :action => "index"%><br />
             <%= link_to "Advanced search", :controller => "home", :action => "advanced_search", :id => 0%><br />
             <%= link_to "Support/Contact", :controller => "home", :action => "support_contact"%><br />
