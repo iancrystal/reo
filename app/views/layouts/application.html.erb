@@ -54,23 +54,23 @@
                   :method => 'get',
                   :html => { :href => "/agents/#{agent.id}" },
                 :update => 'agent_profile', 
-                  :before => "Element.show('spinner')", 
+                  :before => "if ($('notice')) Element.hide('notice');this.style.color='#666';Element.show('spinner')", 
                   :complete => "Element.hide('spinner')" %><br />
-                <% end %>
               <% end %>
-            </div>
-          <% end -%>
-        </div>
-        <div id="main">
-          <% if flash[:notice] -%>
-            <div id="notice"><%= flash[:notice] %></div>
-          <% end -%>
-          <%= image_tag 'loading.gif', :id=>'spinner', :width => "50" , :height => "50", :style=>"display:none; float:center;" %>
-          <div id='agent_profile'>
-            <%= yield %>
+            <% end %>
           </div>
+        <% end -%>
+      </div>
+      <div id="main">
+        <% if flash[:notice] -%>
+          <div id="notice"><%= flash[:notice] %></div>
+        <% end -%>
+        <%= image_tag 'loading.gif', :id=>'spinner', :width => "50" , :height => "50", :style=>"display:none; float:center;" %>
+        <div id='agent_profile'>
+          <%= yield %>
         </div>
       </div>
-    </body>
+    </div>
+  </body>
 </html>
 

@@ -127,8 +127,8 @@ h1 {
 #found_agents h3 {
   text-decoration:underline;background:#bfb;width:7em
 }
-#found_agents a:visited 
-{ color: #666; 
+#found_agents a:visited { 
+  color: #666; 
 }
 
 /* Styles for products/index */

@@ -27,7 +27,7 @@ aws_s3_connect	.\controllers\agents_controller.rb	/^  def aws_s3_connect$/;"	f	c
 create	.\controllers\agents_controller.rb	/^  def create$/;"	f	class:AgentsController
 create	.\controllers\asset_companies_controller.rb	/^  def create$/;"	f	class:AssetCompaniesController
 create	.\controllers\asset_company_notes_controller.rb	/^  def create$/;"	f	class:AssetCompanyNotesController
-create_new_salt	.\models\agent.rb	/^  def create_new_salt$/;"	f	class:Agent
+create_new_salt	.\models\agent.rb	/^  def create_new_salt$/;"	f	class:Agent.fill_terms_of_agreement
 create_new_salt	.\models\asset_company.rb	/^  def create_new_salt$/;"	f	class:AssetCompany
 delete_aws_s3_photo	.\controllers\agents_controller.rb	/^  def delete_aws_s3_photo$/;"	f	class:AgentsController
 delete_aws_s3_resume	.\controllers\agents_controller.rb	/^  def delete_aws_s3_resume$/;"	f	class:AgentsController
@@ -36,10 +36,11 @@ destroy	.\controllers\asset_companies_controller.rb	/^  def destroy$/;"	f	class:
 dump_addr_latlng	.\controllers\home_controller.rb	/^  def dump_addr_latlng$/;"	f	class:HomeController
 edit	.\controllers\agents_controller.rb	/^  def edit$/;"	f	class:AgentsController
 edit	.\controllers\asset_companies_controller.rb	/^  def edit$/;"	f	class:AssetCompaniesController
-encrypted_password	.\models\agent.rb	/^  def self.encrypted_password(password, salt)$/;"	F	class:Agent
+encrypted_password	.\models\agent.rb	/^  def self.encrypted_password(password, salt)$/;"	F	class:Agent.fill_terms_of_agreement
 encrypted_password	.\models\asset_company.rb	/^  def self.encrypted_password(password, salt)$/;"	F	class:AssetCompany
-ext_part_of	.\models\agent.rb	/^  def ext_part_of(file_name)$/;"	f	class:Agent
+ext_part_of	.\models\agent.rb	/^  def ext_part_of(file_name)$/;"	f	class:Agent.fill_terms_of_agreement
 fill_in_addr_latlng	.\controllers\home_controller.rb	/^  def fill_in_addr_latlng$/;"	f	class:HomeController
+fill_terms_of_agreement	.\models\agent.rb	/^  def fill_terms_of_agreement$/;"	f	class:Agent
 filter	.\helpers\authorize_filter.rb	/^  def self.filter(controller)$/;"	F	class:AuthorizeFilter
 filter_login_redirect	.\controllers\admin_controller.rb	/^  def filter_login_redirect$/;"	f	class:AdminController
 index	.\controllers\asset_companies_controller.rb	/^  def index$/;"	f	class:AssetCompaniesController
@@ -54,7 +55,7 @@ password	.\models\agent.rb	/^  def password$/;"	f	class:Agent
 password	.\models\asset_company.rb	/^  def password$/;"	f	class:AssetCompany
 password=	.\models\agent.rb	/^  def password=(pwd)$/;"	f	class:Agent
 password=	.\models\asset_company.rb	/^  def password=(pwd)$/;"	f	class:AssetCompany
-password_non_blank	.\models\agent.rb	/^  def password_non_blank$/;"	f	class:Agent
+password_non_blank	.\models\agent.rb	/^  def password_non_blank$/;"	f	class:Agent.fill_terms_of_agreement
 password_non_blank	.\models\asset_company.rb	/^  def password_non_blank$/;"	f	class:AssetCompany
 photo_filename	.\models\agent.rb	/^  def photo_filename$/;"	f	class:Agent
 photo_url	.\models\agent.rb	/^  def photo_url$/;"	f	class:Agent
