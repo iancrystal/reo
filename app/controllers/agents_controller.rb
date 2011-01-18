@@ -8,34 +8,34 @@ class AgentsController < ApplicationController
 
     @agent = Agent.find(params[:id])
     @service_areas = @agent.service_areas
-    
+
     aws_s3_connect
-    
+
     @resume_url = @agent.resume_url
     if ! @resume_url.blank?
-        if ! AWS::S3::S3Object.exists? @agent.resume_filename, 'reoagentresume'
-          @resume_url = ""
-        end
+      if ! AWS::S3::S3Object.exists? @agent.resume_filename, 'reoagentresume'
+        @resume_url = ""
+      end
     end
-    
+
     @photo_url = @agent.photo_url
     if ! @photo_url.blank?
-        if ! AWS::S3::S3Object.exists? @agent.photo_filename, 'reoagentphoto'
-          @photo_url = ""
-        end
+      if ! AWS::S3::S3Object.exists? @agent.photo_filename, 'reoagentphoto'
+        @photo_url = ""
+      end
     end
-    
+
     if session[:asset_company_id]
       @asset_company_note = AssetCompanyNote.find_or_initialize_by_agent_id_and_asset_company_id(@agent.id, session[:asset_company_id])
       session[:last_agent_shown] = @agent.id
       # so that authorize_filter can make sure updating can only come from this action
       session[:asset_company_id_of_note] = session[:asset_company_id]
     end
-    
+
     @all_notes = AssetCompanyNote.find_all_by_agent_id(@agent.id)
 
     if request.xhr?
-        render :layout=>false
+      render :layout=>false
     else
         #render :template => 'list_emails'
         respond_to do |format|
@@ -66,7 +66,7 @@ class AgentsController < ApplicationController
   # POST /agents
   # POST /agents.xml
   def create
-    
+
     @agent = Agent.new(params[:agent])
     respond_to do |format|
       if @agent.save
@@ -89,7 +89,7 @@ class AgentsController < ApplicationController
         end
         #ok if this fails, it is retried the next time lat lng is needed for this agent location
         @agent.set_latlng!
-        
+
         session[:agent_id] = @agent.id
         flash[:notice] = "User #{@agent.first_name} #{@agent.last_name} was successfully created."
         format.html { redirect_to(:action=>'show', :id => @agent.id) }
@@ -105,14 +105,14 @@ class AgentsController < ApplicationController
   # PUT /agents/1.xml
   def update
     @agent = Agent.find(params[:id])
-    
+
     respond_to do |format|
 
       if @agent.update_attributes(params[:agent])
-      
+
         # this magically updates the zipcodes and habtm agents_zipcodes tables
         @agent.service_areas = params[:agent][:zip_codes]
-        
+
         if ! @agent.photo_data.blank? || ! @agent.resume_data.blank?
           aws_s3_connect
         end
@@ -152,9 +152,9 @@ class AgentsController < ApplicationController
       aws_s3_connect
       delete_aws_s3_resume
     end
-    
+
     @agent.destroy
-    
+
     flash[:notice] = "User #{@agent.first_name} #{@agent.last_name} was successfully deleted"
 
     respond_to do |format|
@@ -165,24 +165,24 @@ class AgentsController < ApplicationController
   end
 
   protected
-  
+
   def aws_s3_connect
     AWS::S3::Base.establish_connection!(
       :access_key_id     => 'AKIAIOLMS62WKQM2NQ2A',
       :secret_access_key => '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'
     ) 
   end
-  
+
   # these should be refactored as more file types are added
-  
+
   def save_photo_to_aws_s3
     AWS::S3::S3Object.store("photo" + @agent.id.to_s, @agent.photo_data, 'reoagentphoto', :access => :public_read)
   end
-  
+
   def save_resume_to_aws_s3
     AWS::S3::S3Object.store(@agent.resume_filename, @agent.resume_data, 'reoagentresume', :access => :public_read)
   end
-  
+
   def delete_aws_s3_photo
     if AWS::S3::S3Object.exists? "photo" + @agent.id.to_s, 'reoagentphoto'
       AWS::S3::S3Object.delete "photo" + @agent.id.to_s, 'reoagentphoto'
@@ -199,5 +199,5 @@ class AgentsController < ApplicationController
       logger.info "#{@agent.resume_filename} does not exist"
     end
   end
-  
+
 end

@@ -2,75 +2,75 @@
        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
+  <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <title>REO Agents Connect: <%= controller.action_name %></title>
     <%= stylesheet_link_tag 'scaffold', 'reo' %>
     <%= javascript_include_tag :defaults %>
-</head>
-<body id="reo">
+  </head>
+  <body id="reo">
     site under construction - by Ian Crystal
     <div id="banner">
-        <%= @page_title || "Reo Agents Connect" %>
+      <%= @page_title || "Reo Agents Connect" %>
     </div>
     <div id="columns">
-        <div id="side">
-            <br />
-            <a href="http://www.wiki-site.com/index.php/ReoAgentsConnect">Project Wiki</a><br />
-            <%= link_to "Home", :controller => "home", :action => "index"%><br />
-            <%= link_to "Advanced search", :controller => "home", :action => "advanced_search", :id => 0%><br />
-            <%= link_to "Support/Contact", :controller => "home", :action => "support_contact"%><br />
-            <br />
-            <% if session[:agent_id] %>
-                <h3 style="color: #bfb ;">REO Agent:</h3>
-                <%= link_to 'Update Profile', edit_agent_url(:id => session[:agent_id]) %><br />
-                <%= link_to 'Show Profile', agent_url (:id => session[:agent_id])%><br />
-                <%= link_to 'Delete Profile', {:controller => 'agents', :action => 'destroy', :id => session[:agent_id]}, {:confirm => "Are you sure?", :method => :delete} %><br />
-                <%= link_to 'Logout', :controller => 'admin', :action => 'logout' %>
-            <% elsif session[:asset_company_id] %>
-                <h3 style="color: #bfb ;">Asset Company:</h3>
-                <%= link_to 'Agent notes', :controller => "home", :action => "advanced_search", :id => 0%><br />
-                <%= link_to 'Update Account', edit_asset_company_url(:id => session[:asset_company_id]) %><br />
-                <%= link_to 'Show Account', asset_company_url (:id => session[:asset_company_id])%><br />
-                <%= link_to 'Delete Account', {:controller => 'asset_companies', :action => 'destroy', :id => session[:asset_company_id]}, {:confirm => "Are you sure?", :method => :delete} %><br />
-                <%= link_to 'Logout', :controller => 'admin', :action => 'logout' %>
-            <% elsif session[:admin_id] %>
-                <h3 style="color: #bfb ;">Admin:</h3>
-                <%= link_to "Manage asset co's", asset_companies_url %><br />
-                <%= link_to "Manage agent accts", :controller => "home", :action => "advanced_search", :id => 0%><br />
-                <%= link_to 'Logout', :controller => 'admin', :action => 'logout' %>
-            <% else %>
-                <%= link_to "Login", :controller => "admin", :action => "login"%><br />
-                <%= link_to "REO Agent Sign-up", :controller => "home", :action => "sign_up" %><br />
-            <% end %>
-            <br /><br />
-            <% if @found_agents -%>
-                <div id="found_agents">
-                <h3>REO Agents</h3>
-                    <% @found_agents.each do |agent| %>
-                        <% if ! agent.first_name.blank? %>
-                           <%= link_to_remote agent.first_name + " " + agent.last_name, 
-                              :url => {:controller => 'agents', :action => 'show', :id => agent.id},
-                              :method => 'get',
-                              :html => { :href => "/agents/#{agent.id}" },
-                              :update => 'agent_profile', 
-                              :before => "Element.show('spinner')", 
-                              :complete => "Element.hide('spinner')" %><br />
-                        <% end %>
-                    <% end %>
-                </div>
-            <% end -%>
+      <div id="side">
+        <br />
+        <a href="http://www.wiki-site.com/index.php/ReoAgentsConnect">Project Wiki</a><br />
+        <%= link_to "Home", :controller => "home", :action => "index"%><br />
+        <%= link_to "Advanced search", :controller => "home", :action => "advanced_search", :id => 0%><br />
+        <%= link_to "Support/Contact", :controller => "home", :action => "support_contact"%><br />
+        <br />
+        <% if session[:agent_id] %>
+          <h3 style="color: #bfb ;">REO Agent:</h3>
+          <%= link_to 'Update Profile', edit_agent_url(:id => session[:agent_id]) %><br />
+          <%= link_to 'Show Profile', agent_url (:id => session[:agent_id])%><br />
+          <%= link_to 'Delete Profile', {:controller => 'agents', :action => 'destroy', :id => session[:agent_id]}, {:confirm => "Are you sure?", :method => :delete} %><br />
+          <%= link_to 'Logout', :controller => 'admin', :action => 'logout' %>
+        <% elsif session[:asset_company_id] %>
+          <h3 style="color: #bfb ;">Asset Company:</h3>
+          <%= link_to 'Agent notes', :controller => "home", :action => "advanced_search", :id => 0%><br />
+          <%= link_to 'Update Account', edit_asset_company_url(:id => session[:asset_company_id]) %><br />
+          <%= link_to 'Show Account', asset_company_url (:id => session[:asset_company_id])%><br />
+          <%= link_to 'Delete Account', {:controller => 'asset_companies', :action => 'destroy', :id => session[:asset_company_id]}, {:confirm => "Are you sure?", :method => :delete} %><br />
+          <%= link_to 'Logout', :controller => 'admin', :action => 'logout' %>
+        <% elsif session[:admin_id] %>
+          <h3 style="color: #bfb ;">Admin:</h3>
+          <%= link_to "Manage asset co's", asset_companies_url %><br />
+          <%= link_to "Manage agent accts", :controller => "home", :action => "advanced_search", :id => 0%><br />
+          <%= link_to 'Logout', :controller => 'admin', :action => 'logout' %>
+        <% else %>
+          <%= link_to "Login", :controller => "admin", :action => "login"%><br />
+          <%= link_to "REO Agent Sign-up", :controller => "home", :action => "sign_up" %><br />
+        <% end %>
+        <br /><br />
+        <% if @found_agents -%>
+          <div id="found_agents">
+            <h3>REO Agents</h3>
+            <% @found_agents.each do |agent| %>
+              <% if ! agent.first_name.blank? %>
+                <%= link_to_remote agent.first_name + " " + agent.last_name, 
+                  :url => {:controller => 'agents', :action => 'show', :id => agent.id},
+                  :method => 'get',
+                  :html => { :href => "/agents/#{agent.id}" },
+                :update => 'agent_profile', 
+                  :before => "Element.show('spinner')", 
+                  :complete => "Element.hide('spinner')" %><br />
+                <% end %>
+              <% end %>
+            </div>
+          <% end -%>
         </div>
         <div id="main">
-            <% if flash[:notice] -%>
-                <div id="notice"><%= flash[:notice] %></div>
-            <% end -%>
-            <%= image_tag 'loading.gif', :id=>'spinner', :width => "50" , :height => "50", :style=>"display:none; float:center;" %>
-            <div id='agent_profile'>
-              <%= yield %>
-            </div>
+          <% if flash[:notice] -%>
+            <div id="notice"><%= flash[:notice] %></div>
+          <% end -%>
+          <%= image_tag 'loading.gif', :id=>'spinner', :width => "50" , :height => "50", :style=>"display:none; float:center;" %>
+          <div id='agent_profile'>
+            <%= yield %>
+          </div>
         </div>
-    </div>
-</body>
+      </div>
+    </body>
 </html>
 

@@ -56,7 +56,7 @@ class HomeController < ApplicationController
       end
     end
   end
-  
+
   def sign_up
     if request.post?
       session[:email1] = params[:email1]
@@ -81,16 +81,16 @@ class HomeController < ApplicationController
       params[:email1] = session[:email1]
     end
   end
-  
+
   def advanced_search
     if request.post?
       sql = ""
       sql_params = []
-      
+
       # mysql (development) like is case insensitive, postgresql (production/heroku) uses ilike which is not supported 
       # in mysql. this is set in config/environments/development.rb, production.rb and test.rb
       like = LIKE
-      
+
       if ! params[:name].blank?
         sql += "(first_name #{like} ? or middle_name #{like} ? or last_name #{like} ?) and "
         sql_params << "%"+params[:name]+"%" << "%"+params[:name]+"%" << "%"+params[:name]+"%"
@@ -134,7 +134,7 @@ class HomeController < ApplicationController
 
       agents = Agent.find(:all, :conditions => [sql.gsub!(/ and $/, '')] + sql_params,
         :order => "first_name, last_name", :limit => 30)
-      
+
       @found_agents = []
       agents.each do |agent|
         found = @found_agents.detect {|a| a.id == agent.id}
@@ -144,31 +144,31 @@ class HomeController < ApplicationController
       end
     end
   end
-  
+
   def support_contact
   end
-  
+
   # utility to fill in the addr_latlng table
   def fill_in_addr_latlng
     agents = Agent.find(:all, :conditions => "id > 14528")
     #agents = Agent.find(15,17,18)
     agents.each do |agent|
-        if ! agent.latlng_good?
-            agent.set_latlng!
-            if agent.latlng_good?
-                puts "#{agent.id} geocode succeeded"
-                logger.info("#{agent.id} geocode succeeded")
-            else
-              puts "#{agent.id} geocode failed"
-              logger.info("#{agent.id} geocode failed")
-            end
+      if ! agent.latlng_good?
+        agent.set_latlng!
+        if agent.latlng_good?
+          puts "#{agent.id} geocode succeeded"
+          logger.info("#{agent.id} geocode succeeded")
         else
-            puts "#{agent.id} geocode already done"
-            logger.info("#{agent.id} geocode already done")
+          puts "#{agent.id} geocode failed"
+          logger.info("#{agent.id} geocode failed")
         end
+      else
+        puts "#{agent.id} geocode already done"
+        logger.info("#{agent.id} geocode already done")
+      end
     end
   end
-  
+
   # creates a yaml file for migration to production (e.g. heroku)
   def dump_addr_latlng
     File.open("addr_latlng.yml", 'w') do |f|

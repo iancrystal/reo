@@ -1,24 +1,24 @@
 <div id="asset-company-list">
-<h1>Listing Asset Companies</h1>
-<table>
-<% for assetco in @asset_companies %>
-<% if assetco.email != ADMIN %>
-<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-<td><%=h assetco.company_name %></td>
-<td><%=h assetco.contact_name %></td>
-<td><%=h assetco.phone %></td>
-<td><%=h assetco.email %></td>
-<td class="list-actions">
-<%= link_to 'Show', assetco %><br/>
-<%= link_to 'Edit', edit_asset_company_path(assetco) %><br/>
-<%= link_to 'Destroy', assetco,
-:confirm => 'Are you sure?',
-:method => :delete %>
-</td>
-</tr>
-<% end %>
-<% end %>
-</table>
+  <h1>Listing Asset Companies</h1>
+  <table>
+    <% for assetco in @asset_companies %>
+      <% if assetco.email != ADMIN %>
+        <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+          <td><%=h assetco.company_name %></td>
+          <td><%=h assetco.contact_name %></td>
+          <td><%=h assetco.phone %></td>
+          <td><%=h assetco.email %></td>
+          <td class="list-actions">
+            <%= link_to 'Show', assetco %><br/>
+            <%= link_to 'Edit', edit_asset_company_path(assetco) %><br/>
+            <%= link_to 'Destroy', assetco,
+            :confirm => 'Are you sure?',
+            :method => :delete %>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </table>
 </div>
 <br />
 <%= link_to 'Create New Asset Company', new_asset_company_path %>

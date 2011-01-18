@@ -3,7 +3,7 @@ class AssetCompanyNotesController < ApplicationController
   # POST /asset_company_notes
   # POST /asset_company_notes.xml
   def create
-    
+
     @asset_company_note = AssetCompanyNote.new(params[:asset_company_note])
     @asset_company_note.agent_id = session[:last_agent_shown]
     @asset_company_note.asset_company_id = session[:asset_company_id]
@@ -18,7 +18,7 @@ class AssetCompanyNotesController < ApplicationController
       end
     end
   end
-  
+
   # PUT /asset_company_notes/1
   # PUT /asset_company_notes/1.xml
   def update
@@ -36,6 +36,6 @@ class AssetCompanyNotesController < ApplicationController
   end
 
   # for now just empty the notes instead of delete so no destroy action yet
-  
+
 end
 

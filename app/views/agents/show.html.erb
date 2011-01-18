@@ -4,60 +4,60 @@
   <br /><br />
 <% end %>
 <% if session[:admin_id] %>
-<%= link_to "Update/Change Membership Status", edit_agent_url(:id => @agent.id) %> |
-<%= link_to 'Delete Account', {:action => 'destroy', :id => @agent.id}, {:confirm => "Are you sure?", :method => :delete} %> 
-<br /><br />
+  <%= link_to "Update/Change Membership Status", edit_agent_url(:id => @agent.id) %> |
+  <%= link_to 'Delete Account', {:action => 'destroy', :id => @agent.id}, {:confirm => "Are you sure?", :method => :delete} %> 
+  <br /><br />
 <% end %>
 <% if ! @resume_url.blank? %>
   <%= link_to "Resume", @resume_url %>
   <br />
 <% end %>
 <ul>
-<li>REO Agents Connect membership level: <%=h@agent.member_status_text%></li>
-<li>Company: <%=h@agent.company%></li>
-<li>Phone 1: <%=h@agent.phone1%></li>
-<li>Phone 2: <%=h@agent.phone2%></li>
-<li>Fax: <%=h@agent.fax%></li>
-<li>Email 1: <%=h@agent.email1%></li>
-<li>Email 2: <%=h@agent.email2%></li>
-<li>physical address:</li>
-<%=h@agent.physical_address1%>, <%=h@agent.physical_address2%>,
-<%=h@agent.physical_address_city%>, <%=h@agent.physical_address_state%>  <%=h@agent.physical_address_zip%>
-<li>mailing address:</li>
-<%=h@agent.mailing_address1%>, <%=h@agent.mailing_address2%>,
-<%=h@agent.mailing_address_city%>, <%=h@agent.mailing_address_state%>  <%=h@agent.mailing_address_zip%>
-<li>Bio data and credentials:</li>
-<%=h@agent.bio_cred%>
-<li>Service areas:</li>
-<%=h@service_areas%>
+  <li>REO Agents Connect membership level: <%=h@agent.member_status_text%></li>
+  <li>Company: <%=h@agent.company%></li>
+  <li>Phone 1: <%=h@agent.phone1%></li>
+  <li>Phone 2: <%=h@agent.phone2%></li>
+  <li>Fax: <%=h@agent.fax%></li>
+  <li>Email 1: <%=h@agent.email1%></li>
+  <li>Email 2: <%=h@agent.email2%></li>
+  <li>physical address:</li>
+  <%=h@agent.physical_address1%>, <%=h@agent.physical_address2%>,
+  <%=h@agent.physical_address_city%>, <%=h@agent.physical_address_state%>  <%=h@agent.physical_address_zip%>
+  <li>mailing address:</li>
+  <%=h@agent.mailing_address1%>, <%=h@agent.mailing_address2%>,
+  <%=h@agent.mailing_address_city%>, <%=h@agent.mailing_address_state%>  <%=h@agent.mailing_address_zip%>
+  <li>Bio data and credentials:</li>
+  <%=h@agent.bio_cred%>
+  <li>Service areas:</li>
+  <%=h@service_areas%>
 </ul>
 <% if session[:asset_company_id] %>
-    <br />
-<div class="reo-form">
-
-<% form_for(@asset_company_note) do |f| %>
-  <%= f.error_messages %>
-<fieldset>
-  <legend>Note from <%= @asset_company_note.asset_company.company_name %> asset company</legend>
-  <div>
-    <%= f.text_area :note, :rows => 5, :cols => 80 %>
-  </div>
   <br />
-  <div>
-    <%= f.submit 'Update' %>
-  </div>
-</fieldset>
-<% end %>
+  <div class="reo-form">
 
-</div>
+    <% form_for(@asset_company_note) do |f| %>
+      <%= f.error_messages %>
+      <fieldset>
+        <legend>Note from <%= @asset_company_note.asset_company.company_name %> asset company</legend>
+        <div>
+          <%= f.text_area :note, :rows => 5, :cols => 80 %>
+        </div>
+        <br />
+        <div>
+          <%= f.submit 'Update' %>
+        </div>
+      </fieldset>
+    <% end %>
+
+  </div>
 <% end %>
 
 <% if @all_notes %>
-<% @all_notes.each do |n| %>
-<% if session[:asset_company_id] != n.asset_company_id %>
-<br />
-<h3>Note from <%=n.asset_company.company_name%> asset company</h3>
-<%=h n.note %>
-<% end %>
-<% end %>
+  <% @all_notes.each do |n| %>
+    <% if session[:asset_company_id] != n.asset_company_id %>
+      <br />
+      <h3>Note from <%=n.asset_company.company_name%> asset company</h3>
+      <%=h n.note %>
+    <% end %>
+  <% end %>
 <% end %>

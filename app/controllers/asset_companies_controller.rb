@@ -1,5 +1,5 @@
 class AssetCompaniesController < ApplicationController
-  
+
   # GET /asset_companies
   # GET /asset_companies.xml
   def index
@@ -13,7 +13,7 @@ class AssetCompaniesController < ApplicationController
   # GET /asset_companies/1
   # GET /asset_companies/1.xml
   def show
-    
+
     @asset_company = AssetCompany.find(params[:id])
 
     respond_to do |format|
@@ -41,7 +41,7 @@ class AssetCompaniesController < ApplicationController
   # POST /asset_companies
   # POST /asset_companies.xml
   def create
-    
+
     @asset_company = AssetCompany.new(params[:asset_company])
     respond_to do |format|
       if @asset_company.save
@@ -78,7 +78,7 @@ class AssetCompaniesController < ApplicationController
     # this automatically removes the entries in the asset_company_notes table of the asset_company being destroyed
     @asset_company = AssetCompany.find(params[:id])
     @asset_company.destroy
-    
+
     flash[:notice] = "#{@asset_company.company_name} was successfully deleted"
     respond_to do |format|
       session[:after_destroy_asset_company] = "yes"
@@ -86,5 +86,5 @@ class AssetCompaniesController < ApplicationController
       format.xml  { head :ok }
     end
   end
- 
+
 end

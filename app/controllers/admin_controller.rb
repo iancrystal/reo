@@ -48,12 +48,12 @@ class AdminController < ApplicationController
     end
     redirect_to(:controller => "home")
   end
-  
+
   # since the before_filter form that passes the controller class (block and class) cannot access the flash, we just
   # use this as the temporary redirect
   def filter_login_redirect
     flash[:notice] = "Unauthorized access. Please log in"
     redirect_to(:action => "login")
   end
-  
+
 end

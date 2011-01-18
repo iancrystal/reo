@@ -6,7 +6,7 @@
 class ApplicationController < ActionController::Base
 
   before_filter AuthorizeFilter
-  
+
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 

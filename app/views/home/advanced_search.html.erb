@@ -1,50 +1,50 @@
 <div class="reo-form">
 
-<% form_tag(:controller => "home", :action => "advanced_search", :method => "get") do %>
-<fieldset>
-  <legend>Search REO Agent</legend>
-  Note: Search results are limited to 30 to guard against searches that are too broad.<br />
-  Try to narrow down your search.<br />
-  <div>
-    <%= label_tag(:q, "Name") %>
-    <%= text_field_tag(:name, "", :size => 15) %>
-  </div>
-  <div>
-    <%= label_tag(:q, "company") %>
-    <%= text_field_tag(:company) %>
-  </div>
-  <div>
-    <%= label_tag(:q, "Street") %>
-    <%= text_field_tag(:street) %>
-  </div>
-  <div>
-    <%= label_tag(:q, "City") %>
-    <%= text_field_tag(:city, "", :size => 15) %>
-    <%= label_tag(:q, "State") %>
-    <%= text_field_tag(:state, "", :size => 2) %>
-    <%= label_tag(:q, "zip code") %>
-    <%= text_field_tag(:zip, "", :size => 9) %>
-  </div>
-  <div>
-    <%= label_tag(:q, "Email") %>
-    <%= text_field_tag(:email) %>
-  </div>
-  <div>
-    <%= label_tag(:q, "Phone") %>
-    <%= text_field_tag(:phone, "", :size => 15) %>
-    <%= label_tag(:q, "Fax") %>
-    <%= text_field_tag(:fax, "", :size => 15) %>
-  </div>
-  <div>
-    <%= label_tag(:q, "credentials") %>
-  </div>
-  <div>
-    <%= text_field_tag(:bio_cred, "", :size => 40) %>
-  </div>
-  <div>
-    <%= submit_tag("Search") %>
-  </div>
-</fieldset>
-<% end %>
+  <% form_tag(:controller => "home", :action => "advanced_search", :method => "get") do %>
+    <fieldset>
+      <legend>Search REO Agent</legend>
+      Note: Search results are limited to 30 to guard against searches that are too broad.<br />
+      Try to narrow down your search.<br />
+      <div>
+        <%= label_tag(:q, "Name") %>
+        <%= text_field_tag(:name, "", :size => 15) %>
+      </div>
+      <div>
+        <%= label_tag(:q, "company") %>
+        <%= text_field_tag(:company) %>
+      </div>
+      <div>
+        <%= label_tag(:q, "Street") %>
+        <%= text_field_tag(:street) %>
+      </div>
+      <div>
+        <%= label_tag(:q, "City") %>
+        <%= text_field_tag(:city, "", :size => 15) %>
+        <%= label_tag(:q, "State") %>
+        <%= text_field_tag(:state, "", :size => 2) %>
+        <%= label_tag(:q, "zip code") %>
+        <%= text_field_tag(:zip, "", :size => 9) %>
+      </div>
+      <div>
+        <%= label_tag(:q, "Email") %>
+        <%= text_field_tag(:email) %>
+      </div>
+      <div>
+        <%= label_tag(:q, "Phone") %>
+        <%= text_field_tag(:phone, "", :size => 15) %>
+        <%= label_tag(:q, "Fax") %>
+        <%= text_field_tag(:fax, "", :size => 15) %>
+      </div>
+      <div>
+        <%= label_tag(:q, "credentials") %>
+      </div>
+      <div>
+        <%= text_field_tag(:bio_cred, "", :size => 40) %>
+      </div>
+      <div>
+        <%= submit_tag("Search") %>
+      </div>
+    </fieldset>
+  <% end %>
 
 </div>

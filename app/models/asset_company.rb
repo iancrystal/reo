@@ -2,12 +2,12 @@ require 'digest/sha1'
 
 class AssetCompany < ActiveRecord::Base
   has_many :asset_company_notes
-  
+
   validates_presence_of :email
   validates_uniqueness_of :email
   validates_confirmation_of :password
   validate :password_non_blank
-    
+
   attr_accessor :password_confirmation
 
   def self.authenticate(email, password)
@@ -25,11 +25,11 @@ class AssetCompany < ActiveRecord::Base
     end
     contact
   end
-  
+
   def password
     @password
   end
-  
+
   def password=(pwd)
     @password = pwd
     return if pwd.blank?
@@ -38,18 +38,18 @@ class AssetCompany < ActiveRecord::Base
   end
 
   private
-  
+
   def password_non_blank
     errors.add(:password, "Missing password" ) if hashed_password.blank?
   end
-  
+
   def self.encrypted_password(password, salt)
     string_to_hash = password + "wibble" + salt
     Digest::SHA1.hexdigest(string_to_hash)
   end
-  
+
   def create_new_salt
     self.salt = self.object_id.to_s + rand.to_s
   end
-  
+
 end

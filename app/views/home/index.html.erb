@@ -1,11 +1,11 @@
 <div style="float:left">
-<% form_tag(:action => :index) do %>
-  Enter the address or zip code to find REO agents within a 5 mile radius.
-  <%= text_field_tag(:address, @address, :size => 80) %>
-  <%= submit_tag("Search") %>
-<% end %>
-<br />
-<%= GMap.header %>
-<%= @map.to_html %>
-<%= @map.div(:width => 600, :height => 400) %>
+  <% form_tag(:action => :index) do %>
+    Enter the address or zip code to find REO agents within a 5 mile radius.
+    <%= text_field_tag(:address, @address, :size => 80) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+  <br />
+  <%= GMap.header %>
+  <%= @map.to_html %>
+  <%= @map.div(:width => 600, :height => 400) %>
 </div>
