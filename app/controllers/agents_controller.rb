@@ -50,6 +50,7 @@ class AgentsController < ApplicationController
   def new
     @agent = Agent.new
     @agent.email1 = session[:email1]
+    @agent.fill_terms_of_agreement
 
     respond_to do |format|
       format.html # new.html.erb

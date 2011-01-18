@@ -36,8 +36,8 @@
         <%= f.text_field :physical_address_city, :size => 15 %>
         <%= f.label :physical_address_state, 'State' %>
         <%= f.text_field :physical_address_state, :size => 2 %>
-      <%= f.label :physical_address_zip, 'Zip code'%>
-      <%= f.text_field :physical_address_zip, :size => 9  %>
+        <%= f.label :physical_address_zip, 'Zip code'%>
+        <%= f.text_field :physical_address_zip, :size => 9  %>
       </div>
       <div>
         Mailing address:
@@ -84,8 +84,16 @@
       <div>
         Upload your resume: <%= f.file_field("uploaded_resume" ) %>
       </div>
-      <br />
       <div>
+        <%= f.label :terms, 'Terms of Agreement' %>
+      <div>
+        <%= f.text_area :terms, :rows => 10, :cols => 80 %>
+      </div>
+        <%= f.check_box :agree %>
+        <%= f.label :agree, 'I agree' %>
+        <br />
+      <div>
+        <br />
         <%= f.submit 'Create' %>
       </div>
     </fieldset>
