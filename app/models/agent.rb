@@ -20,7 +20,7 @@ class Agent < ActiveRecord::Base
     :unless => Proc.new { |u| u.zip_codes.blank? }
   validates_acceptance_of :agree,
     :message => "- Please accept the terms of agreement to proceed"
-  
+
 
   attr_accessor :password_confirmation
   attr_accessor :terms
