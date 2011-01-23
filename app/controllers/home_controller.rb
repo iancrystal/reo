@@ -132,14 +132,16 @@ class HomeController < ApplicationController
         sql_params << "%"+params[:bio_cred]+"%"
       end
 
-      agents = Agent.find(:all, :conditions => [sql.gsub!(/ and $/, '')] + sql_params,
-        :order => "first_name, last_name", :limit => 30)
+      if ! sql.blank?
+        agents = Agent.find(:all, :conditions => [sql.gsub!(/ and $/, '')] + sql_params,
+          :order => "first_name, last_name", :limit => 30)
 
-      @found_agents = []
-      agents.each do |agent|
-        found = @found_agents.detect {|a| a.id == agent.id}
-        if found.blank?
-          @found_agents << agent        
+        @found_agents = []
+        agents.each do |agent|
+          found = @found_agents.detect {|a| a.id == agent.id}
+          if found.blank?
+            @found_agents << agent        
+          end
         end
       end
     end
