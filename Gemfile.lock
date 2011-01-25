@@ -15,7 +15,9 @@ GEM
       mime-types
       xml-simple
     builder (3.0.0)
+    columnize (0.3.1)
     geokit (1.5.0)
+    linecache (0.43-x86-mswin32)
     mime-types (1.16)
     mysql (2.8.1-x86-mswin32)
     rails (2.3.2)
@@ -26,6 +28,11 @@ GEM
       activesupport (= 2.3.2)
       rake (>= 0.8.3)
     rake (0.8.7)
+    ruby-debug (0.10.4)
+      columnize (>= 0.1)
+      ruby-debug-base (~> 0.10.4.0)
+    ruby-debug-base (0.10.4-x86-mswin32)
+      linecache (>= 0.3)
     xml-simple (1.0.12)
     ym4r (0.6.1)
 
@@ -37,4 +44,5 @@ DEPENDENCIES
   geokit (= 1.5.0)
   mysql
   rails (= 2.3.2)
+  ruby-debug
   ym4r

@@ -7,3 +7,4 @@ gem "rails", "2.3.2"
 gem 'mysql', :group => :development 
 gem 'ym4r'
 gem 'aws-s3'
+gem 'ruby-debug', :group => :development

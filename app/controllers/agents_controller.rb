@@ -71,7 +71,10 @@ class AgentsController < ApplicationController
     @agent = Agent.new(params[:agent])
     respond_to do |format|
       if @agent.save
+
+        # this magically updates the zipcodes and habtm agents_zipcodes tables
         @agent.service_areas = params[:agent][:zip_codes]
+
         if ! @agent.photo_data.blank?
           # now that we have the id, save the photo_url
           @agent.photo_url = "/images/photo" + @agent.id.to_s
@@ -111,8 +114,10 @@ class AgentsController < ApplicationController
 
       if @agent.update_attributes(params[:agent])
 
-        # this magically updates the zipcodes and habtm agents_zipcodes tables
         @agent.service_areas = params[:agent][:zip_codes]
+        
+        #ok if this fails, it is retried the next time lat lng is needed for this agent location
+        @agent.set_latlng!
 
         if ! @agent.photo_data.blank? || ! @agent.resume_data.blank?
           aws_s3_connect

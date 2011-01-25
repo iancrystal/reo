@@ -67,6 +67,7 @@ class Agent < ActiveRecord::Base
     # update the agents_zipcodes table and the zipcodes table based on the zipargs argument
 
     self.zipcodes = []
+    self.zipcodes.destroy_all
     zipargs.split(/\s+/).each do |arg|
       z = Zipcode.find_by_zipcode(arg)
       if ! z
@@ -166,6 +167,10 @@ class Agent < ActiveRecord::Base
         latlng = AddrLatlng.new(:agent_id => self.id, :lat => phys_addr.lat, :lng => phys_addr.lng)
         self.addr_latlng = latlng
         self.save
+      end
+    else
+      if ! self.addr_latlng.blank?
+        self.addr_latlng.destroy
       end
     end
   end

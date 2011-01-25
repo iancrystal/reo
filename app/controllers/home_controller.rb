@@ -26,7 +26,7 @@ class HomeController < ApplicationController
       @map.center_zoom_init(coord,11)
 
       @found_agents = [];
-      # get the zipcodes within the 50 mile radius
+      # get the zipcodes within the 5 mile radius
       zips = Zipcode.find(:all, :origin => coord, :within=>5)
       zips.each do |zip|
         agents = zip.agents
@@ -54,6 +54,8 @@ class HomeController < ApplicationController
           end
         end
       end
+      @temp = @found_agents.sort_by { |a| [a.first_name, a.last_name] }
+      @found_agents = @temp
     end
   end
 
