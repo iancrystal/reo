@@ -21,13 +21,13 @@ class HomeController < ApplicationController
       end
       @address = session[:address]
 
-      a=Geokit::Geocoders::YahooGeocoder.geocode @address
-      coord = [a.lat, a.lng]
+      g=Geokit::Geocoders::YahooGeocoder.geocode @address
+      coord = [g.lat, g.lng]
       @map.center_zoom_init(coord,11)
 
       @found_agents = [];
       # get the zipcodes within the 5 mile radius
-      zips = Zipcode.find(:all, :origin => coord, :within=>5)
+      zips = Zipcode.find(:all, :origin => coord, :within=> 5)
       zips.each do |zip|
         agents = zip.agents
         # get the agents of each zipcode
@@ -35,6 +35,9 @@ class HomeController < ApplicationController
           found = @found_agents.detect {|a| a.id == agent.id}
           if found.blank?
             @found_agents << agent
+            # use the zipcode lat/lng if cannot get the lat/lng of physical address 
+            # or if physical address is too far
+            coord = [zip.lat, zip.lng]
             # get the geo lat lng to create the marker for each agent.  check addr_latlng first then the geo web 
             # service then as last resort just use the geo of the zipcode table
             if agent.latlng_good? 
@@ -43,8 +46,13 @@ class HomeController < ApplicationController
               agent.set_latlng!
               if agent.latlng_good? 
                 coord = [agent.addr_latlng.lat, agent.addr_latlng.lng]  
-              else
-                # last resort. this will cause the overlays to overlap but that's ok
+              end
+            end
+            if agent.latlng_good? 
+              # if the physical address is to far just use the zip code service area
+              # so the marker still shows up in the map
+              d = g.distance_to([agent.addr_latlng.lat, agent.addr_latlng.lng], :units => :miles)
+              if (d > 10)
                 coord = [zip.lat, zip.lng]
               end
             end
