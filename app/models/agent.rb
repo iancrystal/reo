@@ -3,8 +3,10 @@ require 'geokit'
 
 class Agent < ActiveRecord::Base
   has_and_belongs_to_many :zipcodes
-  has_many :asset_company_notes
-  has_one :addr_latlng
+  # delete_all is for faster delete. this is safe since a company note has not other
+  # dependencies and no callbacks
+  has_many :asset_company_notes, :dependent => :delete_all
+  has_one :addr_latlng, :dependent => :destroy
 
   validates_presence_of :email1
   validates_uniqueness_of :email1

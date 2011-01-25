@@ -1,7 +1,9 @@
 require 'digest/sha1'
 
 class AssetCompany < ActiveRecord::Base
-  has_many :asset_company_notes
+  # delete_all is for faster delete. this is safe since a company note has not other
+  # dependencies and no callbacks
+  has_many :asset_company_notes, :dependent => :delete_all
 
   validates_presence_of :email
   validates_uniqueness_of :email
