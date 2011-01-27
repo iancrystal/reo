@@ -1,6 +1,7 @@
 require 'digest/sha1'
 require 'geokit'
 
+# Model for the agents table.
 class Agent < ActiveRecord::Base
   has_and_belongs_to_many :zipcodes
   # delete_all is for faster delete. this is safe since a company note has not other
@@ -25,6 +26,7 @@ class Agent < ActiveRecord::Base
 
 
   attr_accessor :password_confirmation
+  # terms of agreement
   attr_accessor :terms
   attr_accessor :agree
   attr_accessor :photo_type
@@ -34,9 +36,9 @@ class Agent < ActiveRecord::Base
   attr_accessor :resume_ext
   attr_accessor :zip_codes
 
+  # Get the service areas. example: Hayward, CA: 94544, 94545; San Jose, CA: 95134, 95135
+  # first let's put all zipcode city and state info in a hash for quick access
   def service_areas
-    # get the service areas. example: Hayward, CA: 94544, 94545; San Jose, CA: 95134, 95135
-    # first let's put all zipcode city and state info in a hash for quick access
     areas_zips = {}
     areas_city = {}
     areas_state = {}
@@ -55,6 +57,7 @@ class Agent < ActiveRecord::Base
 
   end
 
+  # Returns a string of zipcodes of the service areas this agent services
   def service_zips
     zips = []
     self.zipcodes.each do |zip|
@@ -63,8 +66,8 @@ class Agent < ActiveRecord::Base
     zips.join(" ")
   end
 
+  # Updates the agents_zipcodes table and the zipcodes table based on the zipargs argument
   def service_areas=(zipargs)
-    # update the agents_zipcodes table and the zipcodes table based on the zipargs argument
 
     self.zipcodes = []
     self.zipcodes.destroy_all
@@ -92,8 +95,8 @@ class Agent < ActiveRecord::Base
     end
   end
 
+  # Facade to access amazon s3 location because heroku is read only
   def photo_url
-    # facade to access amazon s3 location because heroku is read only
     url = read_attribute("photo_url")
     if ! url.blank?
       url.gsub(/\/images\//,"http:\/\/s3.amazonaws.com\/reoagentphoto\/")
@@ -102,8 +105,8 @@ class Agent < ActiveRecord::Base
     end
   end
 
+  # Facade to access filename of photo
   def photo_filename
-    # facade to access filename of photo
     url = read_attribute("photo_url")
     if ! url.blank?
       url.gsub(/\/images\//,"")
@@ -112,6 +115,7 @@ class Agent < ActiveRecord::Base
     end
   end
 
+  # Facade to the resume url. Prepends the Amazon s3 url
   def resume_url
     name = read_attribute("resume_filename")
     if ! name.blank?
@@ -121,6 +125,7 @@ class Agent < ActiveRecord::Base
     end
   end
 
+  # Checks the validity of email1 and password
   def self.authenticate(email1, password)
     agent = self.find_by_email1(email1)
     if agent
@@ -137,10 +142,12 @@ class Agent < ActiveRecord::Base
     agent
   end
 
+  # Returns the password attribute
   def password
     @password
   end
 
+  # Updates the password attribute
   def password=(pwd)
     @password = pwd
     return if pwd.blank?
@@ -159,6 +166,7 @@ class Agent < ActiveRecord::Base
     self.resume_data = resume_field.read
   end
 
+  # Updates the addr_latlng table based on the physical address
   def set_latlng!
     if ! self.physical_address1.blank? && ! self.physical_address_city.blank? && ! self.physical_address_state.blank? && ! self.physical_address_zip.blank? 
       phys_addr = Geokit::Geocoders::YahooGeocoder.geocode self.physical_address1 + "," + 
@@ -175,6 +183,7 @@ class Agent < ActiveRecord::Base
     end
   end
 
+  # Checks if the entry in the addr_latlng table is valid
   def latlng_good?
     self.addr_latlng && self.addr_latlng.lat && self.addr_latlng.lng
   end

@@ -1,3 +1,5 @@
+# All controller actions go through this filter. This filter looks at the controller,
+# action and the login status to decide whether to allow or block the action
 class AuthorizeFilter < ActionController::Base
 
   def self.filter(controller)

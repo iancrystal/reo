@@ -1,4 +1,8 @@
+# Handles the authentication/login chores 
 class AdminController < ApplicationController
+  # Checks the asset_companies table and agents table to verify the email and password of the
+  # user logging in is correct. If the password matches, appropriately assigns the
+  # :admin_id or :agent_id or :asset_company_id session variables.
   def login
     if request.post?
       if assetc = AssetCompany.authenticate(params[:email], params[:password])
@@ -36,6 +40,7 @@ class AdminController < ApplicationController
     end
   end
 
+  # Sets the :admin_id or :agent_id or :asset_company_id session variables to nil.
   def logout
     session[:agent_id] = nil
     session[:asset_company_id] = nil
@@ -49,7 +54,7 @@ class AdminController < ApplicationController
     redirect_to(:controller => "home")
   end
 
-  # since the before_filter form that passes the controller class (block and class) cannot access the flash, we just
+  # Since the before_filter form that passes the controller class (block and class) cannot access the flash, we just
   # use this as the temporary redirect
   def filter_login_redirect
     flash[:notice] = "Unauthorized access. Please log in"

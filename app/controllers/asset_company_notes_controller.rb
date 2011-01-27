@@ -1,3 +1,4 @@
+# create and update ReST interface to the asset_company_notes table
 class AssetCompanyNotesController < ApplicationController
 
   # POST /asset_company_notes

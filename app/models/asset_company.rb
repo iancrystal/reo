@@ -1,5 +1,6 @@
 require 'digest/sha1'
 
+# Model for the asset_companies table
 class AssetCompany < ActiveRecord::Base
   # delete_all is for faster delete. this is safe since a company note has not other
   # dependencies and no callbacks

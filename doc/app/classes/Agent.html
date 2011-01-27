@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Agent</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Agent</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/app/models/agent_rb.html">
+                app/models/agent.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                ActiveRecord::Base
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+Model for the agents table.
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000031">authenticate</a>&nbsp;&nbsp;
+      <a href="#M000039">fill_terms_of_agreement</a>&nbsp;&nbsp;
+      <a href="#M000037">latlng_good?</a>&nbsp;&nbsp;
+      <a href="#M000038">member_status_text</a>&nbsp;&nbsp;
+      <a href="#M000032">password</a>&nbsp;&nbsp;
+      <a href="#M000033">password=</a>&nbsp;&nbsp;
+      <a href="#M000029">photo_filename</a>&nbsp;&nbsp;
+      <a href="#M000028">photo_url</a>&nbsp;&nbsp;
+      <a href="#M000030">resume_url</a>&nbsp;&nbsp;
+      <a href="#M000025">service_areas</a>&nbsp;&nbsp;
+      <a href="#M000027">service_areas=</a>&nbsp;&nbsp;
+      <a href="#M000026">service_zips</a>&nbsp;&nbsp;
+      <a href="#M000036">set_latlng!</a>&nbsp;&nbsp;
+      <a href="#M000034">uploaded_picture=</a>&nbsp;&nbsp;
+      <a href="#M000035">uploaded_resume=</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">agree</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">password_confirmation</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">photo_data</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">photo_type</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">resume_data</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">resume_ext</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">resume_type</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">terms</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+terms of agreement
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">zip_codes</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000031" class="method-detail">
+        <a name="M000031"></a>
+
+        <div class="method-heading">
+          <a href="#M000031" class="method-signature">
+          <span class="method-name">authenticate</span><span class="method-args">(email1, password)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Checks the validity of email1 and <a href="Agent.html#M000032">password</a>
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000031-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000031-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/agent.rb, line 129</span>
+129:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">authenticate</span>(<span class="ruby-identifier">email1</span>, <span class="ruby-identifier">password</span>)
+130:     <span class="ruby-identifier">agent</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">find_by_email1</span>(<span class="ruby-identifier">email1</span>)
+131:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">agent</span>
+132:       <span class="ruby-comment cmt"># the salt and hashed_password is blank if the account exist but not yet verified</span>
+133:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">agent</span>.<span class="ruby-identifier">salt</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">agent</span>.<span class="ruby-identifier">hashed_password</span>.<span class="ruby-identifier">blank?</span>
+134:         <span class="ruby-identifier">agent</span> = <span class="ruby-keyword kw">nil</span>
+135:       <span class="ruby-keyword kw">else</span>
+136:         <span class="ruby-identifier">expected_password</span> = <span class="ruby-identifier">encrypted_password</span>(<span class="ruby-identifier">password</span>, <span class="ruby-identifier">agent</span>.<span class="ruby-identifier">salt</span>)
+137:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">agent</span>.<span class="ruby-identifier">hashed_password</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">expected_password</span>
+138:           <span class="ruby-identifier">agent</span> = <span class="ruby-keyword kw">nil</span>
+139:         <span class="ruby-keyword kw">end</span>
+140:       <span class="ruby-keyword kw">end</span>
+141:     <span class="ruby-keyword kw">end</span>
+142:     <span class="ruby-identifier">agent</span>
+143:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000039" class="method-detail">
+        <a name="M000039"></a>
+
+        <div class="method-heading">
+          <a href="#M000039" class="method-signature">
+          <span class="method-name">fill_terms_of_agreement</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000039-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000039-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/agent.rb, line 201</span>
+201:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fill_terms_of_agreement</span>
+202:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">terms</span> = <span class="ruby-value str">&quot;I have read and agree with the terms and conditions\n\nLast updated: January 18, 2011\n\n1. Your relationship with REO Agents Connect.\n\n1.1 Use of the Service is Subject to these Terms. Your use of any of the REO Agents Connect the \&quot;Service\&quot;) is subject to the terms of a legal agreement between you and REO Agents Connect Inc., whose principal place of business is at 1111 Street, City, State 11111, United States (\&quot;REO Agents Connect\&quot;). This legal agreement is referred to as the \&quot;Terms\&quot;.\n\n1.2 The Terms include REO Agents Connect's Legal Notices and Privacy Policy. \n\n(a) Unless otherwise agreed in writing with REO Agents Connect, the Terms will include the \nfollowing: \n(i) the terms and conditions set forth in this document;\n(ii) the Legal Notices; and\n(iii) the Privacy Policy.\n\n(b) Before you use the service, you should read each of the documents comprising the Terms, and print or save a local copy for your records.\n\n1.3 Changes to the Terms. REO Agents Connect reserves the right to make changes to the Terms from time to time. When these changes are made, REO Agents Connect will make a new copy of the Terms available at http://reoagentsconnect.com/terms_of_agreement. You understand and agree that if you use the Service after the date on which the Terms have changed, REO Agents Connect will treat your use as acceptance of the updated Terms. If a modification is unacceptable to you, you may terminate the agreement by ceasing use of the REO Agents Connect service.  \n2. Accepting the Terms.\n\n2.1 Clicking to Accept or Using the REO Agents Connect Service. In order to use the REO Agents Connect Service you must agree to the Terms. You can accept the Terms by:\n\n(a) clicking to accept or agree to the Terms, where this option is made available to you by REO Agents Connect in the user interface for the Service; or\n(b) using the REO Agents Connect Service. In this case, you understand and agree that REO Agents Connect will treat your use of the REO Agents Connect Service as acceptance of the Terms from that point onwards.\n\n2.2 U.S. Law Restrictions. You may not use the REO Agents Connect Service and may not accept the Terms if you are a person barred from using the Service under the laws of the United States.\n\n2.3 Authority to Accept the Terms. You represent that you have full power, capacity and authority to accept these Terms. If you are accepting on behalf of your employer or another entity, you represent that you have full legal authority to bind your employer or such entity to these Terms. If you don't have the legal authority to bind, please ensure that an authorized person from your entity consents to and accepts these Terms.\n\n3. Privacy and Personal Information.\n\n3.1 REO Agents Connect's Privacy Policy. For information about REO Agents Connect's data protection practices, please read REO Agents Connect's privacy policy at http://REOAgentsConnect.com/privacy.html. This policy explains how REO Agents Connect treats your personal information and protects your privacy when you use the Service.  \n3.2 Use of Your Data under REO Agents Connect's Privacy Policy. You agree to the use of your data in accordance with REO Agents Connect's privacy policy.\n\n3.3 Your Privacy Policy. You must post and abide by an appropriate privacy policy, and will comply with all applicable laws relating to the collection of information from visitors to Your REO Agents Connect Implementation.  \n4. Provision of Service by REO Agents Connect.\n\n4.1 Limits on Your Use of the Service. You acknowledge and agree that REO Agents Connect may impose or adjust the limit on the number of transactions you may send or receive through the Service; such fixed upper limits may be set by REO Agents Connect at any time, at REO Agents Connect's discretion.\n\n4.2 Changes to the Service: Termination of the Service.\n\n(b) REO Agents Connect reserves the right in its discretion to cease providing all or any part of the Deprecated Version of the Service immediately without any notice if: \n(i) you have breached any provision of the Terms (or have acted in manner that clearly shows that you do not intend to, or are unable to comply with the provisions of the Terms); or \n\n(ii) REO Agents Connect is required to do so by law (for example, due to a change to the law governing the provision of the Deprecated Version of the Service); or \n\n(iii) the Deprecated Version of the Service relies on data or services provided by a third party partner and the relationship with such partner (x) has expired or been terminated or (y) requires REO Agents Connect to change the way REO Agents Connect provides the data or services through the Deprecated Version of the Service; or \n\n(iv) providing the Deprecated Version of the Service could create a substantial economic burden as determined by REO Agents Connect in its reasonable good faith judgment; or \n\n(v) providing the Deprecated Version of the Service could create a security risk or material technical burden as determined by REO Agents Connect in its reasonable good faith judgment. \n\n5. Your REO Agents Connect Account.\n\n5.1 Signing Up for a REO Agents Connect Account. In order to access the Service, you must have a REO Agents Connect Account. You agree that any information you give to REO Agents Connect in connection with your REO Agents Connect Account or your continued use of the Service will always be accurate, correct and up to date.\n\n5.3 Your Passwords and Account Security. You agree that you will be solely responsible to REO Agents Connect for your use of the Service. If you become aware of any unauthorized use of your password, your account, or your key, you agree to notify REO Agents Connect immediately. \n\n6. REO Agents Connect's Proprietary Rights. You acknowledge and agree that REO Agents Connect (or REO Agents Connect's licensors and their suppliers, as applicable) own all legal right, title and interest in and to the Service and Content, including any intellectual property rights that subsist in the Service and Content (whether those rights happen to be registered or not, and wherever in the world those rights may exist).\n\n7. LIMITATION OF LIABILITY.\n\n8. SUBJECT TO SECTION 13.1, YOU EXPRESSLY UNDERSTAND AND AGREE THAT REO Agents Connect, ITS SUBSIDIARIES AND AFFILIATES, AND REO Agents Connect.S LICENSORS AND THEIR SUPPLIERS, WILL NOT BE LIABLE TO YOU FOR:\n\n(a) ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES THAT MAY BE INCURRED BY YOU, HOWEVER CAUSED AND UNDER ANY THEORY OF LIABILITY (INCLUDING, BUT NOT BE LIMITED TO, ANY LOSS OF PROFIT (WHETHER INCURRED DIRECTLY OR INDIRECTLY), ANY LOSS OF GOODWILL OR BUSINESS REPUTATION, ANY LOSS OF DATA, COST OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, OR OTHER INTANGIBLE LOSS); OR\n\n(b) ANY LOSS OR DAMAGE AS A RESULT OF:\n(i) ANY RELIANCE PLACED BY YOU ON THE COMPLETENESS, ACCURACY OR EXISTENCE OF ANY ADVERTISING, OR AS A RESULT OF ANY RELATIONSHIP OR TRANSACTION BETWEEN YOU AND ANY ADVERTISER OR SPONSOR WHOSE ADVERTISING APPEARS ON THE REO Agents Connect SERVICES;\n(ii) ANY CHANGES THAT REO Agents Connect MAY MAKE TO THE SERVICE, OR ANY PERMANENT OR TEMPORARY CESSATION IN THE PROVISION OF THE SERVICE (OR ANY FEATURES WITHIN THE SERVICE);\n(iii) THE DELETION OF, CORRUPTION OF, OR FAILURE TO STORE, ANY CONTENT AND OTHER COMMUNICATIONS DATA MAINTAINED OR TRANSMITTED BY OR THROUGH YOUR USE OF THE SERVICE;\n(iv) YOUR FAILURE TO PROVIDE REO Agents Connect WITH ACCURATE ACCOUNT INFORMATION; OR\n(v) YOUR FAILURE TO KEEP YOUR PASSWORD OR ACCOUNT DETAILS SECURE AND CONFIDENTIAL.\n\n9. THE LIMITATIONS ON REO Agents Connect'S LIABILITY TO YOU IN SECTION 14.1 ABOVE WILL APPLY WHETHER OR NOT REO Agents Connect, ITS SUBSIDIARIES, AFFILIATES, LICENSORS OR THEIR SUPPLIERS HAVE BEEN ADVISED OF OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF ANY SUCH LOSSES OR DAMAGES.\n\n10. The Service may include hyperlinks to other websites or content or resources.  REO Agents Connect has no control over any web sites or resources that are provided by companies or persons other than REO Agents Connect. You acknowledge and agree that REO Agents Connect is not responsible for the availability of any such external sites or resources, and does not endorse any advertising, products or other materials on or available from such websites or resources.\n\n10.1 You acknowledge and agree that REO Agents Connect is not liable for any loss or damage that may be incurred by you as a result of the availability of those external sites or resources, or as a result of any reliance placed by you on the completeness, accuracy or existence of any advertising, products, or other materials on, or available from, such websites or resources.\n\n11. General Legal Terms.\n\n11.1 Notices. You agree that REO Agents Connect may provide you with notices, including those regarding changes to the Terms, by email, regular mail, or postings on the Service.\n\n11.2 No Waiver. You agree that if REO Agents Connect does not exercise or enforce any legal right or remedy contained in the Terms (or that REO Agents Connect has the benefit of under any applicable law), this will not be taken to be a formal waiver of REO Agents Connect's rights and that those rights or remedies will still be available to REO Agents Connect. Any waiver of any provision of these Terms will be effective only if REO Agents Connect expressly states in a signed writing that it is waiving a specified Term.\n\n11.3 Severability. If any court of law that has jurisdiction rules that any provision of these Terms is invalid, then that provision will be removed from the Terms without affecting the rest of the Terms. The remaining provisions of the Terms will continue to be valid and enforceable.\n\n11.5 Assignment. The Terms may be assigned by REO Agents Connect and will inure to the benefit of REO Agents Connect, its successors and assigns.\n\n11.6 Governing Law and Jurisdiction; Injunctive Relief. The Terms, and your relationship with REO Agents Connect under the Terms, will be governed by the laws of the State of California, USA, without regard to its conflict of laws provisions. You and REO Agents Connect agree to submit to the exclusive jurisdiction of the courts located in the County of Santa Clara, California, USA, to resolve any legal matter arising from the Terms.  Notwithstanding this, you agree that REO Agents Connect will be allowed to apply for injunctive remedies (or an equivalent type of urgent legal relief) in any jurisdiction.\n\n11.7 Complete Agreement. The Terms constitute the whole legal agreement between you and REO Agents Connect and govern your use of the Service and Content, and completely replace and supersede any prior agreements between you and REO Agents Connect, written or oral, in relation to the Service and Content.\n    \n&quot;</span>
+203: 
+204:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000037" class="method-detail">
+        <a name="M000037"></a>
+
+        <div class="method-heading">
+          <a href="#M000037" class="method-signature">
+          <span class="method-name">latlng_good?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Checks if the entry in the addr_latlng table is valid
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000037-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000037-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/agent.rb, line 187</span>
+187:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">latlng_good?</span>
+188:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">addr_latlng</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">addr_latlng</span>.<span class="ruby-identifier">lat</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">addr_latlng</span>.<span class="ruby-identifier">lng</span>
+189:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000038" class="method-detail">
+        <a name="M000038"></a>
+
+        <div class="method-heading">
+          <a href="#M000038" class="method-signature">
+          <span class="method-name">member_status_text</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000038-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000038-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/agent.rb, line 191</span>
+191:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">member_status_text</span>
+192:     <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">member_status</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+193:       <span class="ruby-value str">&quot;free&quot;</span>
+194:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">member_status</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+195:       <span class="ruby-value str">&quot;basic&quot;</span>
+196:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">member_status</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+197:       <span class="ruby-value str">&quot;premium&quot;</span>
+198:     <span class="ruby-keyword kw">end</span>
+199:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000032" class="method-detail">
+        <a name="M000032"></a>
+
+        <div class="method-heading">
+          <a href="#M000032" class="method-signature">
+          <span class="method-name">password</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the <a href="Agent.html#M000032">password</a> attribute
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000032-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000032-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/agent.rb, line 146</span>
+146:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">password</span>
+147:     <span class="ruby-ivar">@password</span>
+148:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000033" class="method-detail">
+        <a name="M000033"></a>
+
+        <div class="method-heading">
+          <a href="#M000033" class="method-signature">
+          <span class="method-name">password=</span><span class="method-args">(pwd)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Updates the <a href="Agent.html#M000032">password</a> attribute
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000033-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000033-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/agent.rb, line 151</span>
+151:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">password=</span>(<span class="ruby-identifier">pwd</span>)
+152:     <span class="ruby-ivar">@password</span> = <span class="ruby-identifier">pwd</span>
+153:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">pwd</span>.<span class="ruby-identifier">blank?</span>
+154:     <span class="ruby-identifier">create_new_salt</span>
+155:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">hashed_password</span> = <span class="ruby-constant">Agent</span>.<span class="ruby-identifier">encrypted_password</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">password</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">salt</span>)
+156:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000029" class="method-detail">
+        <a name="M000029"></a>
+
+        <div class="method-heading">
+          <a href="#M000029" class="method-signature">
+          <span class="method-name">photo_filename</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Facade to access filename of photo
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000029-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000029-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/agent.rb, line 109</span>
+109:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">photo_filename</span>
+110:     <span class="ruby-identifier">url</span> = <span class="ruby-identifier">read_attribute</span>(<span class="ruby-value str">&quot;photo_url&quot;</span>)
+111:     <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">url</span>.<span class="ruby-identifier">blank?</span>
+112:       <span class="ruby-identifier">url</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\/images\//</span>,<span class="ruby-value str">&quot;&quot;</span>)
+113:     <span class="ruby-keyword kw">else</span>
+114:       <span class="ruby-value str">&quot;&quot;</span>
+115:     <span class="ruby-keyword kw">end</span>
+116:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000028" class="method-detail">
+        <a name="M000028"></a>
+
+        <div class="method-heading">
+          <a href="#M000028" class="method-signature">
+          <span class="method-name">photo_url</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Facade to access amazon s3 location because heroku is read only
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000028-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000028-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/agent.rb, line 99</span>
+ 99:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">photo_url</span>
+100:     <span class="ruby-identifier">url</span> = <span class="ruby-identifier">read_attribute</span>(<span class="ruby-value str">&quot;photo_url&quot;</span>)
+101:     <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">url</span>.<span class="ruby-identifier">blank?</span>
+102:       <span class="ruby-identifier">url</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\/images\//</span>,<span class="ruby-value str">&quot;http:\/\/s3.amazonaws.com\/reoagentphoto\/&quot;</span>)
+103:     <span class="ruby-keyword kw">else</span>
+104:       <span class="ruby-value str">&quot;&quot;</span>
+105:     <span class="ruby-keyword kw">end</span>
+106:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000030" class="method-detail">
+        <a name="M000030"></a>
+
+        <div class="method-heading">
+          <a href="#M000030" class="method-signature">
+          <span class="method-name">resume_url</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Facade to the resume url. Prepends the Amazon s3 url
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000030-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000030-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/agent.rb, line 119</span>
+119:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">resume_url</span>
+120:     <span class="ruby-identifier">name</span> = <span class="ruby-identifier">read_attribute</span>(<span class="ruby-value str">&quot;resume_filename&quot;</span>)
+121:     <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">blank?</span>
+122:       <span class="ruby-node">&quot;http://s3.amazonaws.com/reoagentresume/#{name}&quot;</span>
+123:     <span class="ruby-keyword kw">else</span>
+124:       <span class="ruby-value str">&quot;&quot;</span>
+125:     <span class="ruby-keyword kw">end</span>
+126:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000025" class="method-detail">
+        <a name="M000025"></a>
+
+        <div class="method-heading">
+          <a href="#M000025" class="method-signature">
+          <span class="method-name">service_areas</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Get the service areas. example: Hayward, CA: 94544, 94545; San Jose, CA:
+95134, 95135 first let&#8216;s put all zipcode city and state info in a
+hash for quick access
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000025-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000025-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/agent.rb, line 41</span>
+41:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">service_areas</span>
+42:     <span class="ruby-identifier">areas_zips</span> = {}
+43:     <span class="ruby-identifier">areas_city</span> = {}
+44:     <span class="ruby-identifier">areas_state</span> = {}
+45:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">zipcodes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">zip</span><span class="ruby-operator">|</span>
+46:       <span class="ruby-identifier">areas_zips</span>[<span class="ruby-node">&quot;#{zip.city}#{zip.state}&quot;</span>] = <span class="ruby-node">&quot;#{zip.zipcode} #{areas_zips[&quot;#{zip.city}#{zip.state}&quot;]}&quot;</span>
+47:       <span class="ruby-identifier">areas_city</span>[<span class="ruby-node">&quot;#{zip.city}#{zip.state}&quot;</span>] = <span class="ruby-identifier">zip</span>.<span class="ruby-identifier">city</span> 
+48:       <span class="ruby-identifier">areas_state</span>[<span class="ruby-node">&quot;#{zip.city}#{zip.state}&quot;</span>] = <span class="ruby-identifier">zip</span>.<span class="ruby-identifier">state</span>
+49:     <span class="ruby-keyword kw">end</span>
+50: 
+51:     <span class="ruby-comment cmt"># then assemble the string by traversing each city-state key</span>
+52:     <span class="ruby-identifier">service_areas</span> = []
+53:       <span class="ruby-identifier">areas_zips</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+54:         <span class="ruby-identifier">service_areas</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{areas_city[key]}, #{areas_state[key]}: #{areas_zips[key]}&quot;</span>
+55:       <span class="ruby-keyword kw">end</span>
+56:     <span class="ruby-identifier">service_areas</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;; &quot;</span>)
+57: 
+58:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000027" class="method-detail">
+        <a name="M000027"></a>
+
+        <div class="method-heading">
+          <a href="#M000027" class="method-signature">
+          <span class="method-name">service_areas=</span><span class="method-args">(zipargs)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Updates the agents_zipcodes table and the zipcodes table based on the
+zipargs argument
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000027-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000027-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/agent.rb, line 70</span>
+70:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">service_areas=</span>(<span class="ruby-identifier">zipargs</span>)
+71: 
+72:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">zipcodes</span> = []
+73:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">zipcodes</span>.<span class="ruby-identifier">destroy_all</span>
+74:     <span class="ruby-identifier">zipargs</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\s+/</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span>
+75:       <span class="ruby-identifier">z</span> = <span class="ruby-constant">Zipcode</span>.<span class="ruby-identifier">find_by_zipcode</span>(<span class="ruby-identifier">arg</span>)
+76:       <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">z</span>
+77:         <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; not found in zipcodes table.&quot;</span>
+78:         <span class="ruby-identifier">a</span>=<span class="ruby-constant">Geokit</span><span class="ruby-operator">::</span><span class="ruby-constant">Geocoders</span><span class="ruby-operator">::</span><span class="ruby-constant">YahooGeocoder</span>.<span class="ruby-identifier">geocode</span> <span class="ruby-identifier">arg</span>
+79:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">lat</span>
+80:           <span class="ruby-identifier">z</span> = <span class="ruby-constant">Zipcode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">:zipcode</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">arg</span>, <span class="ruby-identifier">:lat</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">lat</span>, <span class="ruby-identifier">:lng</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">lng</span>, <span class="ruby-identifier">:state</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">state</span>, <span class="ruby-identifier">:city</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">city</span>)
+81:         <span class="ruby-keyword kw">else</span>
+82:           <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;cannot get info for #{arg}&quot;</span>
+83:         <span class="ruby-keyword kw">end</span>
+84:       <span class="ruby-keyword kw">end</span>
+85:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">z</span>
+86:         <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">zipcodes</span>.<span class="ruby-identifier">find_by_zipcode</span>(<span class="ruby-identifier">arg</span>)
+87:           <span class="ruby-comment cmt"># this automatically creates an entry in the agents_zipcodes and zipcodes table</span>
+88:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">zipcodes</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">z</span>
+89:         <span class="ruby-keyword kw">else</span>
+90:           <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; is already a service area for &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">first_name</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">last_name</span>
+91:         <span class="ruby-keyword kw">end</span>
+92:       <span class="ruby-keyword kw">else</span>
+93:         <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;failed to add #{arg}&quot;</span>
+94:       <span class="ruby-keyword kw">end</span>
+95:     <span class="ruby-keyword kw">end</span>
+96:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000026" class="method-detail">
+        <a name="M000026"></a>
+
+        <div class="method-heading">
+          <a href="#M000026" class="method-signature">
+          <span class="method-name">service_zips</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns a string of zipcodes of the service areas this agent services
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000026-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000026-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/models/agent.rb, line 61</span>
+61:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">service_zips</span>
+62:     <span class="ruby-identifier">zips</span> = []
+63:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">zipcodes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">zip</span><span class="ruby-operator">|</span>
+64:       <span class="ruby-identifier">zips</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">zip</span>.<span class="ruby-identifier">zipcode</span>
+65:     <span class="ruby-keyword kw">end</span>
+66:     <span class="ruby-identifier">zips</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot; &quot;</span>)
+67:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000036" class="method-detail">
+        <a name="M000036"></a>
+
+        <div class="method-heading">
+          <a href="#M000036" class="method-signature">
+          <span class="method-name">set_latlng!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Updates the addr_latlng table based on the physical address
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000036-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000036-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/agent.rb, line 170</span>
+170:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_latlng!</span>
+171:     <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">physical_address1</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">physical_address_city</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">physical_address_state</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">physical_address_zip</span>.<span class="ruby-identifier">blank?</span> 
+172:       <span class="ruby-identifier">phys_addr</span> = <span class="ruby-constant">Geokit</span><span class="ruby-operator">::</span><span class="ruby-constant">Geocoders</span><span class="ruby-operator">::</span><span class="ruby-constant">YahooGeocoder</span>.<span class="ruby-identifier">geocode</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">physical_address1</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;,&quot;</span> <span class="ruby-operator">+</span> 
+173:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">physical_address_city</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;,&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">physical_address_state</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot; &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">physical_address_zip</span>
+174:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">phys_addr</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">phys_addr</span>.<span class="ruby-identifier">lat</span>.<span class="ruby-identifier">blank?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">phys_addr</span>.<span class="ruby-identifier">lng</span>.<span class="ruby-identifier">blank?</span> 
+175:         <span class="ruby-identifier">latlng</span> = <span class="ruby-constant">AddrLatlng</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">:agent_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">id</span>, <span class="ruby-identifier">:lat</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">phys_addr</span>.<span class="ruby-identifier">lat</span>, <span class="ruby-identifier">:lng</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">phys_addr</span>.<span class="ruby-identifier">lng</span>)
+176:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">addr_latlng</span> = <span class="ruby-identifier">latlng</span>
+177:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">save</span>
+178:       <span class="ruby-keyword kw">end</span>
+179:     <span class="ruby-keyword kw">else</span>
+180:       <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">addr_latlng</span>.<span class="ruby-identifier">blank?</span>
+181:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">addr_latlng</span>.<span class="ruby-identifier">destroy</span>
+182:       <span class="ruby-keyword kw">end</span>
+183:     <span class="ruby-keyword kw">end</span>
+184:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000034" class="method-detail">
+        <a name="M000034"></a>
+
+        <div class="method-heading">
+          <a href="#M000034" class="method-signature">
+          <span class="method-name">uploaded_picture=</span><span class="method-args">(picture_field)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000034-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000034-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/agent.rb, line 158</span>
+158:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">uploaded_picture=</span>(<span class="ruby-identifier">picture_field</span>)
+159:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">photo_type</span> = <span class="ruby-identifier">picture_field</span>.<span class="ruby-identifier">content_type</span>.<span class="ruby-identifier">chomp</span>
+160:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">photo_data</span> = <span class="ruby-identifier">picture_field</span>.<span class="ruby-identifier">read</span>
+161:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000035" class="method-detail">
+        <a name="M000035"></a>
+
+        <div class="method-heading">
+          <a href="#M000035" class="method-signature">
+          <span class="method-name">uploaded_resume=</span><span class="method-args">(resume_field)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000035-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000035-source">
+<pre>
+     <span class="ruby-comment cmt"># File app/models/agent.rb, line 163</span>
+163:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">uploaded_resume=</span>(<span class="ruby-identifier">resume_field</span>)
+164:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">resume_ext</span> = <span class="ruby-identifier">ext_part_of</span>(<span class="ruby-identifier">resume_field</span>.<span class="ruby-identifier">original_filename</span>)
+165:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">resume_type</span> = <span class="ruby-identifier">resume_field</span>.<span class="ruby-identifier">content_type</span>.<span class="ruby-identifier">chomp</span>
+166:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">resume_data</span> = <span class="ruby-identifier">resume_field</span>.<span class="ruby-identifier">read</span>
+167:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

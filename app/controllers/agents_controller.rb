@@ -1,5 +1,6 @@
 require 'aws/s3'
 
+# Standard ReST interface of agents table.
 class AgentsController < ApplicationController
 
   # GET /agents/1

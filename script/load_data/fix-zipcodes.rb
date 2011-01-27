@@ -6,7 +6,7 @@ File.delete("zipcodes.log") if File::exists?("zipcodes.log")
 File.open("zipcodes.log","w") do |log|
 
   #for i in 1..41329
-  for i in 5344..41329
+  for i in 10692..41329
     puts i
     log.puts i
     begin

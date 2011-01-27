@@ -1,3 +1,4 @@
+# Standard ReST interface to the asset_companies table.
 class AssetCompaniesController < ApplicationController
 
   # GET /asset_companies

@@ -1,2 +1,37 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+=REO AGENTS CONNECT
+
+This application is used by asset management companies to search for REO agents to manage their REO properties.
+
+==General Usage
+
+* Asset management companies can search for a REO agent in an area using google maps. The asset manager can view the detailed profile of an agent by clicking on a markup on the map or clicking on an item in the list on the left sidebar.
+
+* The asset manager can create/update notes for certain REO agent.
+ 
+* REO agents can also be searched using "Advanced Search" - using a search form where one can enter any of the profile details to be used in the search.
+
+* REO agents can sign up by entering their profile, contact information, and account password. There are already 1 million agents in the database (loaded from a purchased database). When an agent signs up, their email is searched in the database and if the email is found, the sign up form will be pre-filled with the data from the database.  REO agents can upload their resume and photo.
+
+* Asset management company accounts can only be created by the admin. However asset management companies can edit their account after logging in.
+
+* Only the admin can update the membership status of a REO agent.
+
+==Database Overview
+
+The following are the database tables and their short description.
+
+[agents] Contains the name, contact information, credentials, membership status and password of REO agents. Also contains the filenames of the resume and picture file stored in Amazon S3 storage.
+
+[zipcodes] Contains the latitude and longitude of all 41,328 standard zipcodes. Also contains city and state to be used in displaying the service area section of the REO agent profile display.
+
+[agents_zipcodes] The join table for agents and zipcodes. Contains the agent_id to zipcode_id mapping for each service area an agent services (a REO agent can have many service area zipcodes)
+
+[addr_latlngs] Contains the latitude and longitude of the physical address of each agent. During a map search, if a REO agent has a service area in the area being searched, the physical address is used to mark the map instead of the zipcode to avoid overlaps, but only if the physical address is inside the search area. Else the zipcode is used to markup.
+
+[asset_companies] Contains the account information for each asset company.
+
+[asset_company_notes] Contains the notes. Each note record contains the agent_id of the agent the note belongs to and the asset_company_id of the asset company that created the note.
+
+==Authentication Scheme
+
+This application uses a simple but powerful login/authentication tecnique. All controllers go through the AuthorizeFilter (helpers/authorize_filter.rb). The filter class method looks at the controller and action of the request and decides if the current user is authorized or not.

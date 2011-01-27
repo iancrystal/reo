@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'geokit'
 
+# Contains the map searh, sign-up and advanced search actions
 class HomeController < ApplicationController
   def index
 

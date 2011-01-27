@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: README_FOR_APP</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>README_FOR_APP</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>doc/README_FOR_APP
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Wed Jan 26 23:43:55 -0800 2011</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <h1>REO AGENTS CONNECT</h1>
+<p>
+This application is used by asset management companies to search for REO
+agents to manage their REO properties.
+</p>
+<h2>General Usage</h2>
+<ul>
+<li>Asset management companies can search for a REO agent in an area using
+google maps. The asset manager can view the detailed profile of an agent by
+clicking on a markup on the map or clicking on an item in the list on the
+left sidebar.
+
+</li>
+<li>The asset manager can create/update notes for certain REO agent.
+
+</li>
+<li>REO agents can also be searched using &quot;Advanced Search&quot; - using a
+search form where one can enter any of the profile details to be used in
+the search.
+
+</li>
+<li>REO agents can sign up by entering their profile, contact information, and
+account password. There are already 1 million agents in the database
+(loaded from a purchased database). When an agent signs up, their email is
+searched in the database and if the email is found, the sign up form will
+be pre-filled with the data from the database. REO agents can upload their
+resume and photo.
+
+</li>
+<li>Asset management company accounts can only be created by the admin. However
+asset management companies can edit their account after logging in.
+
+</li>
+<li>Only the admin can update the membership status of a REO agent.
+
+</li>
+</ul>
+<h2>Database Overview</h2>
+<p>
+The following are the database tables and their short description.
+</p>
+<dl>
+<dt>agents</dt><dd>Contains the name, contact information, credentials, membership status and
+password of REO agents. Also contains the filenames of the resume and
+picture file stored in Amazon S3 storage.
+
+</dd>
+<dt>zipcodes</dt><dd>Contains the latitude and longitude of all 41,328 standard zipcodes. Also
+contains city and state to be used in displaying the service area section
+of the REO agent profile display.
+
+</dd>
+<dt>agents_zipcodes</dt><dd>The join table for agents and zipcodes. Contains the agent_id to zipcode_id
+mapping for each service area an agent services (a REO agent can have many
+service area zipcodes)
+
+</dd>
+<dt>addr_latlngs</dt><dd>Contains the latitude and longitude of the physical address of each agent.
+During a map search, if a REO agent has a service area in the area being
+searched, the physical address is used to mark the map instead of the
+zipcode to avoid overlaps, but only if the physical address is inside the
+search area. Else the zipcode is used to markup.
+
+</dd>
+<dt>asset_companies</dt><dd>Contains the account information for each asset company.
+
+</dd>
+<dt>asset_company_notes</dt><dd>Contains the notes. Each note record contains the agent_id of the agent the
+note belongs to and the asset_company_id of the asset company that created
+the note.
+
+</dd>
+</dl>
+<h2>Authentication Scheme</h2>
+<p>
+This application uses a simple but powerful login/authentication tecnique.
+All controllers go through the <a
+href="../../classes/AuthorizeFilter.html">AuthorizeFilter</a>
+(helpers/authorize_filter.rb). The filter class method looks at the
+controller and action of the request and decides if the current user is
+authorized or not.
+</p>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>
