@@ -4,10 +4,12 @@
     <%= f.error_messages %>
     <fieldset>
       <legend>Update user details</legend>
-      <div>
-        Member status: 0 - free, 1 - basic, 2 - premium<br />
-        <%= f.text_field :member_status, :size => 3 %>
-      </div>
+      <% if session[:admin_id] %>
+        <div>
+          Member status: 0 - free, 1 - basic, 2 - premium<br />
+          <%= f.text_field :member_status, :size => 3 %>
+        </div>
+      <% end %>
       <div>
         <%= f.label :first_name %>
         <%= f.text_field :first_name, :size => 15 %>

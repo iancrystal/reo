@@ -1,5 +1,6 @@
 tmp/*
 log/development.log
+log/test.log
 public/images/*.jpg
 db/*.sqlite3
 script/load_data/*.log

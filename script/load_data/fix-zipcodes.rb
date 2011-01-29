@@ -9,8 +9,8 @@ File.open("zipcodes.log","w") do |log|
   prev_fail = false
 
   #for i in 1..41329
-  #for i in 10692..41329
-  for i in 10200..41329
+  for i in 16006..41329
+  #for i in 10200..41329
     puts i
     log.puts i
     begin

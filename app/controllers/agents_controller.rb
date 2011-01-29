@@ -74,7 +74,9 @@ class AgentsController < ApplicationController
       if @agent.save
 
         # this magically updates the zipcodes and habtm agents_zipcodes tables
-        @agent.service_areas = params[:agent][:zip_codes]
+        if params[:agent][:zip_codes]
+          @agent.service_areas = params[:agent][:zip_codes]
+        end
 
         if ! @agent.photo_data.blank?
           # now that we have the id, save the photo_url
@@ -113,9 +115,14 @@ class AgentsController < ApplicationController
 
     respond_to do |format|
 
-      if @agent.update_attributes(params[:agent])
+      if (params[:agent][:member_status] && ! session[:admin_id])
+        flash[:notice] = "only an admin can edit the membership status"
+        format.html { redirect_to(:controller => "admin", :action=>'filter_login_redirect') }
+      elsif @agent.update_attributes(params[:agent])
 
-        @agent.service_areas = params[:agent][:zip_codes]
+        if params[:agent][:zip_codes]
+          @agent.service_areas = params[:agent][:zip_codes]
+        end
         
         #ok if this fails, it is retried the next time lat lng is needed for this agent location
         @agent.set_latlng!

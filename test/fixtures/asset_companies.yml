@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+<% SALT = "NaCl" unless defined?(SALT) %>
+
+juan:
+  company_name: Bank of America
+  email: juan@bofa.com
+  phone: 1-800-111-2222
+  fax: 408-544-7299
+  contact_name: juan valdez
+  address1: 101 Innovation drive
+  address2:
+  address_city: San Jose
+  address_state: CA
+  address_zip: 95134
+  salt: <%= SALT %>
+  hashed_password: <%= AssetCompany.encrypted_password('secret' , SALT) %> 
+
+rob:
+  company_name: Citibank
+  email: rob@bofa.com
+  phone: 1-800-111-2222
+  fax: 408-544-7299
+  contact_name: robert romano 
+  address1: 1 ruus drive
+  address2:
+  address_city: Union City
+  address_state: CA
+  address_zip: 94444
+  salt: <%= SALT %>
+  hashed_password: <%= AssetCompany.encrypted_password('secret' , SALT) %> 

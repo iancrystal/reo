@@ -1,27 +1,59 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  company: MyString
-  physical_address: MyText
-  mailing_address: MyText
-  email1: MyString
-  email2: MyString
-  phone1: MyString
-  phone2: MyString
-  fax: MyString
-  bio_cred: MyText
-  photo_url: MyString
+<% SALT = "NaCl" unless defined?(SALT) %>
 
-two:
-  name: MyString
-  company: MyString
-  physical_address: MyText
-  mailing_address: MyText
-  email1: MyString
-  email2: MyString
-  phone1: MyString
-  phone2: MyString
-  fax: MyString
-  bio_cred: MyText
-  photo_url: MyString
+john:
+  first_name: John
+  middle_name: Williams
+  last_name: Doe
+  suffix: Jr
+  company: Century 21
+  physical_address1: 101 Innovation drive
+  physical_address2:
+  physical_address_city: San Jose
+  physical_address_state: CA
+  physical_address_zip: 95134
+  mailing_address1:
+  mailing_address2: 
+  mailing_address_city: 
+  mailing_address_state: 
+  mailing_address_zip: 
+  email1: john@altera.com
+  email2: 
+  phone1: 408-544-7265
+  phone2: 
+  fax: 408-544-7299
+  bio_cred: The best in the business 
+  photo_url: 
+  resume_filename: filename 
+  salt: <%= SALT %>
+  hashed_password: <%= Agent.encrypted_password('secret' , SALT) %> 
+  member_status: 1 
+
+mary:
+  first_name: Mary
+  middle_name: Poppins
+  last_name: Laterno
+  suffix:
+  company: Remax 21
+  physical_address1: 205 Tasman ave
+  physical_address2:
+  physical_address_city: Santa Clara
+  physical_address_state: CA
+  physical_address_zip: 95135
+  mailing_address1:
+  mailing_address2: 
+  mailing_address_city: 
+  mailing_address_state: 
+  mailing_address_zip: 
+  email1: mary@xilinx.com
+  email2: 
+  phone1: 408-722-1234
+  phone2: 
+  fax: 408-722-1111
+  bio_cred: The best in the world
+  photo_url: 
+  resume_filename: filename 
+  salt: <%= SALT %>
+  hashed_password: <%= Agent.encrypted_password('secret' , SALT) %> 
+  member_status: 1 
