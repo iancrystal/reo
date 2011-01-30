@@ -2,6 +2,10 @@
 
 This application is used by asset management companies to search for REO agents to manage their REO properties.
 
+The source code of this application was documented using rdoc. Open doc/app/index.html for easy viewing of source code and documentation.
+
+Unit, functional and integration tests were written for this application (under the test directory). Refer to the rails documentation for instructions on running these tests.
+
 ==General Usage
 
 * Asset management companies can search for a REO agent in an area using google maps. The asset manager can view the detailed profile of an agent by clicking on a markup on the map or clicking on an item in the list on the left sidebar.
@@ -35,3 +39,4 @@ The following are the database tables and their short description.
 ==Authentication Scheme
 
 This application uses a simple but powerful login/authentication tecnique. All controllers go through the AuthorizeFilter (helpers/authorize_filter.rb). The filter class method looks at the controller and action of the request and decides if the current user is authorized or not.
+
