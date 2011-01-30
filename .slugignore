@@ -6,3 +6,4 @@ db/schema.rb
 db/migrate/dev_data/*
 app/tags
 doc
+test

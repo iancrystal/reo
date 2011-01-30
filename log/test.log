@@ -10926,3 +10926,2373 @@ Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies]
   [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
   [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:14:52) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 10ms (DB: 80) | 302 Found [http://test.host/asset_companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:14:52) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;35;1mAssetCompany Load (10.0ms)[0m   [0mSELECT * FROM `asset_companies` [0m
+Rendering template within layouts/application
+Rendering asset_companies/index
+Completed in 40ms (View: 30, DB: 10) | 200 OK [http://test.host/asset_companies/index/29303362]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:22:07) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` [0m
+Rendering template within layouts/application
+Rendering asset_companies/index
+Completed in 41ms (View: 41, DB: 50) | 200 OK [http://test.host/asset_companies/index/29303362]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 21:22:07) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:22:07) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:23:26) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` [0m
+Rendering template within layouts/application
+Rendering asset_companies/index
+Completed in 40ms (View: 40, DB: 50) | 200 OK [http://test.host/asset_companies/index/29303362]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 21:23:26) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:23:26) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:25:03) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` [0m
+Rendering template within layouts/application
+Rendering asset_companies/index
+Completed in 40ms (View: 40, DB: 70) | 200 OK [http://test.host/asset_companies/index/29303362]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 21:25:03) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:25:04) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:31:08) [GET]
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` [0m
+Rendering template within layouts/application
+Rendering asset_companies/index
+Completed in 40ms (View: 30, DB: 80) | 200 OK [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 21:31:08) [GET]
+Rendering template within layouts/application
+Rendering asset_companies/new
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:31:08) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:32:30) [GET]
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` [0m
+Rendering template within layouts/application
+Rendering asset_companies/index
+Completed in 40ms (View: 30, DB: 50) | 200 OK [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 21:32:30) [GET]
+Rendering template within layouts/application
+Rendering asset_companies/new
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:32:30) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 21:32:30) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:35:58) [GET]
+  [4;36;1mAssetCompany Load (10.0ms)[0m   [0;1mSELECT * FROM `asset_companies` [0m
+Rendering template within layouts/application
+Rendering asset_companies/index
+Completed in 40ms (View: 30, DB: 90) | 200 OK [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 21:35:58) [GET]
+Rendering template within layouts/application
+Rendering asset_companies/new
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:35:58) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 21:35:58) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 21:35:58) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 21:35:58) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/show
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://test.host/asset_companies/29303362]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 21:39:05) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;35;1mAssetCompany Load (10.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/edit
+Completed in 50ms (View: 40, DB: 60) | 200 OK [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:39:05) [GET]
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` [0m
+Rendering template within layouts/application
+Rendering asset_companies/index
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 21:39:05) [GET]
+Rendering template within layouts/application
+Rendering asset_companies/new
+Completed in 20ms (View: 20, DB: 0) | 200 OK [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 21:39:05) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/show
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 21:39:05) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:39:05) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 21:39:05) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 21:39:05) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 21:49:34) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/edit
+Completed in 50ms (View: 40, DB: 70) | 200 OK [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:49:34) [GET]
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` [0m
+Rendering template within layouts/application
+Rendering asset_companies/index
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 21:49:34) [GET]
+Rendering template within layouts/application
+Rendering asset_companies/new
+Completed in 20ms (View: 20, DB: 0) | 200 OK [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 21:49:34) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 21:49:34) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:49:34) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 21:49:34) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 21:49:34) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+
+
+Processing AssetCompaniesController#create (for 0.0.0.0 at 2011-01-29 21:49:34) [POST]
+  Parameters: {"asset_company"=>{"email1"=>"create1@asset_company.com", "password"=>"secret"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (10.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 21:50:01) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/edit
+Completed in 40ms (View: 40, DB: 70) | 200 OK [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (10.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:50:01) [GET]
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` [0m
+Rendering template within layouts/application
+Rendering asset_companies/index
+Completed in 10ms (View: 10, DB: 10) | 200 OK [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 21:50:01) [GET]
+Rendering template within layouts/application
+Rendering asset_companies/new
+Completed in 20ms (View: 20, DB: 0) | 200 OK [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 21:50:01) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/show
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (10.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 21:50:01) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 10) | 302 Found [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:50:01) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 21:50:01) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 21:50:01) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+
+
+Processing AssetCompaniesController#create (for 0.0.0.0 at 2011-01-29 21:50:01) [POST]
+  Parameters: {"asset_company"=>{"password"=>"secret", "email"=>"create1@asset_company.com"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompany Exists (0.0ms)[0m   [0mSELECT `asset_companies`.id FROM `asset_companies` WHERE (`asset_companies`.`email` = BINARY 'create1@asset_company.com') LIMIT 1[0m
+  [4;36;1mAssetCompany Create (0.0ms)[0m   [0;1mINSERT INTO `asset_companies` (`address1`, `address_city`, `salt`, `address2`, `updated_at`, `company_name`, `hashed_password`, `address_zip`, `address_state`, `phone`, `fax`, `email`, `contact_name`, `created_at`) VALUES(NULL, NULL, '393086800.494683178598766', NULL, '2011-01-30 05:50:01', NULL, '57827ffd2d2a1bd343db4eb3d4ecead72a84463e', NULL, NULL, NULL, NULL, 'create1@asset_company.com', NULL, '2011-01-30 05:50:01')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/asset_companies/978752319
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/asset_companies?asset_company%5Bemail%5D=create1%40asset_company.com&asset_company%5Bpassword%5D=secret]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;35;1mSQL (61.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 21:52:03) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/edit
+Completed in 50ms (View: 40, DB: 80) | 200 OK [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (10.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:52:03) [GET]
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` [0m
+Rendering template within layouts/application
+Rendering asset_companies/index
+Completed in 10ms (View: 10, DB: 10) | 200 OK [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 21:52:03) [GET]
+Rendering template within layouts/application
+Rendering asset_companies/new
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 21:52:03) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/show
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 21:52:03) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 21:52:03) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 21:52:03) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (10.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 21:52:03) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 10) | 302 Found [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#create (for 0.0.0.0 at 2011-01-29 21:52:03) [POST]
+  Parameters: {"asset_company"=>{"password"=>"secret", "email"=>"create1@asset_company.com"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies?asset_company%5Bemail%5D=create1%40asset_company.com&asset_company%5Bpassword%5D=secret]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_companies` [0m
+
+
+Processing AssetCompaniesController#create (for 0.0.0.0 at 2011-01-29 21:52:03) [POST]
+  Parameters: {"asset_company"=>{"password"=>"secret", "email"=>"create1@asset_company.com"}}
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompany Exists (0.0ms)[0m   [0;1mSELECT `asset_companies`.id FROM `asset_companies` WHERE (`asset_companies`.`email` = BINARY 'create1@asset_company.com') LIMIT 1[0m
+  [4;35;1mAssetCompany Create (0.0ms)[0m   [0mINSERT INTO `asset_companies` (`address1`, `address_city`, `salt`, `address2`, `updated_at`, `company_name`, `hashed_password`, `address_zip`, `address_state`, `phone`, `fax`, `email`, `contact_name`, `created_at`) VALUES(NULL, NULL, '393182300.326217127498568', NULL, '2011-01-30 05:52:03', NULL, '7267445231adc36ae21d5c4df3d1269513dd5074', NULL, NULL, NULL, NULL, 'create1@asset_company.com', NULL, '2011-01-30 05:52:03')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/asset_companies/978752320
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/asset_companies?asset_company%5Bemail%5D=create1%40asset_company.com&asset_company%5Bpassword%5D=secret]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mSQL (50.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `agents` [0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#destroy (for 0.0.0.0 at 2011-01-29 21:57:28) [DELETE]
+  Parameters: {"id"=>"21341157"}
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+filename does not exist
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompanyNote Delete all (0.0ms)[0m   [0;1mDELETE FROM `asset_company_notes` WHERE ((agent_id = 21341157)) [0m
+  [4;35;1mAddrLatlng Load (0.0ms)[0m   [0mSELECT * FROM `addr_latlngs` WHERE (`addr_latlngs`.agent_id = 21341157) LIMIT 1[0m
+  [4;36;1magents_zipcodes Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents_zipcodes`[0m
+  [4;35;1mZipcode Load (0.0ms)[0m   [0mSELECT * FROM `zipcodes` INNER JOIN `agents_zipcodes` ON `zipcodes`.id = `agents_zipcodes`.zipcode_id WHERE (`agents_zipcodes`.agent_id = 21341157 ) [0m
+  [4;36;1mAgent Destroy (0.0ms)[0m   [0;1mDELETE FROM `agents` WHERE `id` = 21341157[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/logout
+Completed in 150ms (DB: 40) | 302 Found [http://test.host/agents/21341157]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `agents` [0m
+  [4;35;1mSQL (80.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#edit (for 0.0.0.0 at 2011-01-29 21:57:28) [GET]
+  Parameters: {"id"=>"21341157"}
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mZipcode Load (0.0ms)[0m   [0mSELECT * FROM `zipcodes` INNER JOIN `agents_zipcodes` ON `zipcodes`.id = `agents_zipcodes`.zipcode_id WHERE (`agents_zipcodes`.agent_id = 21341157 ) [0m
+Rendering template within layouts/application
+Rendering agents/edit
+Completed in 50ms (View: 40, DB: 80) | 200 OK [http://test.host/agents/21341157/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#edit (for 0.0.0.0 at 2011-01-29 21:57:28) [GET]
+  Parameters: {"id"=>"21341157"}
+  [4;35;1mAgent Load (10.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mZipcode Load (0.0ms)[0m   [0;1mSELECT * FROM `zipcodes` INNER JOIN `agents_zipcodes` ON `zipcodes`.id = `agents_zipcodes`.zipcode_id WHERE (`agents_zipcodes`.agent_id = 21341157 ) [0m
+Rendering template within layouts/application
+Rendering agents/edit
+Completed in 20ms (View: 10, DB: 10) | 200 OK [http://test.host/agents/21341157/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AgentsController#new (for 0.0.0.0 at 2011-01-29 21:57:28) [GET]
+Rendering template within layouts/application
+Rendering agents/new
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://test.host/agents/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#show (for 0.0.0.0 at 2011-01-29 21:57:28) [GET]
+  Parameters: {"id"=>"21341157"}
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mZipcode Load (0.0ms)[0m   [0mSELECT * FROM `zipcodes` INNER JOIN `agents_zipcodes` ON `zipcodes`.id = `agents_zipcodes`.zipcode_id WHERE (`agents_zipcodes`.agent_id = 21341157 ) [0m
+  [4;36;1mAssetCompanyNote Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mAssetCompanyNote Load (0.0ms)[0m   [0mSELECT * FROM `asset_company_notes` WHERE (`asset_company_notes`.`agent_id` = 21341157) [0m
+Rendering template within layouts/application
+Rendering agents/show
+Completed in 120ms (View: 10, DB: 0) | 200 OK [http://test.host/agents/21341157]
+  [4;36;1mSQL (10.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `agents` [0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#destroy (for 0.0.0.0 at 2011-01-29 21:57:28) [DELETE]
+  Parameters: {"id"=>"21341157"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 10) | 302 Found [http://test.host/agents/21341157]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `agents` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#edit (for 0.0.0.0 at 2011-01-29 21:57:28) [GET]
+  Parameters: {"id"=>"21341157"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/agents/21341157/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#update (for 0.0.0.0 at 2011-01-29 21:57:28) [PUT]
+  Parameters: {"id"=>"21341157", "agent"=>{"physical_address_zip"=>"95139"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/agents/21341157?agent%5Bphysical_address_zip%5D=95139]
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#update (for 0.0.0.0 at 2011-01-29 21:57:28) [PUT]
+  Parameters: {"id"=>"21341157", "agent"=>{"member_status"=>9}}
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+Redirected to http://test.host/admin/filter_login_redirect
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/agents/21341157?agent%5Bmember_status%5D=9]
+  [4;36;1mAgent Load (10.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `agents` [0m
+
+
+Processing AgentsController#create (for 0.0.0.0 at 2011-01-29 21:57:28) [POST]
+  Parameters: {"agent"=>{"email1"=>"create2@agent.com", "password"=>"secret"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAgent Exists (0.0ms)[0m   [0mSELECT `agents`.id FROM `agents` WHERE (`agents`.`email1` = BINARY 'create2@agent.com') LIMIT 1[0m
+  [4;36;1mAgent Create (0.0ms)[0m   [0;1mINSERT INTO `agents` (`company`, `salt`, `updated_at`, `physical_address_state`, `photo_url`, `mailing_address_zip`, `hashed_password`, `email1`, `physical_address_zip`, `resume_filename`, `email2`, `bio_cred`, `member_status`, `mailing_address1`, `phone1`, `fax`, `mailing_address2`, `mailing_address_state`, `phone2`, `first_name`, `physical_address_city`, `last_name`, `physical_address1`, `created_at`, `middle_name`, `suffix`, `physical_address2`, `mailing_address_city`) VALUES(NULL, '382280400.322747969847661', '2011-01-30 05:57:28', NULL, NULL, NULL, 'fe0e199b5f36f3120b175ea29eb2633460ee1a4a', 'create2@agent.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2011-01-30 05:57:28', NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mAddrLatlng Load (0.0ms)[0m   [0;1mSELECT * FROM `addr_latlngs` WHERE (`addr_latlngs`.agent_id = 21341159) LIMIT 1[0m
+Redirected to http://test.host/agents/21341159
+Completed in 10ms (DB: 10) | 302 Found [http://test.host/agents?agent%5Bemail1%5D=create2%40agent.com&agent%5Bpassword%5D=secret]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `agents` [0m
+  [4;36;1mSQL (50.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#update (for 0.0.0.0 at 2011-01-29 21:57:28) [PUT]
+  Parameters: {"id"=>"21341157", "agent"=>{"physical_address_zip"=>"95139"}}
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAgent Exists (0.0ms)[0m   [0mSELECT `agents`.id FROM `agents` WHERE (`agents`.`email1` = BINARY 'john@altera.com' AND `agents`.id <> 21341157) LIMIT 1[0m
+  [4;36;1mAgent Update (0.0ms)[0m   [0;1mUPDATE `agents` SET `physical_address_zip` = '95139', `updated_at` = '2011-01-30 05:57:28' WHERE `id` = 21341157[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Yahoo geocoding. Address: 101 Innovation drive,San Jose,CA 95139. Result: <?xml version="1.0"?>
+<ResultSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:yahoo:maps" xsi:schemaLocation="urn:yahoo:maps http://local.yahooapis.com/MapsService/V1/GeocodeResponse.xsd"><Result precision="address"><Latitude>37.400296</Latitude><Longitude>-121.935441</Longitude><Address>101 Innovation Dr</Address><City>San Jose</City><State>CA</State><Zip>95134-1941</Zip><Country>US</Country></Result></ResultSet>
+<!-- ws03.ydn.gq1.yahoo.com uncompressed/chunked Sat Jan 29 21:57:29 PST 2011 -->
+  [4;36;1mAddrLatlng Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `addr_latlngs`[0m
+  [4;35;1mAddrLatlng Load (0.0ms)[0m   [0mSELECT * FROM `addr_latlngs` WHERE (`addr_latlngs`.agent_id = 21341157) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAddrLatlng Create (0.0ms)[0m   [0mINSERT INTO `addr_latlngs` (`lng`, `lat`, `agent_id`) VALUES(-121.935441, 37.400296, 21341157)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAgent Exists (0.0ms)[0m   [0;1mSELECT `agents`.id FROM `agents` WHERE (`agents`.`email1` = BINARY 'john@altera.com' AND `agents`.id <> 21341157) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 471ms (DB: 60) | 302 Found [http://test.host/agents/21341157?agent%5Bphysical_address_zip%5D=95139]
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mSQL (40.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `agents` [0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#destroy (for 0.0.0.0 at 2011-01-29 22:02:54) [DELETE]
+  Parameters: {"id"=>"21341157"}
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+filename does not exist
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompanyNote Delete all (0.0ms)[0m   [0;1mDELETE FROM `asset_company_notes` WHERE ((agent_id = 21341157)) [0m
+  [4;35;1mAddrLatlng Load (0.0ms)[0m   [0mSELECT * FROM `addr_latlngs` WHERE (`addr_latlngs`.agent_id = 21341157) LIMIT 1[0m
+  [4;36;1magents_zipcodes Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents_zipcodes`[0m
+  [4;35;1mZipcode Load (0.0ms)[0m   [0mSELECT * FROM `zipcodes` INNER JOIN `agents_zipcodes` ON `zipcodes`.id = `agents_zipcodes`.zipcode_id WHERE (`agents_zipcodes`.agent_id = 21341157 ) [0m
+  [4;36;1mAgent Destroy (0.0ms)[0m   [0;1mDELETE FROM `agents` WHERE `id` = 21341157[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/logout
+Completed in 140ms (DB: 70) | 302 Found [http://test.host/agents/21341157]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `agents` [0m
+  [4;35;1mSQL (50.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#edit (for 0.0.0.0 at 2011-01-29 22:02:55) [GET]
+  Parameters: {"id"=>"21341157"}
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mZipcode Load (0.0ms)[0m   [0mSELECT * FROM `zipcodes` INNER JOIN `agents_zipcodes` ON `zipcodes`.id = `agents_zipcodes`.zipcode_id WHERE (`agents_zipcodes`.agent_id = 21341157 ) [0m
+Rendering template within layouts/application
+Rendering agents/edit
+Completed in 50ms (View: 40, DB: 50) | 200 OK [http://test.host/agents/21341157/edit]
+  [4;36;1mSQL (10.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#edit (for 0.0.0.0 at 2011-01-29 22:02:55) [GET]
+  Parameters: {"id"=>"21341157"}
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mZipcode Load (0.0ms)[0m   [0;1mSELECT * FROM `zipcodes` INNER JOIN `agents_zipcodes` ON `zipcodes`.id = `agents_zipcodes`.zipcode_id WHERE (`agents_zipcodes`.agent_id = 21341157 ) [0m
+Rendering template within layouts/application
+Rendering agents/edit
+Completed in 20ms (View: 20, DB: 10) | 200 OK [http://test.host/agents/21341157/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AgentsController#new (for 0.0.0.0 at 2011-01-29 22:02:55) [GET]
+Rendering template within layouts/application
+Rendering agents/new
+Completed in 30ms (View: 30, DB: 0) | 200 OK [http://test.host/agents/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#show (for 0.0.0.0 at 2011-01-29 22:02:55) [GET]
+  Parameters: {"id"=>"21341157"}
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mZipcode Load (0.0ms)[0m   [0mSELECT * FROM `zipcodes` INNER JOIN `agents_zipcodes` ON `zipcodes`.id = `agents_zipcodes`.zipcode_id WHERE (`agents_zipcodes`.agent_id = 21341157 ) [0m
+  [4;36;1mAssetCompanyNote Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mAssetCompanyNote Load (0.0ms)[0m   [0mSELECT * FROM `asset_company_notes` WHERE (`asset_company_notes`.`agent_id` = 21341157) [0m
+Rendering template within layouts/application
+Rendering agents/show
+Completed in 120ms (View: 20, DB: 0) | 200 OK [http://test.host/agents/21341157]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `agents` [0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#destroy (for 0.0.0.0 at 2011-01-29 22:02:55) [DELETE]
+  Parameters: {"id"=>"21341157"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/agents/21341157]
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `agents` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#edit (for 0.0.0.0 at 2011-01-29 22:02:55) [GET]
+  Parameters: {"id"=>"21341157"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 10) | 302 Found [http://test.host/agents/21341157/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (10.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#update (for 0.0.0.0 at 2011-01-29 22:02:55) [PUT]
+  Parameters: {"id"=>"21341157", "agent"=>{"physical_address_zip"=>"95139"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 10) | 302 Found [http://test.host/agents/21341157?agent%5Bphysical_address_zip%5D=95139]
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#update (for 0.0.0.0 at 2011-01-29 22:02:55) [PUT]
+  Parameters: {"id"=>"21341157", "agent"=>{"member_status"=>9}}
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+Redirected to http://test.host/admin/filter_login_redirect
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/agents/21341157?agent%5Bmember_status%5D=9]
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `agents` [0m
+
+
+Processing AgentsController#create (for 0.0.0.0 at 2011-01-29 22:02:55) [POST]
+  Parameters: {"agent"=>{"email1"=>"create2@agent.com", "password"=>"secret"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAgent Exists (0.0ms)[0m   [0mSELECT `agents`.id FROM `agents` WHERE (`agents`.`email1` = BINARY 'create2@agent.com') LIMIT 1[0m
+  [4;36;1mAgent Create (0.0ms)[0m   [0;1mINSERT INTO `agents` (`company`, `salt`, `updated_at`, `physical_address_state`, `photo_url`, `mailing_address_zip`, `hashed_password`, `email1`, `physical_address_zip`, `resume_filename`, `email2`, `bio_cred`, `member_status`, `mailing_address1`, `phone1`, `fax`, `mailing_address2`, `mailing_address_state`, `phone2`, `first_name`, `physical_address_city`, `last_name`, `physical_address1`, `created_at`, `middle_name`, `suffix`, `physical_address2`, `mailing_address_city`) VALUES(NULL, '382282300.394772199354032', '2011-01-30 06:02:55', NULL, NULL, NULL, '9e1cd787e64c4c58794f2df9b4e42104b3b179d9', 'create2@agent.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2011-01-30 06:02:55', NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mAddrLatlng Load (0.0ms)[0m   [0;1mSELECT * FROM `addr_latlngs` WHERE (`addr_latlngs`.agent_id = 21341160) LIMIT 1[0m
+Redirected to http://test.host/agents/21341160
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/agents?agent%5Bemail1%5D=create2%40agent.com&agent%5Bpassword%5D=secret]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `agents` [0m
+  [4;36;1mSQL (50.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+
+
+Processing AgentsController#update (for 0.0.0.0 at 2011-01-29 22:02:55) [PUT]
+  Parameters: {"id"=>"21341157", "agent"=>{"physical_address_zip"=>"95139"}}
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAgent Exists (0.0ms)[0m   [0mSELECT `agents`.id FROM `agents` WHERE (`agents`.`email1` = BINARY 'john@altera.com' AND `agents`.id <> 21341157) LIMIT 1[0m
+  [4;36;1mAgent Update (0.0ms)[0m   [0;1mUPDATE `agents` SET `physical_address_zip` = '95139', `updated_at` = '2011-01-30 06:02:55' WHERE `id` = 21341157[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Yahoo geocoding. Address: 101 Innovation drive,San Jose,CA 95139. Result: <?xml version="1.0"?>
+<ResultSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:yahoo:maps" xsi:schemaLocation="urn:yahoo:maps http://local.yahooapis.com/MapsService/V1/GeocodeResponse.xsd"><Result precision="address"><Latitude>37.400296</Latitude><Longitude>-121.935441</Longitude><Address>101 Innovation Dr</Address><City>San Jose</City><State>CA</State><Zip>95134-1941</Zip><Country>US</Country></Result></ResultSet>
+<!-- ws01.ydn.gq1.yahoo.com uncompressed/chunked Sat Jan 29 22:02:56 PST 2011 -->
+  [4;36;1mAddrLatlng Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `addr_latlngs`[0m
+  [4;35;1mAddrLatlng Load (0.0ms)[0m   [0mSELECT * FROM `addr_latlngs` WHERE (`addr_latlngs`.agent_id = 21341157) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAddrLatlng Create (0.0ms)[0m   [0mINSERT INTO `addr_latlngs` (`lng`, `lat`, `agent_id`) VALUES(-121.935441, 37.400296, 21341157)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAgent Exists (0.0ms)[0m   [0;1mSELECT `agents`.id FROM `agents` WHERE (`agents`.`email1` = BINARY 'john@altera.com' AND `agents`.id <> 21341157) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 351ms (DB: 50) | 302 Found [http://test.host/agents/21341157?agent%5Bphysical_address_zip%5D=95139]
+  [4;36;1mAgent Load (10.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mSQL (40.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (10.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 22:05:24) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/edit
+Completed in 50ms (View: 40, DB: 111) | 200 OK [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 22:05:24) [GET]
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` [0m
+Rendering template within layouts/application
+Rendering asset_companies/index
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 22:05:24) [GET]
+Rendering template within layouts/application
+Rendering asset_companies/new
+Completed in 20ms (View: 20, DB: 0) | 200 OK [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 22:05:24) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (10.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 22:05:24) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 10) | 302 Found [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 22:05:24) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 22:05:24) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 22:05:24) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#create (for 0.0.0.0 at 2011-01-29 22:05:24) [POST]
+  Parameters: {"asset_company"=>{"password"=>"secret", "email"=>"create1@asset_company.com"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies?asset_company%5Bemail%5D=create1%40asset_company.com&asset_company%5Bpassword%5D=secret]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_companies` [0m
+
+
+Processing AssetCompaniesController#create (for 0.0.0.0 at 2011-01-29 22:05:24) [POST]
+  Parameters: {"asset_company"=>{"password"=>"secret", "email"=>"create1@asset_company.com"}}
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompany Exists (0.0ms)[0m   [0;1mSELECT `asset_companies`.id FROM `asset_companies` WHERE (`asset_companies`.`email` = BINARY 'create1@asset_company.com') LIMIT 1[0m
+  [4;35;1mAssetCompany Create (0.0ms)[0m   [0mINSERT INTO `asset_companies` (`address1`, `address_city`, `salt`, `address2`, `updated_at`, `company_name`, `hashed_password`, `address_zip`, `address_state`, `phone`, `fax`, `email`, `contact_name`, `created_at`) VALUES(NULL, NULL, '392883500.592262654568587', NULL, '2011-01-30 06:05:24', NULL, '60ffceb4640d75d2363537d8c7cef734fc9a88ee', NULL, NULL, NULL, NULL, 'create1@asset_company.com', NULL, '2011-01-30 06:05:24')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/asset_companies/978752321
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/asset_companies?asset_company%5Bemail%5D=create1%40asset_company.com&asset_company%5Bpassword%5D=secret]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 22:09:22) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/edit
+Completed in 50ms (View: 40, DB: 60) | 200 OK [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 22:09:22) [GET]
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` [0m
+Rendering template within layouts/application
+Rendering asset_companies/index
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 22:09:22) [GET]
+Rendering template within layouts/application
+Rendering asset_companies/new
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 22:09:22) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;36;1mAssetCompany Load (10.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/show
+Completed in 10ms (View: 0, DB: 10) | 200 OK [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 22:09:22) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 22:09:22) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 22:09:22) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 22:09:22) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#create (for 0.0.0.0 at 2011-01-29 22:09:22) [POST]
+  Parameters: {"asset_company"=>{"password"=>"secret", "email"=>"create1@asset_company.com"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies?asset_company%5Bemail%5D=create1%40asset_company.com&asset_company%5Bpassword%5D=secret]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#update (for 0.0.0.0 at 2011-01-29 22:09:22) [PUT]
+  Parameters: {"id"=>"29303362", "asset_company"=>{"address_zip"=>"95139"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362?asset_company%5Baddress_zip%5D=95139]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+
+
+Processing AssetCompaniesController#create (for 0.0.0.0 at 2011-01-29 22:09:22) [POST]
+  Parameters: {"asset_company"=>{"password"=>"secret", "email"=>"create1@asset_company.com"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompany Exists (0.0ms)[0m   [0mSELECT `asset_companies`.id FROM `asset_companies` WHERE (`asset_companies`.`email` = BINARY 'create1@asset_company.com') LIMIT 1[0m
+  [4;36;1mAssetCompany Create (0.0ms)[0m   [0;1mINSERT INTO `asset_companies` (`address1`, `address_city`, `salt`, `address2`, `updated_at`, `company_name`, `hashed_password`, `address_zip`, `address_state`, `phone`, `fax`, `email`, `contact_name`, `created_at`) VALUES(NULL, NULL, '392740800.585428181478006', NULL, '2011-01-30 06:09:22', NULL, '24051a8add036f34a9a1508c11e37503e8e85ce5', NULL, NULL, NULL, NULL, 'create1@asset_company.com', NULL, '2011-01-30 06:09:22')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/asset_companies/978752322
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies?asset_company%5Bemail%5D=create1%40asset_company.com&asset_company%5Bpassword%5D=secret]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;35;1mSQL (40.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#update (for 0.0.0.0 at 2011-01-29 22:09:22) [PUT]
+  Parameters: {"id"=>"29303362", "asset_company"=>{"address_zip"=>"95139"}}
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompany Exists (0.0ms)[0m   [0;1mSELECT `asset_companies`.id FROM `asset_companies` WHERE (`asset_companies`.`email` = BINARY 'juan@bofa.com' AND `asset_companies`.id <> 29303362) LIMIT 1[0m
+  [4;35;1mAssetCompany Update (0.0ms)[0m   [0mUPDATE `asset_companies` SET `updated_at` = '2011-01-30 06:09:22', `address_zip` = '95139' WHERE `id` = 29303362[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/asset_companies/29303362
+Completed in 0ms (DB: 40) | 302 Found [http://test.host/asset_companies/29303362?asset_company%5Baddress_zip%5D=95139]
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mSQL (30.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 22:10:10) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/edit
+Completed in 50ms (View: 50, DB: 60) | 200 OK [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 22:10:10) [GET]
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` [0m
+Rendering template within layouts/application
+Rendering asset_companies/index
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 22:10:10) [GET]
+Rendering template within layouts/application
+Rendering asset_companies/new
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 22:10:10) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/show
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (10.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 22:10:10) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 10) | 302 Found [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 22:10:10) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/asset_companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 22:10:10) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 22:10:10) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#create (for 0.0.0.0 at 2011-01-29 22:10:10) [POST]
+  Parameters: {"asset_company"=>{"password"=>"secret", "email"=>"create1@asset_company.com"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies?asset_company%5Bemail%5D=create1%40asset_company.com&asset_company%5Bpassword%5D=secret]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#update (for 0.0.0.0 at 2011-01-29 22:10:10) [PUT]
+  Parameters: {"id"=>"29303362", "asset_company"=>{"address_zip"=>"95139"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362?asset_company%5Baddress_zip%5D=95139]
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_companies` [0m
+
+
+Processing AssetCompaniesController#create (for 0.0.0.0 at 2011-01-29 22:10:10) [POST]
+  Parameters: {"asset_company"=>{"password"=>"secret", "email"=>"create1@asset_company.com"}}
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompany Exists (0.0ms)[0m   [0;1mSELECT `asset_companies`.id FROM `asset_companies` WHERE (`asset_companies`.`email` = BINARY 'create1@asset_company.com') LIMIT 1[0m
+  [4;35;1mAssetCompany Create (0.0ms)[0m   [0mINSERT INTO `asset_companies` (`address1`, `address_city`, `salt`, `address2`, `updated_at`, `company_name`, `hashed_password`, `address_zip`, `address_state`, `phone`, `fax`, `email`, `contact_name`, `created_at`) VALUES(NULL, NULL, '392720700.843543512198982', NULL, '2011-01-30 06:10:10', NULL, 'adbae9f9c7b584135dbae493ff75587cf45056f5', NULL, NULL, NULL, NULL, 'create1@asset_company.com', NULL, '2011-01-30 06:10:10')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/asset_companies/978752323
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/asset_companies?asset_company%5Bemail%5D=create1%40asset_company.com&asset_company%5Bpassword%5D=secret]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mSQL (50.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#update (for 0.0.0.0 at 2011-01-29 22:10:11) [PUT]
+  Parameters: {"id"=>"29303362", "asset_company"=>{"address_zip"=>"95139"}}
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompany Exists (0.0ms)[0m   [0mSELECT `asset_companies`.id FROM `asset_companies` WHERE (`asset_companies`.`email` = BINARY 'juan@bofa.com' AND `asset_companies`.id <> 29303362) LIMIT 1[0m
+  [4;36;1mAssetCompany Update (0.0ms)[0m   [0;1mUPDATE `asset_companies` SET `updated_at` = '2011-01-30 06:10:11', `address_zip` = '95139' WHERE `id` = 29303362[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/asset_companies/29303362
+Completed in 0ms (DB: 50) | 302 Found [http://test.host/asset_companies/29303362?asset_company%5Baddress_zip%5D=95139]
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;35;1mSQL (30.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (11.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 22:12:22) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/edit
+Completed in 40ms (View: 40, DB: 71) | 200 OK [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 22:12:22) [GET]
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` [0m
+Rendering template within layouts/application
+Rendering asset_companies/index
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 22:12:22) [GET]
+Rendering template within layouts/application
+Rendering asset_companies/new
+Completed in 20ms (View: 20, DB: 0) | 200 OK [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 22:12:22) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/show
+Completed in 10ms (View: 0, DB: 0) | 200 OK [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 22:12:22) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 22:12:22) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 22:12:22) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 22:12:22) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#create (for 0.0.0.0 at 2011-01-29 22:12:22) [POST]
+  Parameters: {"asset_company"=>{"password"=>"secret", "email"=>"create1@asset_company.com"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies?asset_company%5Bemail%5D=create1%40asset_company.com&asset_company%5Bpassword%5D=secret]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#update (for 0.0.0.0 at 2011-01-29 22:12:22) [PUT]
+  Parameters: {"id"=>"29303362", "asset_company"=>{"address_zip"=>"95139"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362?asset_company%5Baddress_zip%5D=95139]
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_companies` [0m
+
+
+Processing AssetCompaniesController#create (for 0.0.0.0 at 2011-01-29 22:12:22) [POST]
+  Parameters: {"asset_company"=>{"password"=>"secret", "email"=>"create1@asset_company.com"}}
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompany Exists (0.0ms)[0m   [0;1mSELECT `asset_companies`.id FROM `asset_companies` WHERE (`asset_companies`.`email` = BINARY 'create1@asset_company.com') LIMIT 1[0m
+  [4;35;1mAssetCompany Create (0.0ms)[0m   [0mINSERT INTO `asset_companies` (`address1`, `address_city`, `salt`, `address2`, `updated_at`, `company_name`, `hashed_password`, `address_zip`, `address_state`, `phone`, `fax`, `email`, `contact_name`, `created_at`) VALUES(NULL, NULL, '392928000.67166275109297', NULL, '2011-01-30 06:12:22', NULL, '2691084a67462419745d55db4cd8d9db9ba1b424', NULL, NULL, NULL, NULL, 'create1@asset_company.com', NULL, '2011-01-30 06:12:22')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/asset_companies/978752324
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies?asset_company%5Bemail%5D=create1%40asset_company.com&asset_company%5Bpassword%5D=secret]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mSQL (90.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#update (for 0.0.0.0 at 2011-01-29 22:12:22) [PUT]
+  Parameters: {"id"=>"29303362", "asset_company"=>{"address_zip"=>"95139"}}
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompany Exists (0.0ms)[0m   [0mSELECT `asset_companies`.id FROM `asset_companies` WHERE (`asset_companies`.`email` = BINARY 'juan@bofa.com' AND `asset_companies`.id <> 29303362) LIMIT 1[0m
+  [4;36;1mAssetCompany Update (0.0ms)[0m   [0;1mUPDATE `asset_companies` SET `updated_at` = '2011-01-30 06:12:23', `address_zip` = '95139' WHERE `id` = 29303362[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/asset_companies/29303362
+Completed in 10ms (DB: 90) | 302 Found [http://test.host/asset_companies/29303362?asset_company%5Baddress_zip%5D=95139]
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;35;1mSQL (30.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#destroy (for 0.0.0.0 at 2011-01-29 22:13:11) [DELETE]
+  Parameters: {"id"=>"29303362"}
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompanyNote Delete all (0.0ms)[0m   [0;1mDELETE FROM `asset_company_notes` WHERE ((asset_company_id = 29303362)) [0m
+  [4;35;1mAssetCompany Destroy (0.0ms)[0m   [0mDELETE FROM `asset_companies` WHERE `id` = 29303362[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/admin/logout
+Completed in 10ms (DB: 60) | 302 Found [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mSQL (41.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 22:13:11) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/edit
+Completed in 40ms (View: 40, DB: 41) | 200 OK [http://test.host/asset_companies/29303362/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 22:13:11) [GET]
+  [4;36;1mAssetCompany Load (10.0ms)[0m   [0;1mSELECT * FROM `asset_companies` [0m
+Rendering template within layouts/application
+Rendering asset_companies/index
+Completed in 20ms (View: 10, DB: 10) | 200 OK [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 22:13:11) [GET]
+Rendering template within layouts/application
+Rendering asset_companies/new
+Completed in 20ms (View: 20, DB: 0) | 200 OK [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 22:13:11) [GET]
+  Parameters: {"id"=>"29303362"}
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Rendering template within layouts/application
+Rendering asset_companies/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#destroy (for 0.0.0.0 at 2011-01-29 22:13:11) [DELETE]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAssetCompany Load (10.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#edit (for 0.0.0.0 at 2011-01-29 22:13:11) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 10) | 302 Found [http://test.host/asset_companies/29303362/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#index (for 0.0.0.0 at 2011-01-29 22:13:11) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing AssetCompaniesController#new (for 0.0.0.0 at 2011-01-29 22:13:11) [GET]
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#show (for 0.0.0.0 at 2011-01-29 22:13:11) [GET]
+  Parameters: {"id"=>"29303362"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#create (for 0.0.0.0 at 2011-01-29 22:13:11) [POST]
+  Parameters: {"asset_company"=>{"password"=>"secret", "email"=>"create1@asset_company.com"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies?asset_company%5Bemail%5D=create1%40asset_company.com&asset_company%5Bpassword%5D=secret]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#update (for 0.0.0.0 at 2011-01-29 22:13:11) [PUT]
+  Parameters: {"id"=>"29303362", "asset_company"=>{"address_zip"=>"95139"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_companies/29303362?asset_company%5Baddress_zip%5D=95139]
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (10.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_companies` [0m
+
+
+Processing AssetCompaniesController#create (for 0.0.0.0 at 2011-01-29 22:13:11) [POST]
+  Parameters: {"asset_company"=>{"password"=>"secret", "email"=>"create1@asset_company.com"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompany Exists (0.0ms)[0m   [0mSELECT `asset_companies`.id FROM `asset_companies` WHERE (`asset_companies`.`email` = BINARY 'create1@asset_company.com') LIMIT 1[0m
+  [4;36;1mAssetCompany Create (0.0ms)[0m   [0;1mINSERT INTO `asset_companies` (`address1`, `address_city`, `salt`, `address2`, `updated_at`, `company_name`, `hashed_password`, `address_zip`, `address_state`, `phone`, `fax`, `email`, `contact_name`, `created_at`) VALUES(NULL, NULL, '392560500.751085632552335', NULL, '2011-01-30 06:13:11', NULL, '97d47a4c7864d942973c73e82bc7e4741723f57d', NULL, NULL, NULL, NULL, 'create1@asset_company.com', NULL, '2011-01-30 06:13:11')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/asset_companies/978752325
+Completed in 0ms (DB: 10) | 302 Found [http://test.host/asset_companies?asset_company%5Bemail%5D=create1%40asset_company.com&asset_company%5Bpassword%5D=secret]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_companies` [0m
+  [4;35;1mSQL (30.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompaniesController#update (for 0.0.0.0 at 2011-01-29 22:13:11) [PUT]
+  Parameters: {"id"=>"29303362", "asset_company"=>{"address_zip"=>"95139"}}
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompany Exists (0.0ms)[0m   [0;1mSELECT `asset_companies`.id FROM `asset_companies` WHERE (`asset_companies`.`email` = BINARY 'juan@bofa.com' AND `asset_companies`.id <> 29303362) LIMIT 1[0m
+  [4;35;1mAssetCompany Update (0.0ms)[0m   [0mUPDATE `asset_companies` SET `updated_at` = '2011-01-30 06:13:11', `address_zip` = '95139' WHERE `id` = 29303362[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/asset_companies/29303362
+Completed in 0ms (DB: 30) | 302 Found [http://test.host/asset_companies/29303362?asset_company%5Baddress_zip%5D=95139]
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mSQL (30.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (30.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (30.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (20.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 00:09:39) [POST]
+  Parameters: {"asset_company_note"=>"test note"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 270) | 302 Found [http://test.host/asset_company_notes?asset_company_note=test+note]
+  [4;36;1mSQL (20.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (20.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (20.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (30.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 00:47:02) [POST]
+  Parameters: {"asset_company_note"=>"test note"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 10ms (DB: 160) | 302 Found [http://test.host/asset_company_notes?asset_company_note=test+note]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 00:49:23) [POST]
+  Parameters: {"asset_company_note"=>"test note"}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 80) | 302 Found [http://test.host/asset_company_notes?asset_company_note=test+note]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 00:52:39) [POST]
+  Parameters: {"asset_company_note"=>"test note"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 00:53:43) [POST]
+  Parameters: {"asset_company_note"=>"test note"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 00:58:23) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 08:58:23', 'test note', 21341157, '2011-01-30 08:58:23')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 40) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 00:58:48) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 08:58:48', 'test note', 21341157, '2011-01-30 08:58:48')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 100) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (10.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:01:19) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 81) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:01:19) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:01:19', 'test note', 21341157, '2011-01-30 09:01:19')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 20ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;36;1mSQL (50.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:14:45) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 60) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:14:45) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:14:45', 'test note', 21341157, '2011-01-30 09:14:45')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mSQL (10.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:14:45) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:14:45', 'test note', 21341157, '2011-01-30 09:14:45')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 50) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mAssetCompanyNote Load (0.0ms)[0m   [0mSELECT * FROM `asset_company_notes` WHERE (`asset_company_notes`.`id` = '--- :one\n' AND (agent_id = 21341157 and asset_company_id = 29303362)) [0m
+  [4;36;1mSQL (50.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:20:51) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 80) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mAssetCompany Load (10.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:20:51) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:20:51', 'test note', 21341157, '2011-01-30 09:20:51')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 20ms (DB: 20) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:20:51) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (10.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:20:51', 'test note', 21341157, '2011-01-30 09:20:51')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 50) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mAssetCompanyNote Load (0.0ms)[0m   [0mSELECT * FROM `asset_company_notes` WHERE (agent_id = 21341157 and asset_company_id = 29303362) LIMIT 1[0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:27:00) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 80) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:27:00) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:27:00', 'test note', 21341157, '2011-01-30 09:27:00')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;36;1mSQL (60.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:27:00) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:27:00', 'test note', 21341157, '2011-01-30 09:27:00')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 60) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mAssetCompanyNote Load (0.0ms)[0m   [0mSELECT * FROM `asset_company_notes` WHERE (agent_id = 21341157 and asset_company_id = 29303362) LIMIT 1[0m
+
+
+Processing AssetCompanyNotesController#update (for 0.0.0.0 at 2011-01-30 01:27:00) [PUT]
+  Parameters: {"id"=>"9", "asset_company_note"=>{"note"=>"the update"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (50.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:27:29) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 71) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:27:29) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:27:29', 'test note', 21341157, '2011-01-30 09:27:29')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 20ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:27:29) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:27:29', 'test note', 21341157, '2011-01-30 09:27:29')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 40) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mAssetCompanyNote Load (0.0ms)[0m   [0mSELECT * FROM `asset_company_notes` WHERE (agent_id = 21341157 and asset_company_id = 29303362) LIMIT 1[0m
+
+
+Processing AssetCompanyNotesController#update (for 0.0.0.0 at 2011-01-30 01:27:29) [PUT]
+  Parameters: {"id"=>"11", "asset_company_note"=>{"note"=>"the update"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (50.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:29:08) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 100) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;35;1mSQL (10.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:29:08) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:29:08', 'test note', 21341157, '2011-01-30 09:29:08')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 20) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:29:08) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:29:08', 'test note', 21341157, '2011-01-30 09:29:08')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 0ms (DB: 40) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mAssetCompanyNote Load (0.0ms)[0m   [0mSELECT * FROM `asset_company_notes` WHERE (agent_id = 21341157 and asset_company_id = 29303362) LIMIT 1[0m
+
+
+Processing AssetCompanyNotesController#update (for 0.0.0.0 at 2011-01-30 01:29:08) [PUT]
+  Parameters: {"id"=>"13", "asset_company_note"=>{"note"=>"the update"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (41.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:30:22) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 60) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:30:22) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:30:22', 'test note', 21341157, '2011-01-30 09:30:22')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 10) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;36;1mSQL (70.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:30:22) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:30:22', 'test note', 21341157, '2011-01-30 09:30:22')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 70) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mAssetCompanyNote Load (0.0ms)[0m   [0mSELECT * FROM `asset_company_notes` WHERE (agent_id = 21341157 and asset_company_id = 29303362) LIMIT 1[0m
+
+
+Processing AssetCompanyNotesController#update (for 0.0.0.0 at 2011-01-30 01:30:22) [PUT]
+  Parameters: {"id"=>"15", "asset_company_note"=>{"note"=>"the update"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (60.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:33:10) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 80) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:33:10) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:33:10', 'test note', 21341157, '2011-01-30 09:33:10')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:33:10) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:33:10', 'test note', 21341157, '2011-01-30 09:33:10')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 40) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mAssetCompanyNote Load (0.0ms)[0m   [0mSELECT * FROM `asset_company_notes` WHERE (agent_id = 21341157 and asset_company_id = 29303362) LIMIT 1[0m
+
+
+Processing AssetCompanyNotesController#update (for 0.0.0.0 at 2011-01-30 01:33:10) [PUT]
+  Parameters: {"id"=>"17", "asset_company_note"=>{"note"=>"the update"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (40.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:35:46) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 100) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mAssetCompany Load (10.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:35:46) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:35:46', 'test note', 21341157, '2011-01-30 09:35:46')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 10) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;36;1mSQL (441.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:35:46) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:35:46', 'test note', 21341157, '2011-01-30 09:35:46')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 0ms (DB: 441) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mAssetCompanyNote Load (0.0ms)[0m   [0mSELECT * FROM `asset_company_notes` WHERE (agent_id = 21341157 and asset_company_id = 29303362) LIMIT 1[0m
+
+
+Processing AssetCompanyNotesController#update (for 0.0.0.0 at 2011-01-30 01:35:46) [PUT]
+  Parameters: {"id"=>"19", "asset_company_note"=>{"note"=>"the update"}}
+  [4;36;1mAssetCompanyNote Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_company_notes` WHERE (`asset_company_notes`.`id` = 19) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompanyNote Update (0.0ms)[0m   [0;1mUPDATE `asset_company_notes` SET `note` = 'the update', `updated_at` = '2011-01-30 09:35:46' WHERE `id` = 19[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Redirected to http://test.host/agents/21341157
+Completed in 20ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mSQL (30.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:37:22) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 70) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:37:22) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:37:22', 'test note', 21341157, '2011-01-30 09:37:22')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:37:23) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Create (0.0ms)[0m   [0mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:37:23', 'test note', 21341157, '2011-01-30 09:37:23')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 40) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mAssetCompanyNote Load (0.0ms)[0m   [0mSELECT * FROM `asset_company_notes` WHERE (agent_id = 21341157 and asset_company_id = 29303362) LIMIT 1[0m
+
+
+Processing AssetCompanyNotesController#update (for 0.0.0.0 at 2011-01-30 01:37:23) [PUT]
+  Parameters: {"id"=>"21", "asset_company_note"=>{"note"=>"the update"}}
+  [4;36;1mAssetCompanyNote Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_company_notes` WHERE (`asset_company_notes`.`id` = 21) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompanyNote Update (0.0ms)[0m   [0;1mUPDATE `asset_company_notes` SET `note` = 'the update', `updated_at` = '2011-01-30 09:37:23' WHERE `id` = 21[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mAssetCompanyNote Load (10.0ms)[0m   [0mSELECT * FROM `asset_company_notes` WHERE (`asset_company_notes`.`id` = 21) [0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:40:54) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 90) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:40:54) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompanyNote Create (0.0ms)[0m   [0;1mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:40:54', 'test note', 21341157, '2011-01-30 09:40:54')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 20ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mAssetCompanyNote Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_company_notes` WHERE (agent_id = 21341157 and asset_company_id = 29303362) LIMIT 1[0m
+
+
+Processing AssetCompanyNotesController#update (for 0.0.0.0 at 2011-01-30 01:40:54) [PUT]
+  Parameters: {"id"=>"22", "asset_company_note"=>{"note"=>"the update"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mAssetCompanyNote Load (0.0ms)[0m   [0mSELECT * FROM `asset_company_notes` WHERE (`asset_company_notes`.`id` = 22) [0m
+  [4;36;1mSQL (50.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:40:54) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompanyNote Create (0.0ms)[0m   [0;1mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:40:54', 'test note', 21341157, '2011-01-30 09:40:54')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 50) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (30.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 01:40:54) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompanyNote Create (0.0ms)[0m   [0;1mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 09:40:54', 'test note', 21341157, '2011-01-30 09:40:54')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 0ms (DB: 30) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mAssetCompanyNote Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_company_notes` WHERE (agent_id = 21341157 and asset_company_id = 29303362) LIMIT 1[0m
+
+
+Processing AssetCompanyNotesController#update (for 0.0.0.0 at 2011-01-30 01:40:54) [PUT]
+  Parameters: {"id"=>"24", "asset_company_note"=>{"note"=>"the update"}}
+  [4;35;1mAssetCompanyNote Load (0.0ms)[0m   [0mSELECT * FROM `asset_company_notes` WHERE (`asset_company_notes`.`id` = 24) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Update (0.0ms)[0m   [0mUPDATE `asset_company_notes` SET `note` = 'the update', `updated_at` = '2011-01-30 09:40:54' WHERE `id` = 24[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mAssetCompanyNote Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_company_notes` WHERE (`asset_company_notes`.`id` = 24) [0m
+  [4;35;1mSQL (30.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mAgent Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `agents`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mAssetCompanyNote Columns (10.0ms)[0m   [0;1mSHOW FIELDS FROM `asset_company_notes`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 02:04:41) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 80) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 02:04:41) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompanyNote Create (0.0ms)[0m   [0;1mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 10:04:41', 'test note', 21341157, '2011-01-30 10:04:41')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 10) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mAssetCompanyNote Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_company_notes` WHERE (agent_id = 21341157 and asset_company_id = 29303362) LIMIT 1[0m
+
+
+Processing AssetCompanyNotesController#update (for 0.0.0.0 at 2011-01-30 02:04:41) [PUT]
+  Parameters: {"id"=>"25", "asset_company_note"=>{"note"=>"the update"}}
+Redirected to http://test.host/admin/filter_login_redirect
+Filter chain halted as [AuthorizeFilter] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;35;1mAssetCompanyNote Load (0.0ms)[0m   [0mSELECT * FROM `asset_company_notes` WHERE (`asset_company_notes`.`id` = 25) [0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mAgent Load (0.0ms)[0m   [0;1mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;35;1mAssetCompany Load (10.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 02:04:41) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompanyNote Create (0.0ms)[0m   [0;1mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 10:04:41', 'test note', 21341157, '2011-01-30 10:04:41')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 50) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `asset_company_notes` [0m
+  [4;35;1mSQL (40.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAgent Load (0.0ms)[0m   [0mSELECT * FROM `agents` WHERE (`agents`.`id` = 21341157) [0m
+  [4;36;1mAssetCompany Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+
+
+Processing AssetCompanyNotesController#create (for 0.0.0.0 at 2011-01-30 02:04:41) [POST]
+  Parameters: {"asset_company_note"=>{"note"=>"test note"}}
+  [4;35;1mSQL (0.0ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mAssetCompanyNote Create (0.0ms)[0m   [0;1mINSERT INTO `asset_company_notes` (`asset_company_id`, `updated_at`, `note`, `agent_id`, `created_at`) VALUES(29303362, '2011-01-30 10:04:41', 'test note', 21341157, '2011-01-30 10:04:41')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 40) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mAssetCompanyNote Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_company_notes` WHERE (agent_id = 21341157 and asset_company_id = 29303362) LIMIT 1[0m
+
+
+Processing AssetCompanyNotesController#update (for 0.0.0.0 at 2011-01-30 02:04:41) [PUT]
+  Parameters: {"id"=>"27", "asset_company_note"=>{"note"=>"the update"}}
+  [4;35;1mAssetCompanyNote Load (0.0ms)[0m   [0mSELECT * FROM `asset_company_notes` WHERE (`asset_company_notes`.`id` = 27) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompanyNote Update (0.0ms)[0m   [0mUPDATE `asset_company_notes` SET `note` = 'the update', `updated_at` = '2011-01-30 10:04:41' WHERE `id` = 27[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mAssetCompany Load (0.0ms)[0m   [0mSELECT * FROM `asset_companies` WHERE (`asset_companies`.`id` = 29303362) [0m
+Redirected to http://test.host/agents/21341157
+Completed in 10ms (DB: 0) | 302 Found [http://test.host/asset_company_notes?asset_company_note%5Bnote%5D=test+note]
+  [4;36;1mAssetCompanyNote Load (0.0ms)[0m   [0;1mSELECT * FROM `asset_company_notes` WHERE (`asset_company_notes`.`id` = 27) [0m
+  [4;35;1mSQL (50.0ms)[0m   [0mROLLBACK[0m
