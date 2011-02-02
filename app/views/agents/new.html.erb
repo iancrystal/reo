@@ -38,6 +38,7 @@
         <%= f.text_field :physical_address_state, :size => 2 %>
         <%= f.label :physical_address_zip, 'Zip code'%>
         <%= f.text_field :physical_address_zip, :size => 9  %>
+        <%= observe_field(:agent_physical_address_zip, :frequency => 1, :function => "$('agent_zip_codes').value = $('agent_physical_address_zip').value " ) %>
       </div>
       <div>
         Mailing address:
