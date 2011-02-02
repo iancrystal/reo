@@ -38,6 +38,7 @@ class Agent < ActiveRecord::Base
 
   # Get the service areas. example: Hayward, CA: 94544, 94545; San Jose, CA: 95134, 95135
   # first let's put all zipcode city and state info in a hash for quick access
+  # used to display agent info
   def service_areas
     areas_zips = {}
     areas_city = {}
@@ -58,6 +59,7 @@ class Agent < ActiveRecord::Base
   end
 
   # Returns a string of zipcodes of the service areas this agent services
+  # Used to prefill zipcodes field of the agent edit form
   def service_zips
     zips = []
     self.zipcodes.each do |zip|
@@ -67,6 +69,7 @@ class Agent < ActiveRecord::Base
   end
 
   # Updates the agents_zipcodes table and the zipcodes table based on the zipargs argument
+  # Used in updating and creating agents
   def service_areas=(zipargs)
 
     self.zipcodes = []

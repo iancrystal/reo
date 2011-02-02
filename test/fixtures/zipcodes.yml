@@ -1,15 +1,22 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  zipcode: 1
-  lat: 9.99
-  lng: 9.99
-  state: MyString
-  city: MyString
+z92253:
+  zipcode: 92253
+  lat: 33.67429
+  lng: -116.28017
+  city: La Quinta
+  state: CA
 
-two:
-  zipcode: 1
-  lat: 9.99
-  lng: 9.99
-  state: MyString
-  city: MyString
+z92201:
+  zipcode: 92201
+  lat: 33.7115
+  lng: -116.23797 
+  city: Indio 
+  state: CA
+
+z92210:
+  zipcode: 92210
+  lat: 33.71846
+  lng: -116.33612
+  city: Indian Wells 
+  state: CA

@@ -57,3 +57,30 @@ mary:
   salt: <%= SALT %>
   hashed_password: <%= Agent.encrypted_password('secret' , SALT) %> 
   member_status: 1 
+
+nopassword:
+  first_name: Nopassword
+  middle_name: Poppins
+  last_name: Laterno
+  suffix:
+  company: Remax 21
+  physical_address1: 205 Tasman ave
+  physical_address2:
+  physical_address_city: Santa Clara
+  physical_address_state: CA
+  physical_address_zip: 95135
+  mailing_address1:
+  mailing_address2: 
+  mailing_address_city: 
+  mailing_address_state: 
+  mailing_address_zip: 
+  email1: nopassword@xilinx.com
+  email2: 
+  phone1: 408-722-1234
+  phone2: 
+  fax: 408-722-1111
+  bio_cred: The best in the world
+  photo_url: 
+  resume_filename: filename 
+  salt: <%= SALT %>
+  member_status: 1 

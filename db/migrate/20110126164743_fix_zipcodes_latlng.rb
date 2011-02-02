@@ -12,8 +12,7 @@ class FixZipcodesLatlng < ActiveRecord::Migration
       fail_count = 0
       prev_fail = false
 
-      #for i in 1..41329
-      for i in 11330..41329
+      for i in 11749..41329
         puts i
         #log.puts i
         begin
