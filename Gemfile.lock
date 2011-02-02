@@ -28,6 +28,7 @@ GEM
       activesupport (= 2.3.2)
       rake (>= 0.8.3)
     rake (0.8.7)
+    rmagick (2.12.0-x86-mswin32)
     ruby-debug (0.10.4)
       columnize (>= 0.1)
       ruby-debug-base (~> 0.10.4.0)
@@ -44,5 +45,6 @@ DEPENDENCIES
   geokit (= 1.5.0)
   mysql
   rails (= 2.3.2)
+  rmagick (= 2.12.0)
   ruby-debug
   ym4r
