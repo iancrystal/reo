@@ -1,4 +1,5 @@
 require 'aws/s3'
+require 'RMagick'
 
 # Standard ReST interface of agents table.
 class AgentsController < ApplicationController
@@ -190,6 +191,9 @@ class AgentsController < ApplicationController
   # these should be refactored as more file types are added
 
   def save_photo_to_aws_s3
+    img = Magick::Image::from_blob @agent.photo_data
+    thumb = img[0].resize_to_fill(150, 150)
+    @agent.photo_data = thumb.to_blob
     AWS::S3::S3Object.store("photo" + @agent.id.to_s, @agent.photo_data, 'reoagentphoto', :access => :public_read)
   end
 
