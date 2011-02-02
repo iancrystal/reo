@@ -45,6 +45,6 @@ DEPENDENCIES
   geokit (= 1.5.0)
   mysql
   rails (= 2.3.2)
-  rmagick (= 2.12.0)
+  rmagick
   ruby-debug
   ym4r
