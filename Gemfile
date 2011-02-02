@@ -8,4 +8,5 @@ gem 'mysql', :group => :development
 gem 'ym4r'
 gem 'aws-s3'
 gem 'ruby-debug', :group => :development
-gem 'rmagick'
+gem "rmagick", "2.12.0"
+
